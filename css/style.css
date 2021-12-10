@@ -1,0 +1,6286 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Quicksand:300");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+a:active, a:hover {
+  outline: 0;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+}
+
+mark {
+  background: yellow;
+  color: black;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+q {
+  quotes: "“" "”" "‘" "’";
+}
+
+small {
+  font-size: 80%;
+}
+
+sub {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 0;
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+button, input {
+  line-height: normal;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, html input[type=button] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], html input[disabled] {
+  cursor: default;
+}
+
+input[type=checkbox], input[type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+input[type=submit],
+input[type=reset],
+input[type=button], button {
+  -webkit-appearance: none;
+}
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2") format("woff2");
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url("./MaterialIcons-Regular.woff2") format("woff2"), url("./MaterialIcons-Regular.woff") format("woff"), url("./MaterialIcons-Regular.ttf") format("truetype");
+}
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  max-width: 1em;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("icomoon/fonts/icomoon.eot?wo3hpi");
+  src: url("icomoon/fonts/icomoon.eot?wo3hpi#iefix") format("embedded-opentype"), url("icomoon/fonts/icomoon.ttf?wo3hpi") format("truetype"), url("icomoon/fonts/icomoon.woff?wo3hpi") format("woff"), url("icomoon/fonts/icomoon.svg?wo3hpi#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-freebsd-brands:before {
+  content: "";
+}
+
+.icon-home:before {
+  content: "";
+}
+
+.icon-home2:before {
+  content: "";
+}
+
+.icon-home3:before {
+  content: "";
+}
+
+.icon-address-book:before {
+  content: "";
+}
+
+.icon-box-add:before {
+  content: "";
+}
+
+.icon-download:before {
+  content: "";
+}
+
+.icon-zoom-in:before {
+  content: "";
+}
+
+.icon-wrench:before {
+  content: "";
+}
+
+.icon-cloud-download:before {
+  content: "";
+}
+
+.icon-download2:before {
+  content: "";
+}
+
+.icon-plus:before {
+  content: "";
+}
+
+.icon-cancel-circle:before {
+  content: "";
+}
+
+.icon-cross:before {
+  content: "";
+}
+
+.icon-checkmark:before {
+  content: "";
+}
+
+.icon-exit:before {
+  content: "";
+}
+
+.icon-pause:before {
+  content: "";
+}
+
+.icon-stop:before {
+  content: "";
+}
+
+.icon-pause2:before {
+  content: "";
+}
+
+.icon-checkbox-checked:before {
+  content: "";
+}
+
+.icon-checkbox-unchecked:before {
+  content: "";
+}
+
+.icon-radio-checked:before {
+  content: "";
+}
+
+.icon-radio-checked2:before {
+  content: "";
+}
+
+.icon-radio-unchecked:before {
+  content: "";
+}
+
+.icon-tux:before {
+  content: "";
+}
+
+.icon-appleinc:before {
+  content: "";
+}
+
+.icon-finder:before {
+  content: "";
+}
+
+.icon-windows8:before {
+  content: "";
+}
+
+/* // http://www.w3.org/TR/css3-animations/#the-animation-name-property-
+// Each of these mixins support comma separated lists of values, which allows different transitions for individual properties to be described in a single style rule. Each value in the list corresponds to the value at that same position in the other properties.
+ */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  scrollbar-color: rgba(153, 153, 153, 0.7) rgba(0, 0, 0, 0);
+}
+*::-webkit-scrollbar {
+  width: 8px;
+}
+*::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 0;
+  background: transparent;
+  -webkit-box-shadow: none;
+}
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(153, 153, 153, 0.7);
+  -webkit-box-shadow: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+* :focus {
+  outline: none;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "微軟正黑體", "微软雅黑", "メイリオ", "맑은 고딕", sans-serif;
+  font-size: 1em;
+}
+
+body {
+  -webkit-overflow-scrolling: touch;
+  padding: 0;
+  background-color: #1e212b;
+  height: 100%;
+  line-height: 1.42857143;
+  margin: 0;
+  font-weight: 400;
+  color: #000000;
+}
+body > div {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+body header + .content {
+  display: block;
+  width: 100%;
+  height: calc( 100% - 40px );
+  padding: 1em 0em 1em 0em;
+  margin-top: 40px;
+  overflow: auto;
+}
+body header + .content > div {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+body header + .content > div > #app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+body header + .content > div > #app > article.infoBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+body header + .content > div > #app > article.infoBox section.dataInfo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+body header + .content > div > #app > article.subject {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: 1;
+}
+body header + .content p {
+  color: #909090;
+}
+body .body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 0 1em;
+  position: relative;
+}
+
+footer#footer {
+  font-size: 0.8em;
+  padding: 15px;
+  color: #ffffff;
+  background-color: #909090;
+  text-align: right;
+}
+
+.clCover {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: #ffffff;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+  width: 13em;
+  height: 3.25em;
+}
+.clCover b {
+  display: inline-block;
+  cursor: pointer;
+  margin: 0.5em;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+}
+
+b.clStyle_0 {
+  border: 1px solid #2ec4d1;
+  color: #abe7ed;
+  background-image: linear-gradient(135deg, #1B96F1, #3BE2BC);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1B96F1", endColorstr="#3BE2BC",GradientType=0);
+}
+b.clStyle_0:hover {
+  color: #58d0da;
+  -webkit-box-shadow: inset 0 0 4px black;
+          box-shadow: inset 0 0 4px black;
+}
+
+b.clStyle_1 {
+  border: 1px solid #a53ae9;
+  color: #e4c4f8;
+  background-image: linear-gradient(135deg, #3544DC, #EF33F2);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3544DC", endColorstr="#EF33F2",GradientType=0);
+}
+b.clStyle_1:hover {
+  color: #ba68ee;
+  -webkit-box-shadow: inset 0 0 4px black;
+          box-shadow: inset 0 0 4px black;
+}
+
+b.clStyle_2 {
+  border: 1px solid #d78f6f;
+  color: #f8ece7;
+  background-image: linear-gradient(135deg, #9a04bf, #ffec39);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9a04bf", endColorstr="#ffec39",GradientType=0);
+}
+b.clStyle_2:hover {
+  color: #e2ae97;
+  -webkit-box-shadow: inset 0 0 4px black;
+          box-shadow: inset 0 0 4px black;
+}
+
+b.clStyle_3 {
+  border: 1px solid #d33264;
+  color: #eeb0c3;
+  background-image: linear-gradient(135deg, #9F046C, #F5515F);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9F046C", endColorstr="#F5515F",GradientType=0);
+}
+b.clStyle_3:hover {
+  color: #dc5c84;
+  -webkit-box-shadow: inset 0 0 4px black;
+          box-shadow: inset 0 0 4px black;
+}
+
+b.clStyle_4 {
+  border: 1px solid #27a2a4;
+  color: #83e0e1;
+  background-image: linear-gradient(135deg, #564ce6, #07db78);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#564ce6", endColorstr="#07db78",GradientType=0);
+}
+b.clStyle_4:hover {
+  color: #31cbcd;
+  -webkit-box-shadow: inset 0 0 4px black;
+          box-shadow: inset 0 0 4px black;
+}
+
+b.clStyle_5 {
+  border: 1px solid #6dd871;
+  color: #e6f8e6;
+  background-image: linear-gradient(135deg, #25C7A2, #9de451);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#25C7A2", endColorstr="#9de451",GradientType=0);
+}
+b.clStyle_5:hover {
+  color: #95e398;
+  -webkit-box-shadow: inset 0 0 4px black;
+          box-shadow: inset 0 0 4px black;
+}
+
+b.clStyle_6 {
+  border: 1px solid #fdab60;
+  color: #fffbf7;
+  background-image: linear-gradient(135deg, #ffe7a6, #FB8332);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffe7a6", endColorstr="#FB8332",GradientType=0);
+}
+b.clStyle_6:hover {
+  color: #fec692;
+  -webkit-box-shadow: inset 0 0 4px #735400;
+          box-shadow: inset 0 0 4px #735400;
+}
+
+b.clStyle_7 {
+  border: 1px solid #7c74e4;
+  color: #f5f4fd;
+  background-image: linear-gradient(135deg, #61DEC7, #8E2EF7);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#61DEC7", endColorstr="#8E2EF7",GradientType=0);
+}
+b.clStyle_7:hover {
+  color: #a49fec;
+  -webkit-box-shadow: inset 0 0 4px #020b09;
+          box-shadow: inset 0 0 4px #020b09;
+}
+
+b.clStyle_8 {
+  border: 1px solid #cccd32;
+  color: #ebebad;
+  background-image: linear-gradient(135deg, #8ADC32, #F8C332);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8ADC32", endColorstr="#F8C332",GradientType=0);
+}
+b.clStyle_8:hover {
+  color: #d6d75b;
+  -webkit-box-shadow: inset 0 0 4px black;
+          box-shadow: inset 0 0 4px black;
+}
+
+b.clStyle_9 {
+  border: 1px solid #888888;
+  color: #d5d5d5;
+  background-image: linear-gradient(135deg, #eeeeee, #444444);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeeeee", endColorstr="#444444",GradientType=0);
+}
+b.clStyle_9:hover {
+  color: #a2a2a2;
+  -webkit-box-shadow: inset 0 0 4px #555555;
+          box-shadow: inset 0 0 4px #555555;
+}
+
+.content.charts {
+  overflow: auto;
+}
+.content.charts article.chartBox .blockR {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  white-space: pre-wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.content.charts article.chartBox .blockR section.socChart {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc( 50% - 1em );
+          flex: 0 0 calc( 50% - 1em );
+  margin: 0.5em;
+}
+@media (max-width: 650px) {
+  .content.charts article.chartBox .blockR section.socChart {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+article.casesBox .blockR section.socCases .detailed ul li span {
+  white-space: pre-wrap;
+}
+
+.noteSay, .accSpk p {
+  white-space: pre-wrap;
+}
+
+article.casesBox .blockR section.socCases {
+  -ms-flex-line-pack: baseline;
+      align-content: baseline;
+}
+body header + .content.cases,
+body header + .content.host,
+body header + .content.malwares,
+body header + .content.events {
+  padding: 0;
+  overflow: auto;
+}
+body header + .content.cases .container,
+body header + .content.host .container,
+body header + .content.malwares .container,
+body header + .content.events .container {
+  padding: 0;
+}
+body header + .content.cases .container article.casesBox,
+body header + .content.host .container article.casesBox,
+body header + .content.malwares .container article.casesBox,
+body header + .content.events .container article.casesBox {
+  position: relative;
+}
+body header + .content.cases .container article.casesBox .blockL,
+body header + .content.host .container article.casesBox .blockL,
+body header + .content.malwares .container article.casesBox .blockL,
+body header + .content.events .container article.casesBox .blockL {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 300px;
+  max-width: 300px;
+  position: fixed;
+  top: 40px;
+  height: calc( 100% - 40px );
+  z-index: 20;
+}
+body header + .content.cases .container article.casesBox .blockR,
+body header + .content.host .container article.casesBox .blockR,
+body header + .content.malwares .container article.casesBox .blockR,
+body header + .content.events .container article.casesBox .blockR {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  margin-left: 300px;
+}
+body header + .content.cases .container article.casesBox .blockR > div.horizonta,
+body header + .content.host .container article.casesBox .blockR > div.horizonta,
+body header + .content.malwares .container article.casesBox .blockR > div.horizonta,
+body header + .content.events .container article.casesBox .blockR > div.horizonta {
+  background-color: #14151c;
+}
+
+.btn {
+  padding: 0.25em 1em;
+  border-radius: 0.35em;
+  cursor: pointer;
+}
+
+.deleteAll {
+  position: absolute;
+  right: 0;
+  font-size: 0.75em;
+  font-weight: bold;
+  background-color: #1B96F1;
+  color: #ffffff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: 1px solid #0c75c3;
+  -webkit-box-shadow: 2px 2px 3px #202020;
+          box-shadow: 2px 2px 3px #202020;
+}
+.deleteAll:hover {
+  background-color: #0d7bcc;
+}
+
+.wti {
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.wti span {
+  opacity: 0.35;
+}
+.wti span.go_next {
+  position: fixed;
+  display: block;
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  top: 50%;
+  left: 50%;
+  margin: -190px 0 0 -60px;
+  z-index: 10;
+  -webkit-animation: shadow 2s infinite linear;
+          animation: shadow 2s infinite linear;
+  background-color: rgba(37, 199, 162, 0.35);
+  cursor: pointer;
+}
+@-webkit-keyframes shadow {
+  0% {
+    -webkit-box-shadow: 0px 0px 15px #25C7A2;
+            box-shadow: 0px 0px 15px #25C7A2;
+  }
+  50% {
+    -webkit-box-shadow: 0px 0px 65px #1B96F1;
+            box-shadow: 0px 0px 65px #1B96F1;
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 15px #25C7A2;
+            box-shadow: 0px 0px 15px #25C7A2;
+  }
+}
+@keyframes shadow {
+  0% {
+    -webkit-box-shadow: 0px 0px 15px #25C7A2;
+            box-shadow: 0px 0px 15px #25C7A2;
+  }
+  50% {
+    -webkit-box-shadow: 0px 0px 65px #1B96F1;
+            box-shadow: 0px 0px 65px #1B96F1;
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 15px #25C7A2;
+            box-shadow: 0px 0px 15px #25C7A2;
+  }
+}
+.go_next:before {
+  position: absolute;
+  display: block;
+  content: " ";
+  border: solid 1px #FFF;
+  width: 132px;
+  height: 132px;
+  border-radius: 66px;
+  top: -6px;
+  left: -6px;
+  -webkit-animation: bbig 2s infinite linear;
+          animation: bbig 2s infinite linear;
+}
+.go_next:after {
+  position: absolute;
+  display: block;
+  content: " ";
+  border: solid 1px #FFF;
+  width: 132px;
+  height: 132px;
+  border-radius: 66px;
+  top: -6px;
+  left: -6px;
+  -webkit-animation: bbig 2s 0.5s infinite linear;
+          animation: bbig 2s 0.5s infinite linear;
+}
+
+@-webkit-keyframes bbig {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes bbig {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+}
+.fade-enter-active, .fade-leave-active {
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.fade-enter, .fade-leave-to, .fade-leave-active {
+  opacity: 0;
+}
+
+.component-fade-enter-active, .component-fade-leave-active {
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.component-fade-enter, .component-fade-leave-to {
+  opacity: 0;
+}
+
+.curr {
+  cursor: pointer;
+}
+
+.loader {
+  position: relative;
+}
+.loader:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  margin: -44px auto auto -44px;
+  border-radius: 50%;
+  border: 8px solid #3f3f3f;
+  border-top: 8px solid #3498db;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.disabled, input[disabled=disabled] {
+  pointer-events: none !important;
+  opacity: 0.35 !important;
+  cursor: no-drop !important;
+  cursor: not-allowed !important;
+}
+
+.loading {
+  position: relative;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.loading::after {
+  content: "";
+  position: absolute;
+  z-index: 100;
+  top: calc( 50% - 2.25em );
+  left: calc( 50% - 2.25em );
+  width: 3em;
+  height: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 0.5em solid #ffffff;
+  border-top: 0.5em solid #1B96F1;
+  border-radius: 50%;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+}
+
+.events .blockR.loading, .malwares .blockR.loading {
+  opacity: 0.6;
+}
+.events .blockR.loading::after, .malwares .blockR.loading::after {
+  position: fixed;
+  left: calc( 50% + 119px );
+}
+
+/** .loader
+ * border: 16px solid #f3f3f3
+ * border-top: 16px solid #3498db
+ * border-radius: 50%
+ * width: 120px
+ * height: 120px
+ * animation: spin 2s linear infinite
+ *
+ * **/
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.showWarning {
+  position: fixed;
+  bottom: 0em;
+  right: 0em;
+  max-width: 14em;
+  text-align: center;
+  padding: 2em 2em;
+  background-color: #25C7A2;
+  border-radius: 0.5em;
+  color: #1e212b;
+  border: 4px solid #25C7A2;
+  -webkit-box-shadow: inset 0 0 1em rgba(30, 33, 43, 0.5);
+          box-shadow: inset 0 0 1em rgba(30, 33, 43, 0.5);
+  pointer-events: none;
+  display: none;
+  font-weight: bold;
+}
+.showWarning::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 1em;
+  left: -1em;
+  border-style: solid;
+  border-width: 1em 1em 1em 0;
+  border-color: transparent #25C7A2 transparent transparent;
+}
+
+.home .showWarning {
+  max-width: 100%;
+  width: auto;
+  position: absolute;
+  top: -1em;
+  bottom: auto;
+  right: auto;
+  left: 6em;
+  padding: 0.25em 1em;
+  border: 2px solid #25C7A2;
+  font-size: 0.8em;
+}
+.home .showWarning.fail {
+  background-color: #fc3848;
+  border: 2px solid #fc3848;
+  color: #ffffff;
+}
+.home .showWarning::before {
+  display: none;
+  border-color: transparent #fc3848 transparent transparent;
+}
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+canvas {
+  max-height: 310px !important;
+  max-width: 100% !important;
+}
+
+@-moz-document url-prefix() {
+  span.material-icons.status_S {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+    text-shadow: 0 0 4px #25C7A2, 0 0 10px #25C7A2, 0 0 10px #25C7A2, 0 0 15px #25C7A2, 0 0 20px #25C7A2;
+  }
+  span.material-icons.status_W {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+    text-shadow: 0 0 4px #ffec39, 0 0 10px #ffec39, 0 0 10px #ffec39, 0 0 15px #ffec39, 0 0 20px #ffec39;
+  }
+  span.material-icons.status_U {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+    text-shadow: 0 0 4px #fc3848, 0 0 10px #fc3848, 0 0 10px #fc3848, 0 0 15px #fc3848, 0 0 20px #fc3848;
+  }
+}
+.Progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1111;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.Progress .ppBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 24em;
+  height: 8em;
+  background-color: #2a2a39;
+  border: 1px solid #1e212b;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 0 10px #000000;
+          box-shadow: 0 0 10px #000000;
+}
+.Progress label {
+  color: #ffffff;
+  padding: 1em;
+}
+.Progress label span {
+  padding: 0 0.5em;
+}
+.Progress #Progress_file {
+  width: 20em !important;
+  height: 1em !important;
+}
+
+header {
+  position: fixed;
+  z-index: 50;
+  display: block;
+  width: 100%;
+  height: auto;
+  color: #ffffff;
+  background-color: black;
+  top: 0;
+  border-bottom: solid 2px #303030;
+  max-height: 40px;
+}
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 100;
+}
+header .container .logo-title {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 22px;
+  padding: 0em 4em 0em 1em;
+}
+header .container .logo-title img {
+  height: 100%;
+  width: auto;
+}
+header .container nav.topMenu {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+header .container nav.topMenu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+header .container nav.topMenu ul li {
+  position: relative;
+  display: inline-block;
+  padding: 0.65em 0.5em 0.35em 0.5em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-bottom: 2px solid transparent;
+}
+header .container nav.topMenu ul li.pick, header .container nav.topMenu ul li:hover {
+  border-bottom: 2px solid #f12939 !important;
+  background-color: #000000 !important;
+}
+header .container nav.topMenu ul li a {
+  padding: 0.75em;
+  color: #aaaaaa;
+  text-transform: uppercase;
+  font-size: 1rem;
+  word-break: keep-all;
+}
+header .container nav.topMenu ul li a .material-icons {
+  font-size: 1em;
+  padding-left: 0.5em;
+  color: #fc3848;
+}
+header .container nav.topMenu ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+}
+header .container nav.topMenu ul li > ul {
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  opacity: 0;
+}
+header .container nav.topMenu ul li .sub-menu {
+  background-color: #3f3f3f;
+  border: 3px solid #3f3f3f;
+  height: auto;
+  -webkit-box-shadow: 0 0 4px black;
+          box-shadow: 0 0 4px black;
+  border-radius: 0.5em;
+  opacity: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+header .container nav.topMenu ul li .sub-menu::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  top: -1em;
+  left: 0.5em;
+  border-style: solid;
+  border-width: 0 0.5em 1em 0.5em;
+  border-color: transparent transparent #3f3f3f transparent;
+  z-index: -1;
+}
+header .container nav.topMenu ul li .sub-menu li {
+  width: 100%;
+  text-align: center;
+  border-radius: 0.5em;
+  background-color: rgba(30, 33, 43, 0.5);
+}
+header .container nav.topMenu ul li .sub-menu li:nth-child(1) {
+  margin-bottom: 3px;
+}
+header .container nav.topMenu ul li .sub-menu li a {
+  padding: 0.75em 1em;
+}
+header .container ul.sysBox {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+header .container ul.sysBox li {
+  padding-top: 0.5em;
+  margin: 0 0.25em;
+  color: #aaaaaa;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+header .container ul.sysBox li:hover {
+  color: #ffffff;
+}
+header .container ul.sysBox li a {
+  color: #aaaaaa;
+}
+header .userInfoBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+header .userInfoBox .cloMe {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+header .userInfoBox .userData {
+  position: relative;
+  z-index: 10;
+  width: 80%;
+  height: 80%;
+  max-width: 1200px;
+  min-width: 400px;
+  background-color: #262a37;
+  border: 2px solid #3f3f3f;
+  border-radius: 1em;
+  overflow: auto;
+  -webkit-box-shadow: 0 0 1em black;
+          box-shadow: 0 0 1em black;
+}
+header .userInfoBox .userData h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.1rem;
+  padding: 1em 1em 0.75em 1em;
+  border-bottom: 1px dashed #3f3f3f;
+  background-color: #1e212b;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+header .userInfoBox .userData h2 > span {
+  margin-right: 0.5em;
+}
+header .userInfoBox .userData h2 ~ h2 {
+  margin-top: 1em;
+  border-top: 1px dashed #3f3f3f;
+}
+header .userInfoBox .userData .cloBtn {
+  background-color: #16181f;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: sticky;
+  top: 0.5rem;
+  right: 0.5rem;
+  margin-top: -2em;
+  margin-left: calc( 100% - 1.75em );
+  color: #fc3848;
+  border: 2px solid #fc3848;
+  cursor: pointer;
+  z-index: 1000;
+}
+header .userInfoBox .userData .bigBox {
+  padding: 1em 0;
+}
+header .userInfoBox .userData .bigBox .dtalContnet {
+  padding: 0 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+header .userInfoBox .userData .bigBox .dtalContnet .rowLine {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 300px;
+  padding: 0 0.25em;
+}
+header .userInfoBox .userData .bigBox .dtalContnet .rowLine .infoTitle {
+  padding: 0.25em;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  max-width: 120px;
+  max-width: 260px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: #25C7A2;
+  font-size: 0.9em;
+  text-align: right;
+}
+header .userInfoBox .userData .bigBox .dtalContnet .rowLine .inputBox {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  padding: 0.5em 0.25em;
+  position: relative;
+}
+header .userInfoBox .userData .bigBox .dtalContnet .rowLine .inputBox::before {
+  content: "";
+  height: calc( 2em - 1px );
+  width: 0;
+  position: absolute;
+  left: 2.5em;
+  border-right: 1px solid #3f3f3f;
+}
+header .userInfoBox .userData .bigBox .dtalContnet .rowLine .inputBox span.material-icons {
+  position: absolute;
+  z-index: 1;
+  top: 0.7em;
+  left: 0.65em;
+  color: #909090;
+}
+header .userInfoBox .userData .bigBox .dtalContnet .rowLine .inputBox input {
+  width: 100%;
+  padding: 0.25em 0.5em 0.25em 2.75em;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #cccccc;
+}
+header .userInfoBox .userData .bigBox .dtalContnet .rowLine .inputBox input[type*=checkbox] {
+  width: auto;
+  height: auto;
+}
+header .userInfoBox .userData .bigBox .dtalContnet .rowLine .inputBox.disabled {
+  cursor: pointer;
+}
+header .userInfoBox .userData .bigBox .dtalContnet .rowLine .inputBox.disabled input {
+  pointer-events: none !important;
+}
+header .userInfoBox .userData .bigBox .dtalContnet .rowLine .inputBox select {
+  width: 100%;
+  padding: 0.25em 0.5em 0.25em 2.75em;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #cccccc;
+}
+header .userInfoBox .userData .bigBox .dtalContnet .rowLine e.inputBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .userInfoBox .userData .bigBox .dtalContnet .rowLine e.inputBox::before {
+  display: none;
+}
+header .userInfoBox .userData .bigBox .dtalContnet .rowLine e.inputBox small {
+  color: #909090;
+  word-break: break-all;
+}
+header .userInfoBox .userData .bigBox .dtalContnet .rowLine label.inputBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .userInfoBox .userData .bigBox .dtalContnet .rowLine label.inputBox::before {
+  display: none;
+}
+header .userInfoBox .userData .bigBox .dtalContnet .rowLine label.inputBox small {
+  padding-left: 0.5em;
+  color: #909090;
+  cursor: pointer;
+}
+header .userInfoBox .userData .noBefore::before {
+  display: none;
+}
+header button.btn {
+  background-color: #1B96F1;
+  border: 1px solid #0d7bcc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+header button.btn:hover {
+  color: #cccccc;
+  background-color: #0d7bcc;
+}
+
+.switch {
+  position: relative;
+  width: 65px;
+  height: 30px;
+  line-height: 30px;
+}
+.switch .switch-checkbox {
+  display: none;
+}
+.switch .switch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.switch .switch-txt {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  -webkit-transition: margin 0.3s ease-in 0s;
+  transition: margin 0.3s ease-in 0s;
+}
+.switch .switch-txt::before {
+  display: block;
+  float: right;
+  width: 50%;
+  font-size: 13px;
+  color: #cccccc;
+  font-weight: bold;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.switch .switch-txt::after {
+  display: block;
+  float: right;
+  width: 50%;
+  font-size: 13px;
+  color: #cccccc;
+  font-weight: bold;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  content: attr(turnOn);
+  padding-left: 10px;
+  background: #1B96F1;
+  color: #ffffff;
+}
+.switch .switch-txt::before {
+  content: attr(turnOff);
+  padding-right: 10px;
+  background: #909090;
+  color: #ffffff;
+  text-align: right;
+}
+.switch .switch-Round-btn {
+  position: absolute;
+  display: block;
+  width: 26px;
+  height: 26px;
+  margin: 2px;
+  background: #cccccc;
+  top: 0;
+  bottom: 0;
+  right: 35px;
+  border: 2px solid #ffffff;
+  border-radius: 13px;
+  -webkit-transition: all 0.3s ease-in 0s;
+  transition: all 0.3s ease-in 0s;
+}
+.switch .switch-checkbox:checked + .switch-label .switch-txt {
+  margin-left: 0;
+}
+.switch .switch-checkbox:checked + .switch-label .switch-Round-btn {
+  right: 0;
+}
+
+.cloud_downloadBox {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+.cloud_downloadBox .conBox {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+.cloud_downloadBox .conBox .cloMe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.cloud_downloadBox .conBox .conData {
+  position: relative;
+  width: 60%;
+  max-width: 800px;
+  min-width: 380px;
+  max-height: 60%;
+  min-height: 360px;
+  z-index: 1;
+  background-color: #262a37;
+  border-radius: 1em;
+  border: 2px solid #3f3f3f;
+  -webkit-box-shadow: 0 0 1.8em black;
+          box-shadow: 0 0 1.8em black;
+  overflow: hidden;
+}
+.cloud_downloadBox .conBox .conData h2 {
+  padding: 0.5em 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2em;
+  background-color: #1e212b;
+  border-bottom: 1px dashed #3f3f3f;
+}
+.cloud_downloadBox .conBox .conData h2 > span {
+  margin-right: 0.5em;
+}
+.cloud_downloadBox .conBox .conData .cloBtn {
+  background-color: #16181f;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  color: #fc3848;
+  border: 2px solid #fc3848;
+  cursor: pointer;
+  z-index: 1000;
+}
+.cloud_downloadBox .conBox .conData .contnetBox {
+  padding: 1em 2em;
+}
+.cloud_downloadBox .conBox .conData .contnetBox p {
+  color: #cccccc;
+  padding: 0.25em;
+}
+.cloud_downloadBox .conBox .conData .contnetBox p > a {
+  color: #1B96F1;
+  line-height: 2.4em;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+.cloud_downloadBox .conBox .conData .contnetBox p > a b {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.cloud_downloadBox .conBox .conData .contnetBox p > a b:hover {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+.cloud_downloadBox .conBox .conData .contnetBox p > a > span {
+  margin-right: 0.25em;
+  font-size: 1.4em;
+  color: #16181f;
+  background-color: #1B96F1;
+  padding: 0.15em;
+  border-radius: 4px;
+}
+.cloud_downloadBox .conBox .conData .contnetBox ol {
+  padding-left: 1.5em;
+  list-style-type: decimal;
+}
+.cloud_downloadBox .conBox .conData .contnetBox ol li {
+  color: #cccccc;
+  padding-left: 0em;
+  font-size: 0.9em;
+}
+.cloud_downloadBox .conBox .conData .contnetBox ol b {
+  font-size: 1.4em;
+}
+
+.contactInfo {
+  position: relative;
+}
+.contactInfo:hover ul, .contactInfo:focus ul {
+  display: block;
+}
+.contactInfo ul {
+  display: none;
+  width: 240px;
+  position: absolute;
+  top: 100%;
+  right: -2em;
+  z-index: 1;
+  background-color: #16181f;
+  border: 2px solid #25C7A2;
+  border-radius: 0.5em;
+  padding: 0.5em !important;
+  font-size: 0.8em;
+  cursor: auto;
+  -webkit-box-shadow: 0 0 0.5em black;
+          box-shadow: 0 0 0.5em black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.contactInfo ul::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  top: -1em;
+  right: 2em;
+  border-style: solid;
+  border-width: 0 0.5em 1em 0.5em;
+  border-color: transparent transparent #25C7A2 transparent;
+  z-index: -1;
+}
+.contactInfo ul li {
+  cursor: auto !important;
+  padding: 0.5em !important;
+}
+.contactInfo ul li + li {
+  border-top: 1px solid #1e212b;
+}
+
+article.infoBox section {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 1em 0.5em;
+}
+article.infoBox section.userIcon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 260px;
+          flex: 0 0 260px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+article.infoBox section.userIcon .iconBox {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding-right: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+article.infoBox section.userIcon .iconBox span.material-icons {
+  font-size: 4em;
+  color: #262a37;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 4rem;
+  height: 4rem;
+}
+article.infoBox section.userIcon .iconBox span.material-icons.status_S {
+  border: 1px solid #25C7A2;
+  -webkit-box-shadow: 0 0 1rem #25C7A2;
+          box-shadow: 0 0 1rem #25C7A2;
+  background-color: #25C7A2;
+}
+article.infoBox section.userIcon .iconBox span.material-icons.status_W {
+  border: 1px solid #ffec39;
+  -webkit-box-shadow: 0 0 1rem #ffec39;
+          box-shadow: 0 0 1rem #ffec39;
+  background-color: #ffec39;
+}
+article.infoBox section.userIcon .iconBox span.material-icons.status_U {
+  border: 1px solid #fc3848;
+  -webkit-box-shadow: 0 0 1rem #fc3848;
+          box-shadow: 0 0 1rem #fc3848;
+  background-color: #fc3848;
+}
+article.infoBox section.userIcon .info {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: #cccccc;
+}
+article.infoBox section.userIcon .info h1 {
+  display: block;
+  font-size: 1.1em;
+  border-bottom: 1px solid #cccccc;
+  padding-left: 0.75rem;
+}
+article.infoBox section.userIcon .info h2 {
+  display: block;
+  font-size: 0.8em;
+  padding-left: 0.75rem;
+}
+article.infoBox section.dataInfo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+article.infoBox section.dataInfo ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+article.infoBox section.dataInfo ul li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: #cccccc;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  border-bottom: dashed 4px #2a2a39;
+  margin: 0.5em;
+  border-radius: 3.5em;
+}
+article.infoBox section.dataInfo ul li span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 3.5em;
+  height: 3.5em;
+  min-width: 3.5em;
+  text-align: center;
+  font-size: 1.35em;
+  color: #cccccc;
+  font-weight: bolder;
+  border-radius: 3em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+article.infoBox section.dataInfo ul li span small {
+  border-top: 2px solid #cccccc;
+}
+article.infoBox section.dataInfo ul li:nth-child(1) span {
+  border: 4px solid #25C7A2;
+}
+article.infoBox section.dataInfo ul li:nth-child(2) span {
+  border: 4px solid #ffec39;
+}
+article.infoBox section.dataInfo ul li:nth-child(3) span {
+  border: 4px solid #fc3848;
+}
+article.infoBox section.dataInfo ul li:nth-child(4) span {
+  border: 4px solid #1B96F1;
+}
+article.infoBox section.dataInfo ul li b {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0.5rem;
+  font-size: 0.95em;
+  max-width: 6em;
+  color: #cccccc;
+}
+@media (min-width: 1365px) {
+  article.infoBox section.dataInfo ul li {
+    max-width: 240px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  article.infoBox section.dataInfo ul li b {
+    max-width: 100%;
+  }
+}
+article.subject {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  color: #cccccc;
+}
+article.subject section {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #2a2a39;
+  padding: 1em;
+  margin: 0.5em;
+  border-radius: 4px;
+}
+article.subject section h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.25em;
+  position: relative;
+}
+article.subject section h1 span.material-icons {
+  font-size: 2em;
+}
+article.subject section h1 b {
+  padding-left: 0.25em;
+}
+article.subject section h1 e.tag {
+  position: absolute;
+  right: 0;
+}
+article.subject section h1 e.tag div {
+  font-size: 0.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0 0.5em;
+}
+article.subject section h1 e.tag div::before {
+  content: "";
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  margin-right: 0.25em;
+}
+article.subject section h1 e.tag .tag_r {
+  color: #fc3848;
+}
+article.subject section h1 e.tag .tag_r::before {
+  background-color: #fc3848;
+}
+article.subject section h1 e.tag .tag_g {
+  color: #25C7A2;
+}
+article.subject section h1 e.tag .tag_g::before {
+  background-color: #25C7A2;
+}
+article.subject section.cases, article.subject section.host {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+article.subject section ul.casesData {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow: auto;
+  padding: 1em 0;
+  font-size: 0.8em;
+}
+article.subject section ul.casesData > li {
+  position: relative;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  border: 1px solid rgba(63, 63, 63, 0.5);
+  border-left: 4px solid #25C7A2;
+}
+article.subject section ul.casesData > li.pick_1 {
+  border-left: 4px solid #fc3848;
+}
+article.subject section ul.casesData > li.pick_2 {
+  border-left: 4px solid #ffec39;
+}
+article.subject section ul.casesData > li.pick_3 {
+  border-left: 4px solid #1B96F1;
+}
+article.subject section ul.casesData > li.pick_4 {
+  border-left: 4px solid #25C7A2;
+}
+article.subject section ul.casesData > li > ul {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+}
+article.subject section ul.casesData > li > ul li {
+  min-width: 5em;
+  padding: 0.25em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+article.subject section ul.casesData > li > ul li:nth-child(1) {
+  word-break: break-all;
+}
+article.subject section ul.casesData > li > ul li:nth-child(1):hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+article.subject section ul.casesData > li > ul li b {
+  font-size: 0.8em;
+  text-align: center;
+}
+article.subject section ul.casesData > li > ul li e {
+  color: #1B96F1;
+  cursor: pointer;
+}
+article.subject section ul.casesData > li > ul li e:hover {
+  text-decoration: underline;
+}
+article.subject section ul.casesData > li > ul li small {
+  font-size: 0.7em;
+  background-color: #fc3848;
+  padding: 0.15em 0.25em;
+  border-radius: 4px;
+  white-space: nowrap;
+  color: #ffffff;
+}
+article.subject section ul.casesData > li > ul li small.wait {
+  color: #2a2a39;
+  background-color: #ffec39;
+}
+article.subject section ul.newsData {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0.5em 0;
+  overflow: auto;
+}
+article.subject section ul.newsData li {
+  padding: 0.25em 0.5em 0.75em 0.5em;
+  margin: 0.25em 0;
+}
+article.subject section ul.newsData li h3 {
+  font-size: 1.1em;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.3);
+}
+article.subject section ul.newsData li b {
+  font-size: 0.7em;
+  color: rgba(37, 199, 162, 0.6);
+}
+article.subject section ul.newsData li p {
+  font-size: 0.9em;
+  white-space: pre-wrap;
+}
+article.subject section ul.contactsData {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0.5em 0;
+  margin-top: 0.5em;
+  overflow: auto;
+}
+article.subject section ul.contactsData li {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0.5em;
+  width: 100%;
+}
+article.subject section ul.contactsData li h3 {
+  display: block;
+  width: 100%;
+  word-break: break-all;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.3);
+  cursor: pointer;
+}
+article.subject section ul.contactsData li b {
+  font-size: 0.7em;
+  color: rgba(37, 199, 162, 0.6);
+}
+article.subject section ul.contactsData li .accSpk {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+article.subject section ul.contactsData li .accSpk e {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60px;
+          flex: 0 0 60px;
+  height: auto;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-size: 0.8em;
+  border-radius: 10px;
+  background-color: rgba(255, 236, 57, 0.1);
+  color: #ffffff;
+  padding: 0.25em 0.25em 1.75em 0.25em;
+  border: 3px solid #ffec39;
+  position: relative;
+}
+article.subject section ul.contactsData li .accSpk e span {
+  position: absolute;
+  z-index: 1;
+  width: 1.6rem;
+  height: 1.6rem;
+  max-width: 1.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: -0.5rem;
+  background-color: #ffec39;
+  border-radius: 50%;
+  color: #16181f;
+}
+article.subject section ul.contactsData li .accSpk p {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  word-break: break-all;
+  background-color: rgba(204, 204, 204, 0.1);
+  color: #cccccc;
+  padding: 0.5em 1.25em 0.5em 0.5em;
+  border-radius: 4px;
+  position: relative;
+  min-width: 4em;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+article.subject section ul.contactsData li .accSpk p::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin-top: -0.25em;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0.25em 0.75em 0.25em 0;
+  border-color: transparent #ffec39 transparent transparent;
+}
+article.subject section ul.contactsData li.reply .accSpk {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+article.subject section ul.contactsData li.reply .accSpk p {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+article.subject section ul.contactsData li.reply p {
+  text-align: left;
+  padding: 0.5em 0.5em 0.5em 1.25em;
+}
+article.subject section ul.contactsData li.reply p::before {
+  right: auto;
+  left: 0;
+  border-width: 0.25em 0 0.25em 0.75em;
+  border-color: transparent transparent transparent #1b96f1;
+}
+article.subject section ul.contactsData li.reply e {
+  background-color: rgba(27, 150, 241, 0.1);
+  border: 3px solid #1b96f1;
+}
+article.subject section ul.contactsData li.reply e span {
+  background-color: #1b96f1;
+}
+article.subject .contacBox {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+article.subject .searchBox {
+  width: 100%;
+  padding-top: 0.5em;
+  position: relative;
+}
+article.subject .searchBox span.material-icons {
+  position: absolute;
+  left: 0.25em;
+  top: 0.75em;
+  color: rgba(255, 255, 255, 0.2);
+}
+article.subject .searchBox input {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.25em 1em 0.25em 1.75em;
+  border-radius: 4px;
+  color: #cccccc;
+}
+article.subject .posTR {
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+article.subject .posTR span.material-icons {
+  color: #707070;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+article.subject .posTR span.material-icons:hover {
+  color: #ffffff;
+}
+article.chartBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  color: #909090;
+}
+article.chartBox .blockL {
+  padding: 1em;
+}
+article.chartBox .blockL section.socStayus {
+  background-color: rgba(63, 63, 63, 0.2);
+  padding: 2em 1em;
+  border-radius: 4px;
+}
+article.chartBox .blockL section.socStayus ul {
+  padding: 1em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+article.chartBox .blockL section.socStayus ul li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding: 0.5em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+article.chartBox .blockL section.socStayus ul li + li {
+  border-left: 2px solid #3f3f3f;
+}
+article.chartBox .blockL section.socStayus ul li span {
+  font-size: 1.25em;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+article.chartBox .blockL section.socStayus ul li span i {
+  border-bottom: 1px solid #25C7A2;
+}
+article.chartBox .blockL section.socStayus ul li b {
+  padding-top: 0.5em;
+  font-size: 0.7em;
+}
+article.chartBox .blockL section.socStayus ul li:nth-child(1) span {
+  color: #25C7A2;
+}
+article.chartBox .blockL section.socStayus ul li:nth-child(2) span {
+  color: #fc3848;
+}
+article.chartBox .blockL section.socStayus ul li:nth-child(3) span {
+  color: #ffec39;
+}
+article.chartBox .blockL section.socStayus ul li:nth-child(4) span {
+  color: #1B96F1;
+}
+article.chartBox .blockR {
+  position: relative;
+  padding: 1em;
+}
+article.chartBox .blockR section.socChart {
+  background-color: rgba(63, 63, 63, 0.2);
+  padding: 3em 1em 2em 1em;
+  border-radius: 4px;
+}
+article section {
+  position: relative;
+  margin-bottom: 1em;
+}
+article section h4.title {
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+article section h4.title span.material-icons {
+  margin-right: 0.25em;
+}
+article.casesBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  color: #909090;
+}
+article.casesBox .blockL {
+  background-color: #181a22;
+  border-left: 2px solid rgba(42, 42, 57, 0.5);
+}
+article.casesBox .blockL section.listCases {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+article.casesBox .blockL section.listCases section.userIcon {
+  margin-bottom: 0;
+  padding: 1em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+article.casesBox .blockL section.listCases section.userIcon .iconBox {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 4em;
+          flex: 0 0 4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+article.casesBox .blockL section.listCases section.userIcon .iconBox span.material-icons {
+  font-size: 3em;
+  color: #cccccc;
+}
+article.casesBox .blockL section.listCases section.userIcon .info {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: #cccccc;
+}
+article.casesBox .blockL section.listCases section.userIcon .info h1 {
+  display: block;
+  font-size: 1.1em;
+}
+article.casesBox .blockL section.listCases section.userIcon .info h2 {
+  display: block;
+  font-size: 0.8em;
+}
+article.casesBox .blockL section.listCases .casesInfo {
+  border-bottom: 4px double #3f3f3f;
+}
+article.casesBox .blockL section.listCases .casesInfo h2.titleInfo {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5em 1em;
+  border-top: 4px double #3f3f3f;
+  border-right: 2px solid #1f1f2b;
+  background-color: #14151c;
+  overflow: hidden;
+}
+article.casesBox .blockL section.listCases .casesInfo h2.titleInfo span.material-icons {
+  margin-right: 0.5em;
+}
+article.casesBox .blockL section.listCases .casesInfo h2.titleInfo a.downloadHost {
+  position: absolute;
+  right: 0em;
+  color: #aaaaaa;
+  cursor: pointer;
+}
+article.casesBox .blockL section.listCases .casesInfo h2.titleInfo .mySort {
+  position: absolute;
+  width: 1.5em;
+  height: 100%;
+  top: 0;
+  right: 0;
+  font-size: 0.8em;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-left: 1px solid #3f3f3f;
+  color: #cccccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+article.casesBox .blockL section.listCases .casesInfo h2.titleInfo .mySort span.material-icons {
+  margin-right: 0;
+}
+article.casesBox .blockL section.listCases .sortBox {
+  border-bottom: 1px solid #2a2a39;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 32px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-color: #16181f;
+  -webkit-box-shadow: 0 3px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 3px 1px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+article.casesBox .blockL section.listCases .sortBox .selectBox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+article.casesBox .blockL section.listCases .sortBox .selectBox select.myselect {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 32px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0);
+  color: #cccccc;
+  padding-left: 1em;
+  font-size: 0.8em;
+}
+article.casesBox .blockL section.listCases .sortBox .selectBox select.myselect option {
+  background-color: #3f3f3f;
+}
+article.casesBox .blockL section.listCases .sortBox .selectBox select.myselect + select.myselect {
+  border-left: 1px solid #3f3f3f;
+}
+article.casesBox .blockL section.listCases .sortBox .selectBox .selectUl {
+  position: relative;
+  overflow: visible;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 32px;
+  background-color: rgba(0, 0, 0, 0.15);
+  color: #cccccc;
+  margin-bottom: 0;
+  font-size: 0.8em;
+  padding-top: 0;
+}
+article.casesBox .blockL section.listCases .sortBox .selectBox .selectUl + .selectUl {
+  border-left: 1px solid #3f3f3f;
+}
+article.casesBox .blockL section.listCases .sortBox .selectBox .selectUl:focus .checkbox {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+article.casesBox .blockL section.listCases .sortBox .selectBox .selectUl:focus .titleCC {
+  background-color: black;
+}
+article.casesBox .blockL section.listCases .sortBox .selectBox .selectUl .titleCC {
+  padding: 0.5em;
+  height: 2rem;
+  text-align: center;
+  white-space: nowrap;
+}
+article.casesBox .blockL section.listCases .sortBox .selectBox .selectUl .checkbox {
+  display: none;
+  background-color: #3f3f3f;
+  padding: 0.35em 0.5em;
+  height: 2rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+article.casesBox .blockL section.listCases .sortBox .selectBox .selectUl .checkbox:hover {
+  background-color: #14151c;
+}
+article.casesBox .blockL section.listCases .sortBox .selectBox .selectUl .checkbox:hover a {
+  color: #cccccc;
+}
+article.casesBox .blockL section.listCases .sortBox .selectBox .selectUl .checkbox input {
+  margin-right: 0.5em;
+  pointer-events: none;
+}
+article.casesBox .blockL section.listCases .sortBox .selectBox .selectUl .checkbox + .checkbox {
+  border-left: 1px solid #3f3f3f;
+}
+article.casesBox .blockL section.listCases .sortBox .selectBox .selectUl .checkbox a {
+  color: #cccccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+}
+article.casesBox .blockL section.listCases .sortBox .filterMe {
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0);
+  padding-right: 0.5em;
+}
+article.casesBox .blockL section.listCases .sortBox .filterMe .selectSearc {
+  background-color: rgba(0, 0, 0, 0.05);
+  border: none;
+  border-right: 1px solid #2a2a39;
+  font-size: 0.9em;
+  color: #cccccc;
+}
+article.casesBox .blockL section.listCases .sortBox .filterMe .selectSearc option {
+  color: #cccccc;
+  background-color: #303030;
+  border: 1px solid #505050;
+}
+article.casesBox .blockL section.listCases .sortBox .filterMe .searchBox {
+  position: relative;
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+}
+article.casesBox .blockL section.listCases .sortBox .filterMe .searchBox span.material-icons {
+  position: absolute;
+  left: 0.25em;
+  top: 0.25em;
+  color: rgba(255, 255, 255, 0.2);
+}
+article.casesBox .blockL section.listCases .sortBox .filterMe .searchBox span.material-icons.flexRight {
+  left: auto;
+  right: 0.25em;
+  cursor: pointer;
+}
+article.casesBox .blockL section.listCases .sortBox .filterMe .searchBox input {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-left: 1px solid rgba(0, 0, 0, 0.7);
+  padding: 0.25em 1.75em;
+  color: #cccccc;
+}
+article.casesBox .blockL section.listCases .sortBox .filterMe e {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+article.casesBox .blockL section.listCases .sortBox .filterMe e span {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 1em;
+  padding: 0.25em 0.5em;
+  font-size: 0.7em;
+  cursor: pointer;
+}
+article.casesBox .blockL section.listCases .sortBox e.cloSort {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  border-left: 1px solid #3f3f3f;
+}
+article.casesBox .blockL section.listCases .sortBox ul.sortList {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.15);
+  color: #cccccc;
+  font-size: 0.8em;
+}
+article.casesBox .blockL section.listCases .sortBox ul.sortList li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.15em;
+}
+article.casesBox .blockL section.listCases .sortBox ul.sortList li span {
+  position: relative;
+  padding: 0;
+  right: auto;
+}
+article.casesBox .blockL section.listCases .sortBox ul.sortList li + li {
+  border-left: 1px solid #3f3f3f;
+}
+article.casesBox .blockL section.listCases .sortBox ul.sortList li.pickMe {
+  background-color: black;
+}
+article.casesBox .blockL section.listCases .filterBox {
+  position: relative;
+  border-bottom: 1px solid #2a2a39;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 32px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-shadow: 0 3px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 3px 1px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+article.casesBox .blockL section.listCases .filterBox e, article.casesBox .blockL section.listCases .filterBox a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #cccccc;
+  padding: 0.35em;
+  border-left: 1px solid #2a2a39;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.025);
+}
+article.casesBox .blockL section.listCases .filterBox e span.material-icons, article.casesBox .blockL section.listCases .filterBox a span.material-icons {
+  font-size: 1.15em;
+}
+article.casesBox .blockL section.listCases .filterBox e.pickMe, article.casesBox .blockL section.listCases .filterBox a.pickMe {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+article.casesBox .blockL section.listCases .filterBox .filterMe {
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+article.casesBox .blockL section.listCases .filterBox .filterMe .searchBox {
+  position: relative;
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+}
+article.casesBox .blockL section.listCases .filterBox .filterMe .searchBox span.material-icons {
+  position: absolute;
+  left: 0.25em;
+  top: 0.25em;
+  color: rgba(255, 255, 255, 0.2);
+}
+article.casesBox .blockL section.listCases .filterBox .filterMe .searchBox span.material-icons.flexRight {
+  left: auto;
+  right: 0.25em;
+  cursor: pointer;
+}
+article.casesBox .blockL section.listCases .filterBox .filterMe .searchBox input {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(255, 255, 255, 0);
+  padding: 0.25em 1.75em;
+  color: #cccccc;
+}
+article.casesBox .blockL section.listCases .filterBox .filterMe e {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+article.casesBox .blockL section.listCases .filterBox .filterMe e span {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 1em;
+  padding: 0.25em 0.5em;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+article.casesBox .blockL section.listCases .filterBox .filterMe .selectBox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+article.casesBox .blockL section.listCases .filterBox .filterMe .selectBox select.myselect {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 32px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0);
+  color: #cccccc;
+  padding-left: 1em;
+  font-size: 0.8em;
+}
+article.casesBox .blockL section.listCases .filterBox .filterMe .selectBox select.myselect option {
+  background-color: #3f3f3f;
+}
+article.casesBox .blockL section.listCases .filterBox .filterMe .selectBox select.myselect + select.myselect {
+  border-left: 1px solid #3f3f3f;
+}
+article.casesBox .blockL section.listCases .filterBox .filterMe .selectBox .selectUl {
+  position: relative;
+  overflow: visible;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 32px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #cccccc;
+  margin-bottom: 0;
+  font-size: 0.8em;
+  padding-top: 0;
+}
+article.casesBox .blockL section.listCases .filterBox .filterMe .selectBox .selectUl + .selectUl {
+  border-left: 1px solid #3f3f3f;
+}
+article.casesBox .blockL section.listCases .filterBox .filterMe .selectBox .selectUl:focus .checkbox {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+article.casesBox .blockL section.listCases .filterBox .filterMe .selectBox .selectUl:focus .titleCC {
+  background-color: black;
+}
+article.casesBox .blockL section.listCases .filterBox .filterMe .selectBox .selectUl .titleCC {
+  padding: 0.5em;
+  height: 2rem;
+  text-align: center;
+  white-space: nowrap;
+}
+article.casesBox .blockL section.listCases .filterBox .filterMe .selectBox .selectUl .checkbox {
+  display: none;
+  background-color: #3f3f3f;
+  padding: 0.35em 0.5em;
+  height: 2rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+article.casesBox .blockL section.listCases .filterBox .filterMe .selectBox .selectUl .checkbox:hover {
+  background-color: #14151c;
+}
+article.casesBox .blockL section.listCases .filterBox .filterMe .selectBox .selectUl .checkbox:hover a {
+  color: #cccccc;
+}
+article.casesBox .blockL section.listCases .filterBox .filterMe .selectBox .selectUl .checkbox input {
+  margin-right: 0.5em;
+  pointer-events: none;
+}
+article.casesBox .blockL section.listCases .filterBox .filterMe .selectBox .selectUl .checkbox + .checkbox {
+  border-left: 1px solid #3f3f3f;
+}
+article.casesBox .blockL section.listCases .filterBox .filterMe .selectBox .selectUl .checkbox a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+}
+article.casesBox .blockL section.listCases > ul {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+article.casesBox .blockL section.listCases ul {
+  font-size: 0.9em;
+  overflow: auto;
+  padding-top: 2px;
+}
+article.casesBox .blockL section.listCases ul li {
+  position: relative;
+  padding: 0.75em 1em;
+  border-bottom: 1px solid #2a2a39;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+article.casesBox .blockL section.listCases ul li:hover {
+  background-color: #090a0d;
+}
+article.casesBox .blockL section.listCases ul li.pick {
+  background-color: #090a0d;
+  border: 1px solid #1B96F1;
+}
+article.casesBox .blockL section.listCases ul li.flexBtm {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: flex;
+  padding: 0;
+  background-color: #2a2a39;
+  cursor: auto;
+}
+article.casesBox .blockL section.listCases ul li.flexBtm > ul {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-bottom: 0;
+  width: 17.5em;
+}
+article.casesBox .blockL section.listCases ul li.flexBtm > ul > li {
+  width: 2em;
+  height: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #3f3f3f;
+  pointer-events: auto;
+}
+article.casesBox .blockL section.listCases ul li.flexBtm > ul > li.indexPg {
+  background-color: #3f3f3f;
+  color: #2a2a39;
+  padding: 0;
+  min-width: 2em;
+  max-width: 3.5em;
+  width: 3.5em;
+}
+article.casesBox .blockL section.listCases ul li.flexBtm > ul > li.indexPg input {
+  text-align: center;
+  border: 0px solid #3f3f3f;
+  width: 100%;
+  height: 100%;
+}
+article.casesBox .blockL section.listCases ul li.flexBtm > ul > li span, article.casesBox .blockL section.listCases ul li.flexBtm > ul > li b {
+  position: relative;
+  color: #cccccc;
+  font-size: 1.5em;
+  padding: 0;
+  right: auto;
+  overflow: visible;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+article.casesBox .blockL section.listCases ul li.flexBtm > ul > li b {
+  font-size: 1em;
+}
+article.casesBox .blockL section.listCases ul li.flexBtm .pageIndex {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+article.casesBox .blockL section.listCases ul li.flexBtm .pageIndex input {
+  width: 4em;
+}
+article.casesBox .blockL section.listCases ul li.flexBtm .pageall {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  color: #909090;
+  font-size: 0.6em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+article.casesBox .blockL section.listCases ul li.flexBtm .pageall span {
+  right: auto;
+}
+article.casesBox .blockL section.listCases ul li p {
+  position: relative;
+}
+article.casesBox .blockL section.listCases ul li p.anti {
+  padding-left: 0.5em;
+  margin-top: 0.5em;
+  white-space: nowrap;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+}
+article.casesBox .blockL section.listCases ul li p.anti span {
+  position: relative;
+  background-color: #2a2a39;
+  color: #909090;
+  font-size: 0.7em;
+  margin: 0 0.25em;
+  max-width: 33.333%;
+}
+article.casesBox .blockL section.listCases ul li p.anti span + span {
+  border-left: 2px solid #1e212b;
+}
+article.casesBox .blockL section.listCases ul li p.anti span.tag_1 {
+  color: #25C7A2;
+}
+article.casesBox .blockL section.listCases ul li p.anti span.tag_2 {
+  color: #fc3848;
+  text-align: left;
+}
+article.casesBox .blockL section.listCases ul li p.anti span.tag_3 {
+  color: #ffec39;
+}
+article.casesBox .blockL section.listCases ul li p.anti span.tag_4 {
+  color: #1B96F1;
+  text-align: left;
+}
+article.casesBox .blockL section.listCases ul li p.anti span b {
+  font-size: 1.25em;
+  padding-right: 0.5em;
+  right: 0;
+  font-weight: bolder;
+}
+article.casesBox .blockL section.listCases ul li p.anti span.groupsIcon {
+  -webkit-box-flex: 2em;
+      -ms-flex: 2em;
+          flex: 2em;
+  max-width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  border-left: none;
+  background-color: #1B96F1;
+  overflow: hidden;
+}
+article.casesBox .blockL section.listCases ul li p.anti span.groupsIcon > span {
+  font-size: 1rem;
+  max-width: 1rem;
+  padding: 0;
+  position: relative;
+  right: 1rem;
+  color: #cccccc;
+  background-color: transparent;
+}
+article.casesBox .blockL section.listCases ul li p.anti span.groupsIcon b {
+  color: #cccccc;
+  padding: 0;
+}
+article.casesBox .blockL section.listCases ul li p.anti.flexTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0;
+}
+article.casesBox .blockL section.listCases ul li p.anti.flexTop span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  right: 0 !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+article.casesBox .blockL section.listCases ul li p.anti.flexTop + h3 {
+  padding-left: 1.25em;
+  padding-top: 1.25em;
+  padding-bottom: 0.75em;
+}
+article.casesBox .blockL section.listCases ul li p.anti.flexTop + h3 .noflex {
+  position: absolute;
+  right: auto;
+  left: 0.25em;
+  top: 2em;
+  padding: 0;
+  margin: 0;
+}
+article.casesBox .blockL section.listCases ul li .ipShow {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+article.casesBox .blockL section.listCases ul li .ipShow:hover ul {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+article.casesBox .blockL section.listCases ul li .ipShow b {
+  font-size: 0.8rem;
+  padding: 0;
+  width: 1.4rem;
+  height: 1.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #3f3f3f;
+  color: #cccccc;
+  border-radius: 50%;
+}
+article.casesBox .blockL section.listCases ul li .ipShow ul {
+  display: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: absolute;
+  left: 4em;
+  background-color: #cccccc;
+  color: #16181f;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 1000;
+  border-radius: 4px;
+  border: 1px solid #16181f;
+  overflow: visible;
+  -webkit-box-shadow: 0 0 10px black;
+          box-shadow: 0 0 10px black;
+}
+article.casesBox .blockL section.listCases ul li .ipShow ul::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 0;
+  height: 0;
+  left: -1em;
+  top: 50%;
+  margin-top: -0.5em;
+  border-style: solid;
+  border-width: 0.5em 1em 0.5em 0;
+  border-color: transparent #cccccc transparent transparent;
+}
+article.casesBox .blockL section.listCases ul li .ipShow ul > li {
+  padding: 0.25em 0.5em;
+  border-bottom: 1px solid #aaaaaa;
+}
+article.casesBox .blockL section.listCases ul li .ipShow ul > li:hover {
+  background-color: #262a37;
+  color: #cccccc;
+}
+article.casesBox .blockL section.listCases ul li .ipShow ul > li:last-child {
+  border-bottom: none;
+}
+article.casesBox .blockL section.listCases ul li .ipShow ul > li + li {
+  border-top: 1px solid #dedede;
+}
+article.casesBox .blockL section.listCases ul li .amendGroup {
+  position: absolute;
+  bottom: 0.6em;
+  right: 0;
+  width: 1.8em;
+  height: 1.8em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  background-color: #ffec39;
+  display: none;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  opacity: 0;
+}
+article.casesBox .blockL section.listCases ul li .amendGroup span {
+  position: relative;
+  right: auto;
+  max-width: 1.8em;
+  padding: 0;
+  color: #1e212b;
+}
+article.casesBox .blockL section.listCases ul li:hover {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+article.casesBox .blockL section.listCases ul li:hover .amendGroup {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+}
+article.casesBox .blockL section.listCases ul li.pick .flexTop + h3 {
+  color: #ffffff;
+}
+article.casesBox .blockL section.listCases ul li h3 {
+  color: #cccccc;
+  font-size: 1em;
+  font-weight: bolder;
+  word-break: break-all;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+article.casesBox .blockL section.listCases ul li h3 small {
+  font-size: 0.6em;
+  padding-left: 1em;
+}
+article.casesBox .blockL section.listCases ul li h3 i.material-icons {
+  font-size: 1em;
+  color: #25C7A2;
+}
+article.casesBox .blockL section.listCases ul li b {
+  font-weight: 200;
+  font-size: 0.8em;
+  padding-right: 0.5em;
+  margin-right: 0.5em;
+  max-width: 11.5em;
+  overflow: hidden;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  white-space: nowrap;
+}
+article.casesBox .blockL section.listCases ul li small {
+  font-size: 0.8em;
+  color: #1B96F1;
+}
+article.casesBox .blockL section.listCases ul li span {
+  font-size: 0.5em;
+  color: #ffffff;
+  padding: 0.15em 0.35em;
+  position: absolute;
+  right: 1em;
+  border-radius: 4px;
+}
+article.casesBox .blockL section.listCases ul li span.tag_1 {
+  color: #1e212b;
+  background-color: #25C7A2;
+}
+article.casesBox .blockL section.listCases ul li span.tag_2 {
+  background-color: #fc3848;
+}
+article.casesBox .blockL section.listCases ul li span.tag_3 {
+  color: #1e212b;
+  background-color: #ffec39;
+}
+article.casesBox .blockL section.listCases ul li span.tag_4 {
+  color: #cccccc;
+  background-color: #1B96F1;
+}
+article.casesBox .blockL section.listCases ul li span.noflex {
+  position: relative;
+  right: 0.75em;
+  top: 0.15em;
+  font-size: 1.5em;
+  pointer-events: none;
+  display: inline-block;
+}
+article.casesBox .blockL section.listCases ul li.tagStatus_1 {
+  border-left: 4px solid #25C7A2;
+}
+article.casesBox .blockL section.listCases ul li.tagStatus_2 {
+  border-left: 4px solid #fc3848;
+}
+article.casesBox .blockL section.listCases ul li.tagStatus_3 {
+  border-left: 4px solid #ffec39;
+}
+article.casesBox .blockL section.listCases ul li.tagStatus_4 {
+  border-left: 4px solid #1B96F1;
+}
+article.casesBox .blockL section.listCases .flexGroup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+article.casesBox .blockL section.listCases .flexGroup .cloMe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox {
+  z-index: 1;
+  position: relative;
+  width: 80%;
+  height: auto;
+  max-height: 80%;
+  max-width: 1200px;
+  overflow: auto;
+  min-height: 450px;
+  background-color: #262a37;
+  padding: 1em;
+  border-radius: 0.5em;
+  border: 2px solid #cccccc;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .cloBtn {
+  background-color: #16181f;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  color: #fc3848;
+  border: 2px solid #fc3848;
+  cursor: pointer;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 4px solid #1B96F1;
+}
+@media (max-width: 650px) {
+  article.casesBox .blockL section.listCases .flexGroup section.groupBox h2 {
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
+  }
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox h2 b {
+  font-size: 1.6rem;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox h2 .otherBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 3.5em;
+  top: 0.9em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 0.8rem;
+}
+@media (max-width: 650px) {
+  article.casesBox .blockL section.listCases .flexGroup section.groupBox h2 .otherBox {
+    position: relative;
+    top: auto;
+    right: auto;
+  }
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox h2 .otherBox e {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(204, 204, 204, 0.15);
+  border-radius: 4px;
+  color: #cccccc;
+  padding: 0.15em 0.5em;
+  margin: 0 0.25em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+  overflow: visible;
+  border: 1px solid transparent;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox h2 .otherBox e:hover, article.casesBox .blockL section.listCases .flexGroup section.groupBox h2 .otherBox e.indexPick {
+  background-color: #1e212b;
+  color: #ffffff;
+  border: 1px solid #25C7A2;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox h2 .otherBox e span {
+  color: #25C7A2;
+  margin-right: 0.25em;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox select {
+  width: 100%;
+  padding: 0.25em;
+  border: 1px solid #cccccc;
+  background-color: transparent;
+  color: #cccccc;
+  margin-bottom: 1em;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox select option {
+  color: #1e212b;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .searchBox.horizonta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1em;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .searchBox.horizonta button.btn {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0.5em;
+  font-size: 0.75em;
+  font-weight: bold;
+  background-color: #1B96F1;
+  border: 1px solid #0d7bcc;
+  color: #ffffff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-shadow: 2px 2px 3px #16181f;
+          box-shadow: 2px 2px 3px #16181f;
+  margin: 0 0.25em 0 0;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .searchBox.horizonta button.btn + button {
+  margin: 0 0 0 0.25em;
+  background-color: #25C7A2;
+  border: 1px solid #1d9c7f;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupList {
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
+  min-width: 400px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  place-items: flex-start;
+  padding-top: 1em;
+  position: relative;
+  border-right: 2px dashed #3f3f3f;
+}
+@media (max-width: 650px) {
+  article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupList {
+    min-width: 280px;
+  }
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupList .pageSizeList {
+  width: 100%;
+  padding: 0 0.5em 1em 0.5em;
+  font-size: 0.9em;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupList .pageSizeList b, article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupList .pageSizeList em {
+  margin-right: 0.5em;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupList .pageSizeList em {
+  padding: 0 0.5em;
+  color: #25C7A2;
+  cursor: pointer;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupList .pageSizeList em.pickOne {
+  background-color: #25C7A2;
+  color: #ffffff;
+  border: 1px solid #1d9c7f;
+  border-radius: 4px;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupList .pageSizeList .pickAll {
+  display: inline-block;
+  margin-left: 1em;
+  color: #25C7A2;
+  cursor: pointer;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupList .pageSizeList .pickAll span {
+  padding-left: 0.5em;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupList b.flexTitle {
+  position: absolute;
+  bottom: 0;
+  right: 1em;
+  font-size: 2em;
+  color: #505050;
+}
+@media (max-width: 650px) {
+  article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupList b.flexTitle {
+    bottom: auto;
+    right: auto;
+    position: relative;
+  }
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupList label.titleTag {
+  padding: 0.5em 0.5em 0.25em 0.5em;
+  background-color: #25C7A2;
+  border-radius: 4px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  margin: 0.75em 0.5em;
+  width: calc( 33% - 1em );
+  min-width: 8em;
+  cursor: pointer;
+  position: relative;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupList label.titleTag.pickMe {
+  background-color: #ffec39;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupList label.titleTag .checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 1.5rem;
+          flex: 0 0 1.5rem;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupList label.titleTag .Straight {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  place-items: flex-start;
+  padding-bottom: 0.5em;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupList label.titleTag span {
+  color: #1e212b;
+  font-size: 0.9rem;
+  word-break: break-word;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupList label.titleTag span.name {
+  display: block;
+  border-bottom: 1px solid #1e212b;
+  width: 100%;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupList label.titleTag span.os {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupList label.titleTag span.time {
+  font-weight: bold;
+  font-size: 0.7rem;
+  border-top: 1px solid #1e212b;
+  color: #15715c;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupList label.titleTag span.group {
+  color: #cccccc;
+  background-color: #15715c;
+  border-radius: 4px;
+  padding: 0.15em 0.5em;
+  font-size: 0.7rem;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupList label.titleTag span.status {
+  padding: 0.15em 0.5em;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  position: absolute;
+  left: -0.5rem;
+  top: -0.75rem;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupList label.titleTag span.status.tag_1 {
+  color: #1e212b;
+  border: 1px solid #3f3f3f;
+  background-color: #25C7A2;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupList label.titleTag span.status.tag_2 {
+  color: #ffffff;
+  background-color: #fc3848;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupList label.titleTag span.status.tag_3 {
+  color: #1e212b;
+  border: 1px solid #3f3f3f;
+  background-color: #ffec39;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupList label.titleTag span.status.tag_4 {
+  color: #cccccc;
+  border: 1px solid #3f3f3f;
+  background-color: #1B96F1;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupList label.titleTag i {
+  position: absolute;
+  left: 0.5em;
+  color: #fc3848;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .typeInfoBox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .setBox {
+  min-width: 240px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 1em;
+  padding-top: 1em;
+  position: relative;
+  min-height: 300px;
+  position: sticky;
+  top: 0;
+  right: 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .setBox > div {
+  position: absolute;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .setBox h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px dashed #3f3f3f;
+  color: #ffec39;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .setBox h1 span {
+  color: #ffec39;
+  margin-right: 0.5em;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .setBox p {
+  padding: 0em 0 1em 0;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .setBox p b {
+  color: #fc3848;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .setBox p small {
+  display: block;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .setBox .pauseBox > div {
+  min-width: calc( 240px - 1em );
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 0.5em;
+  margin-bottom: 1em;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .setBox .pauseBox > div p {
+  min-height: 6rem;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .setBox b.flexTitle {
+  position: absolute;
+  bottom: -5em;
+  right: 1em;
+  font-size: 2em;
+  color: #505050;
+}
+@media (max-width: 650px) {
+  article.casesBox .blockL section.listCases .flexGroup section.groupBox .setBox b.flexTitle {
+    bottom: auto;
+    right: auto;
+    position: relative;
+  }
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .setBox .visibilityBox > div {
+  min-width: calc( 240px - 1em );
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 0.5em;
+  margin-bottom: 1em;
+}
+article.casesBox .blockL section.listCases .flexGroup section.groupBox .setBox .visibilityBox > div p {
+  min-height: 3rem;
+}
+article.casesBox .blockR {
+  background-color: #14151c;
+  border-left: 2px solid rgba(42, 42, 57, 0.5);
+}
+article.casesBox .blockR section.socCases {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #2a2a39;
+  padding: 1em;
+  margin: 0.5em;
+  border-radius: 4px;
+}
+article.casesBox .blockR section.socCases h2 {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.25em;
+  color: #dedede;
+  padding-bottom: 0.5em;
+}
+article.casesBox .blockR section.socCases h2 span.material-icons {
+  font-size: 1.5em;
+}
+article.casesBox .blockR section.socCases h2 b {
+  padding-left: 0.5em;
+  word-break: break-all;
+}
+article.casesBox .blockR section.socCases h2 small, article.casesBox .blockR section.socCases h2 a {
+  font-size: 0.7em;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #25C7A2;
+  padding: 0.15em 0.75em;
+  border-radius: 0.25em;
+}
+article.casesBox .blockR section.socCases .detailed h3 {
+  font-size: 1.2em;
+}
+article.casesBox .blockR section.socCases .detailed p {
+  font-size: 0.9em;
+  word-break: break-all;
+}
+article.casesBox .blockR section.socCases .detailed p .event {
+  background-color: #cccccc;
+  color: #090a0d;
+  border-radius: 4px;
+  padding: 0.15em 0.5em;
+}
+article.casesBox .blockR section.socCases .detailed p .virusTotal {
+  display: inline-block;
+  background-color: #1B96F1;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 0.15em 0.5em;
+  cursor: pointer;
+  margin-top: 1em;
+}
+article.casesBox .blockR section.socCases .detailed ul {
+  margin-top: 1em;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 0.9em;
+  border: 1px solid #3f3f3f;
+  border-bottom: 0px solid #3f3f3f;
+}
+article.casesBox .blockR section.socCases .detailed ul li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-bottom: 1px solid #3f3f3f;
+}
+article.casesBox .blockR section.socCases .detailed ul li:nth-child(2n+1) {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+article.casesBox .blockR section.socCases .detailed ul li b {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100px;
+          flex: 0 0 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.35em 0.5em;
+}
+article.casesBox .blockR section.socCases .detailed ul li span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-left: 1px solid #3f3f3f;
+  padding: 0.35em 0.5em;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  word-break: break-word;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+article.casesBox .blockR section.socCases .detailed ul li span i ~ i::before {
+  content: "、";
+  display: inline;
+}
+article.casesBox .blockR section.socCases .detailed ul li span e {
+  padding: 0.15em 0.25em;
+  border-radius: 4px;
+  margin-right: 0.5em;
+  margin: 0.25em;
+  color: #505050;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+article.casesBox .blockR section.socCases .detailed ul li span e i {
+  margin-right: 0.15em;
+}
+article.casesBox .blockR section.socCases .detailed ul li span e.pick {
+  background-color: #25C7A2;
+  color: #2a2a39;
+}
+article.casesBox .blockR section.socCases .detailed ul li span e.pick i {
+  color: #16181f;
+}
+article.casesBox .blockR section.socCases .detailed ul li div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-left: 1px solid #3f3f3f;
+  padding: 0.35em 0.5em;
+}
+article.casesBox .blockR section.socCases .detailed ul li a {
+  color: #1B96F1;
+}
+article.casesBox .blockR section.socCases .detailed ul li small {
+  background-color: #ffec39;
+  color: #1e212b;
+  padding: 0.15em 0.75em;
+  border-radius: 4px;
+  margin-left: 1em;
+}
+article.casesBox .blockR section.socCases .statusBox {
+  text-align: center;
+  padding: 1em 1em;
+  font-size: 1.25em;
+  border-radius: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+article.casesBox .blockR section.socCases .statusBox + .statusBox {
+  margin-top: 1em;
+}
+article.casesBox .blockR section.socCases .statusBox.tag_1 {
+  color: #1e212b;
+  background-color: #25C7A2;
+  border: 2px solid #43dcb9;
+}
+article.casesBox .blockR section.socCases .statusBox.tag_2 {
+  color: #ffffff;
+  background-color: #fc3848;
+  border: 2px solid #fd6a76;
+}
+article.casesBox .blockR section.socCases .statusBox.tag_3 {
+  color: #1e212b;
+  background-color: #ffec39;
+  border: 2px solid #fff16c;
+}
+article.casesBox .blockR section.socCases .statusBox b {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5em;
+}
+article.casesBox .blockR section.socCases .statusClose {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #1B96F1;
+  width: 84%;
+  margin: 1.5em auto 1em auto;
+  border-radius: 0.25em;
+  color: #ffffff;
+  cursor: pointer;
+  height: 2.5em;
+}
+article.casesBox .blockR section.socCases .statusClose span.material-icons {
+  margin-right: 0.5em;
+  padding: 0.5em 1em 0.5em 0.5em;
+}
+article.casesBox .blockR section.socCases .statusClose e {
+  font-size: 0.9em;
+  border-left: 1px solid #2a2a39;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  width: 100%;
+  border-top-right-radius: 0.25em;
+  border-bottom-right-radius: 0.25em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+article.casesBox .blockR section.socCases .statusClose:hover e {
+  background-color: #0d7bcc;
+}
+article.casesBox .blockR section.socCases ul.spiteList, article.casesBox .blockR section.socCases ul.ipList, article.casesBox .blockR section.socCases ul.endpointList {
+  font-size: 0.9em;
+  border: 1px solid #3f3f3f;
+}
+article.casesBox .blockR section.socCases ul.spiteList li, article.casesBox .blockR section.socCases ul.ipList li, article.casesBox .blockR section.socCases ul.endpointList li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+}
+article.casesBox .blockR section.socCases ul.spiteList li span, article.casesBox .blockR section.socCases ul.ipList li span, article.casesBox .blockR section.socCases ul.endpointList li span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0.5em;
+  word-break: break-all;
+}
+article.casesBox .blockR section.socCases ul.spiteList li span:nth-child(1), article.casesBox .blockR section.socCases ul.ipList li span:nth-child(1), article.casesBox .blockR section.socCases ul.endpointList li span:nth-child(1) {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+article.casesBox .blockR section.socCases ul.spiteList li span:nth-child(2), article.casesBox .blockR section.socCases ul.ipList li span:nth-child(2), article.casesBox .blockR section.socCases ul.endpointList li span:nth-child(2) {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+article.casesBox .blockR section.socCases ul.spiteList li span:nth-child(3), article.casesBox .blockR section.socCases ul.ipList li span:nth-child(3), article.casesBox .blockR section.socCases ul.endpointList li span:nth-child(3) {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+article.casesBox .blockR section.socCases ul.spiteList li span:nth-child(4), article.casesBox .blockR section.socCases ul.ipList li span:nth-child(4), article.casesBox .blockR section.socCases ul.endpointList li span:nth-child(4) {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+article.casesBox .blockR section.socCases ul.spiteList li span b, article.casesBox .blockR section.socCases ul.ipList li span b, article.casesBox .blockR section.socCases ul.endpointList li span b {
+  background-color: #ffec39;
+  color: #1e212b;
+  padding: 0.25em 0.5em;
+  border-radius: 4px;
+  font-size: 0.7em;
+  margin: 0.25em;
+}
+article.casesBox .blockR section.socCases ul.spiteList li span b.pick_ok, article.casesBox .blockR section.socCases ul.ipList li span b.pick_ok, article.casesBox .blockR section.socCases ul.endpointList li span b.pick_ok {
+  background-color: #25C7A2;
+  color: #ffffff;
+}
+article.casesBox .blockR section.socCases ul.spiteList li + li, article.casesBox .blockR section.socCases ul.ipList li + li, article.casesBox .blockR section.socCases ul.endpointList li + li {
+  border-top: 1px solid #3f3f3f;
+}
+article.casesBox .blockR section.socCases ul.spiteList li:nth-child(2n+1), article.casesBox .blockR section.socCases ul.ipList li:nth-child(2n+1), article.casesBox .blockR section.socCases ul.endpointList li:nth-child(2n+1) {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+article.casesBox .blockR section.socCases ul.spiteList li:nth-child(1), article.casesBox .blockR section.socCases ul.ipList li:nth-child(1), article.casesBox .blockR section.socCases ul.endpointList li:nth-child(1) {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #16181f;
+  border-bottom: 1px solid #3f3f3f;
+}
+article.casesBox .blockR section.socCases ul.spiteList li.goPage, article.casesBox .blockR section.socCases ul.ipList li.goPage, article.casesBox .blockR section.socCases ul.endpointList li.goPage {
+  display: block;
+  width: 100%;
+  text-align: right;
+  padding: 0;
+  background-color: #16181f;
+}
+article.casesBox .blockR section.socCases ul.spiteList li.goPage b, article.casesBox .blockR section.socCases ul.ipList li.goPage b, article.casesBox .blockR section.socCases ul.endpointList li.goPage b {
+  display: inline-block;
+  cursor: pointer;
+  margin: 0.4em 0.25em;
+}
+article.casesBox .blockR section.socCases ul.spiteList li.goPage b span, article.casesBox .blockR section.socCases ul.ipList li.goPage b span, article.casesBox .blockR section.socCases ul.endpointList li.goPage b span {
+  padding: 0.25em;
+  background-color: #3f3f3f;
+  border-radius: 50%;
+  color: #cccccc;
+  width: 2em;
+  height: 2em;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+article.casesBox .blockR section.socCases ul.spiteList li.goPage b span.color_3, article.casesBox .blockR section.socCases ul.ipList li.goPage b span.color_3, article.casesBox .blockR section.socCases ul.endpointList li.goPage b span.color_3 {
+  cursor: auto;
+  background-color: #25C7A2;
+  color: #16181f;
+}
+article.casesBox .blockR section.socCases ul.ipList li {
+  padding: 0.5em;
+  word-break: break-all;
+}
+article.casesBox .blockR section.socCases ul.noteList {
+  position: relative;
+  min-height: 300px;
+  padding-top: 0.5em;
+  overflow: hidden;
+  border: 1px solid #1e212b;
+  border-radius: 0.5em;
+  background-color: rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 0 2px #3f3f3f;
+          box-shadow: 0 0 2px #3f3f3f;
+}
+article.casesBox .blockR section.socCases ul.noteList li {
+  position: relative;
+  margin-bottom: 0.25em;
+  margin-top: 0.25em;
+}
+article.casesBox .blockR section.socCases ul.noteList li span.noteUser {
+  padding: 0.25em 0.5em 0.25em 0.25em;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+article.casesBox .blockR section.socCases ul.noteList li span.noteUser span.material-icons {
+  font-size: 2em;
+}
+article.casesBox .blockR section.socCases ul.noteList li span.noteUser span.noteName {
+  font-size: 0.7em;
+}
+article.casesBox .blockR section.socCases ul.noteList li span.noteSay {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0.5em 0.5em 1.25em 0.5em;
+  background-color: #1a1c25;
+  border-radius: 4px;
+  color: #dedede;
+  z-index: 1;
+  word-break: break-all;
+}
+article.casesBox .blockR section.socCases ul.noteList li span.noteSay::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  font-size: 0.8em;
+  left: -1em;
+  top: 1em;
+  border-style: solid;
+  border-width: 1em 2em 1em 0;
+  border-color: transparent #1a1c25 transparent transparent;
+  z-index: -1;
+}
+article.casesBox .blockR section.socCases ul.noteList li span.noteTime {
+  position: absolute;
+  right: 2em;
+  bottom: 0.15em;
+  font-size: 0.7em;
+  color: #666666;
+  z-index: 1;
+}
+article.casesBox .blockR section.socCases ul.noteList li.rowReverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+article.casesBox .blockR section.socCases ul.noteList li.rowReverse span.noteSay {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  word-break: break-word;
+}
+article.casesBox .blockR section.socCases ul.noteList li.rowReverse span.noteSay::before {
+  left: auto;
+  right: -1em;
+  border-width: 1em 0 1em 2em;
+  border-color: transparent transparent transparent #1a1c25;
+}
+article.casesBox .blockR section.socCases ul.noteList li.rowReverse span.noteTime {
+  right: auto;
+  left: 2em;
+}
+article.casesBox .blockR section.socCases ul.noteList li.talkBox {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  padding: 1em;
+  background-color: #2a2a39;
+  margin-bottom: 0;
+  border-top: 1px solid #1e212b;
+}
+@media (max-width: 650px) {
+  article.casesBox .blockR section.socCases ul.noteList li.talkBox {
+    padding: 1em;
+  }
+}
+article.casesBox .blockR section.socCases ul.noteList li.talkBox textarea {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 0.9em;
+  padding: 0.5em;
+  border: 1px solid #16181f;
+  background-color: #22222e;
+  color: #cccccc;
+  min-height: 52px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+article.casesBox .blockR section.socCases ul.noteList li.talkBox button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 80px;
+          flex: 0 0 80px;
+  min-height: 52px;
+}
+article.casesBox .blockR section.socCases ul.noteList li.talkBox button.postBtn {
+  background-color: #1B96F1;
+  color: #cccccc;
+  border: 1px solid #16181f;
+  border-radius: 0px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+article.casesBox .blockR section.socCases ul.noteList li.talkBox span.noteTime {
+  right: auto;
+  left: 2em;
+}
+article.casesBox .blockR section.socCases ul.noteList li ul.notBox {
+  max-height: 50vh;
+  overflow: auto;
+  overflow-x: hidden;
+  margin-bottom: 88px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+article.casesBox .blockR section.socCases ul.noteList li ul.notBox li.is_top {
+  padding-bottom: 0.15em;
+  padding-top: 0.25em;
+  border-bottom: 1px solid rgba(37, 199, 162, 0.4);
+  border-radius: 4px;
+  background-color: rgba(37, 199, 162, 0.1);
+}
+article.casesBox .blockR section.socCases ul.noteList li ul.notBox li.is_top::after {
+  content: "置頂";
+  background-color: #6ee4c9;
+  color: #1e212b;
+  padding: 0.1em 0.75em 0.25em 0.75em;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  font-size: 0.5em;
+  z-index: 2;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 4px #15715c;
+          box-shadow: 0 0 4px #15715c;
+}
+article.casesBox .blockR section.socCases ul.noteList li ul.notBox li.is_top span.noteSay {
+  color: #1e212b;
+  background-color: #25C7A2;
+}
+article.casesBox .blockR section.socCases ul.noteList li ul.notBox li.is_top span.noteSay::before {
+  border-color: transparent #25C7A2 transparent transparent;
+}
+article.casesBox .blockR section.socCases .imgBox {
+  position: relative;
+}
+article.casesBox .blockR section.socCases .imgBox.pos_flex {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+article.casesBox .blockR section.socCases .imgBox.pos_flex > div {
+  margin-top: 2em;
+  height: calc( 100% - 4em );
+  overflow: auto;
+  display: block;
+  text-align: center;
+}
+article.casesBox .blockR section.socCases .imgBox.pos_flex > div img {
+  min-width: 1600px;
+  cursor: auto;
+}
+article.casesBox .blockR section.socCases .imgBox.pos_flex > div .clo {
+  width: 3em;
+  height: 3em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #f12939;
+  color: #ffffff;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+article.casesBox .blockR section.socCases .imgBox.pos_flex > div .clo::before {
+  content: "X";
+  font-size: 2em;
+  display: block;
+}
+article.casesBox .blockR section.socCases .imgBox > div {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+article.casesBox .blockR section.socCases .imgBox > div img {
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.home .infoBox section {
+  padding: 0.5;
+}
+.home section.cases {
+  background-color: transparent;
+  padding: 0;
+  height: -webkit-fill-available;
+}
+.home section.cases .casesfox {
+  background-color: #2a2a39;
+  padding: 1em;
+  border-radius: 4px;
+}
+.home section.cases .casesfox + .casesfox {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow: hidden;
+  margin-top: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.home section.cases .casesfox ul.casesData {
+  overflow: auto;
+}
+.home section.cases .casesfox section.socChart {
+  padding: 0;
+  margin: 0;
+  height: auto;
+}
+.home section.cases .casesfox section.socChart h4.title {
+  position: relative;
+  top: auto;
+  left: auto;
+}
+.home section.Announcement {
+  -webkit-box-flex: 2 !important;
+      -ms-flex: 2 !important;
+          flex: 2 !important;
+}
+.home section.Announcement .casesfox {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-height: 160px;
+  overflow: hidden;
+}
+.home section.Announcement .casesfox + .casesfox {
+  max-height: 11em;
+}
+.home section.Announcement .casesfox .newsData {
+  overflow: auto;
+  height: calc(100% - 2.5em);
+}
+.home section.Announcement .downloadTag {
+  padding: 0.15em 0.5em;
+  background-color: #25C7A2;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+  margin-left: 0.5em;
+}
+
+.cases article.casesBox .blockL section.listCases .filterBox e, .cases article.casesBox .blockL section.listCases .filterBox a {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  border-left: none;
+  background-color: transparent;
+}
+
+.login #loginApp.body {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+article.login {
+  max-width: 500px;
+}
+article.login .coreLogo {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+article.login .coreLogo img {
+  max-width: 100px;
+}
+article.login section.logoIcon {
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+article.login section.logoIcon img {
+  width: 80%;
+  max-width: 240px;
+}
+article.login section.loginContent {
+  max-width: 360px;
+  padding: 1em 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+article.login section.loginContent .inputBox, article.login section.loginContent .btnBox, article.login section.loginContent .footInfo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.25em;
+}
+article.login section.loginContent .inputBox.userId, article.login section.loginContent .inputBox.userPs, article.login section.loginContent .btnBox.userId, article.login section.loginContent .btnBox.userPs, article.login section.loginContent .footInfo.userId, article.login section.loginContent .footInfo.userPs {
+  position: relative;
+}
+article.login section.loginContent .inputBox.userId span.material-icons, article.login section.loginContent .inputBox.userPs span.material-icons, article.login section.loginContent .btnBox.userId span.material-icons, article.login section.loginContent .btnBox.userPs span.material-icons, article.login section.loginContent .footInfo.userId span.material-icons, article.login section.loginContent .footInfo.userPs span.material-icons {
+  position: absolute;
+  right: 0.5em;
+  top: 0.5em;
+  color: #1e212b;
+  font-size: 1.5em;
+}
+article.login section.loginContent .inputBox input, article.login section.loginContent .inputBox button, article.login section.loginContent .btnBox input, article.login section.loginContent .btnBox button, article.login section.loginContent .footInfo input, article.login section.loginContent .footInfo button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  display: inline-block;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  border: 1px solid #1e212b;
+}
+article.login section.loginContent .inputBox button, article.login section.loginContent .btnBox button, article.login section.loginContent .footInfo button {
+  background-color: #25C7A2;
+  color: #ffffff;
+}
+article.login section.loginContent .inputBox small, article.login section.loginContent .btnBox small, article.login section.loginContent .footInfo small {
+  color: #cccccc;
+}
+
+.isDefault {
+  background-color: #ffffff;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.host .dataInfo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.host .dataInfo ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.host .dataInfo ul li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: #cccccc;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+.host .dataInfo ul li span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 3.5em;
+  height: 3.5em;
+  min-width: 3.5em;
+  text-align: center;
+  font-size: 1.35em;
+  color: #cccccc;
+  font-weight: bolder;
+  line-height: 3.2em;
+  border-radius: 3em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.host .dataInfo ul li span small, .host .dataInfo ul li span i {
+  line-height: 1.2em;
+}
+.host .dataInfo ul li span i {
+  border-bottom: 2px solid #cccccc;
+}
+.host .dataInfo ul li:nth-child(1) span {
+  border: 4px solid #25C7A2;
+}
+.host .dataInfo ul li:nth-child(2) span {
+  border: 4px solid #ffec39;
+}
+.host .dataInfo ul li:nth-child(3) span {
+  border: 4px solid #fc3848;
+}
+.host .dataInfo ul li:nth-child(4) span {
+  border: 4px solid #1B96F1;
+}
+.host .dataInfo ul li b {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0.5rem;
+  font-size: 0.95em;
+  max-width: 6em;
+  color: #cccccc;
+}
+@media (min-width: 1365px) {
+  .host .dataInfo ul li {
+    max-width: 240px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .host .dataInfo ul li b {
+    max-width: 100%;
+  }
+}
+.host ul.spiteList li span {
+  -webkit-box-flex: 1 !important;
+      -ms-flex: 1 !important;
+          flex: 1 !important;
+}
+.host ul.spiteList li + li {
+  cursor: pointer;
+}
+.host ul.spiteList li + li:hover {
+  background-color: #cccccc !important;
+  color: #2a2a39 !important;
+}
+.host ul.selectUl .checkbox {
+  word-break: break-all;
+  height: auto !important;
+  min-height: 32px;
+}
+
+.pageSizeList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.pageSizeList label {
+  margin-right: 0.5em;
+}
+.pageSizeList ul.pagesBox {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-bottom: 0;
+  width: 17.5em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 0 !important;
+}
+.pageSizeList ul.pagesBox > li {
+  width: 2em;
+  height: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #3f3f3f !important;
+  pointer-events: auto;
+  padding: 0 !important;
+}
+.pageSizeList ul.pagesBox > li.indexPg {
+  background-color: #3f3f3f;
+  color: #2a2a39;
+  min-width: 2em;
+  max-width: 3.5em;
+  width: 3.5em;
+}
+.pageSizeList ul.pagesBox > li.indexPg input {
+  text-align: center;
+  border: 0px solid #3f3f3f;
+  width: 100%;
+  height: 100%;
+}
+.pageSizeList ul.pagesBox > li span, .pageSizeList ul.pagesBox > li b {
+  position: relative;
+  color: #cccccc;
+  font-size: 1.5em;
+  padding: 0;
+  right: auto;
+  overflow: visible;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.pageSizeList ul.pagesBox > li b {
+  font-size: 1em;
+}
+.pageSizeList .pageIndex {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.pageSizeList .pageIndex input {
+  width: 4em;
+}
+.pageSizeList .pageall {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  color: #909090;
+  font-size: 0.6em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hideMe {
+  opacity: 0.4;
+  background-color: black;
+  display: none;
+  visibility: hidden;
+}
+
+.malwares article.casesBox .blockL section.listCases ul li p.anti {
+  padding-left: 0;
+}
+.malwares article.casesBox .blockL section.listCases ul li p.anti span {
+  max-width: none;
+}
+
+.content.events .body#app .blockR ul.endpointList {
+  position: relative;
+  font-size: 0.9em;
+}
+.content.events .body#app .blockR ul.endpointList li:nth-child(1) {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: #16181f;
+  border-bottom: 1px solid #3f3f3f;
+  color: #25C7A2;
+}
+.content.events .body#app .blockR ul.endpointList li:nth-child(1) span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.content.events .body#app .blockR ul.endpointList li + li > span:nth-child(1) {
+  text-align: center;
+  word-break: break-word;
+}
+.content.events .body#app .blockR ul.endpointList li + li > span:nth-child(2) {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 0.8em;
+}
+.content.events .body#app .blockR ul.endpointList li + li > span:nth-child(2) p {
+  font-size: 1.3em;
+  border-bottom: 1px solid #3f3f3f;
+  width: 100%;
+}
+.content.events .body#app .blockR ul.endpointList li + li > span:nth-child(3) {
+  font-size: 0.9em;
+}
+.content.events .body#app .blockR ul.endpointList li + li > span .sAdd:hover {
+  cursor: alias;
+  color: #cccccc;
+  text-decoration: underline;
+}
+.content.events .body#app .blockR ul.endpointList li + li > span span.material-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.content.events .body#app .blockR ul.endpointList li span:nth-child(1) {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+.content.events .body#app .blockR ul.endpointList li span:nth-child(1) i {
+  cursor: pointer;
+}
+.content.events .body#app .blockR ul.endpointList li span:nth-child(2) {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+.content.events .body#app .blockR ul.endpointList li span:nth-child(3) {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+.content.events .body#app .blockR ul.endpointList li span:nth-child(4) {
+  -webkit-box-flex: 7;
+      -ms-flex: 7;
+          flex: 7;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.content.events .body#app .blockR ul.endpointList li span:nth-child(4) > span {
+  padding: 0;
+  width: 100%;
+  padding-right: 2rem;
+  position: relative;
+}
+.content.events .body#app .blockR ul.endpointList li span:nth-child(4) > span::before, .content.events .body#app .blockR ul.endpointList li span:nth-child(4) > span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+}
+.content.events .body#app .blockR ul.endpointList li span:nth-child(4) > span::before {
+  width: 0;
+  height: 50%;
+  border-left: 2px solid #25C7A2;
+  bottom: 0;
+  left: 1em;
+}
+.content.events .body#app .blockR ul.endpointList li span:nth-child(4) > span + span {
+  padding-left: 2rem;
+  padding-right: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.content.events .body#app .blockR ul.endpointList li span:nth-child(4) > span + span::before, .content.events .body#app .blockR ul.endpointList li span:nth-child(4) > span + span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+}
+.content.events .body#app .blockR ul.endpointList li span:nth-child(4) > span + span::before {
+  width: 0;
+  height: 50%;
+  border-left: 2px solid #25C7A2;
+  top: 0;
+  left: 1em;
+}
+.content.events .body#app .blockR ul.endpointList li span:nth-child(4) > span + span::after {
+  width: 1.2rem;
+  height: 0;
+  top: 50%;
+  left: 1rem;
+  border-bottom: 2px solid #25C7A2;
+}
+.content.events .body#app .blockR ul.endpointList li span:nth-child(4) > span + span .titleIcon {
+  width: 3rem !important;
+  height: 3rem !important;
+}
+.content.events .body#app .blockR ul.endpointList li span:nth-child(4) > span + span .titleIcon::after {
+  content: "✚";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  background-color: #cccccc;
+  top: 1rem;
+  left: -1.75rem;
+  border-radius: 50%;
+  border: 2px solid #3f3f3f;
+}
+.content.events .body#app .blockR ul.endpointList li span:nth-child(4) > span + span .titleIcon .material-icons {
+  font-size: 2.5rem;
+}
+.content.events .body#app .blockR ul.endpointList li span:nth-child(4) .dataInit span.Straight {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-align: left;
+  font-size: 0.9em;
+  width: 100%;
+}
+.content.events .body#app .blockR ul.endpointList li span .dataInit {
+  height: 100%;
+  border-left: 1px dashed #3f3f3f;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 0.5rem;
+}
+.content.events .body#app .blockR ul.endpointList li span .dataInit p {
+  padding: 0.1em 0.25em 0.25em 0.25em;
+}
+.content.events .body#app .blockR ul.endpointList li span .dataInit p:nth-child(2n) {
+  background-color: rgba(204, 204, 204, 0.05);
+  width: 100%;
+}
+.content.events .body#app .blockR ul.endpointList li span .dataInit p e {
+  color: #cccccc;
+}
+.content.events .body#app .blockR ul.endpointList .titleIcon {
+  position: relative;
+  z-index: 2;
+  width: 2rem;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #25C7A2;
+  color: #2a2a39;
+  border-radius: 50%;
+}
+.antiWhite {
+  background-color: #909090;
+  color: #2a2a39;
+  padding: 0.15em 0.5em;
+  border-radius: 4px;
+}
+
+ul.endpointList li span b {
+  background-color: rgba(0, 0, 0, 0) !important;
+  color: #909090 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 0.75rem !important;
+}
+
+.openBtn {
+  text-align: center;
+  padding: 0.25em 1em;
+  background-color: rgba(37, 199, 162, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #25C7A2;
+}
+.openBtn span {
+  width: 1em;
+  height: 1em;
+  color: #cccccc;
+}
+
+.openMe {
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+  background-color: rgba(0, 0, 0, 0.15) !important;
+  border-radius: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.handwriting {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.handwriting.flexKeyboard {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: auto;
+  bottom: 5%;
+  left: 0;
+}
+.handwriting.flexKeyboard textarea {
+  width: 100%;
+  max-width: 100%;
+}
+.handwriting.flexKeyboard .container {
+  width: 70% !important;
+  padding: 2em !important;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 1em;
+  -webkit-box-shadow: inset 0 0 50px black;
+          box-shadow: inset 0 0 50px black;
+  border: 2px solid #1e212b;
+}
+.handwriting .container {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.handwriting .keyboard {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 1em;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+@media (max-width: 650px) {
+  .handwriting .keyboard {
+    display: none !important;
+  }
+}
+
+#app .statusBox.timeTree {
+  text-align: left;
+  position: relative;
+  margin-bottom: 1em;
+  display: block !important;
+}
+#app .statusBox.timeTree::after {
+  content: "";
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: #3f3f3f;
+  position: absolute;
+  bottom: -0.25em;
+  left: 1.35em;
+  border-radius: 50%;
+}
+#app .statusBox.timeTree .timeBox {
+  padding-top: 0.5em;
+  position: relative;
+}
+#app .statusBox.timeTree .timeBox::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
+  border-left: 6px solid #3f3f3f;
+  position: absolute;
+  bottom: -1em;
+  left: 1em;
+  z-index: 1;
+}
+#app .statusBox.timeTree .timeBox::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 1em;
+  height: 0;
+  border-bottom: 4px solid #3f3f3f;
+  z-index: 1;
+  left: 1em;
+  bottom: 4em;
+}
+#app .statusBox.timeTree .timeBox b.timeTag {
+  position: relative;
+  z-index: 2;
+  font-size: 0.9em;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  width: auto;
+  background-color: #fc3848;
+  border-radius: 4px;
+  margin-bottom: 0.5em;
+  color: #ffffff;
+  left: -1.75em;
+}
+#app .statusBox.timeTree .timeBox .contentBox {
+  position: relative;
+  text-align: left;
+  padding: 0.5em 1em 1em 1em;
+  margin-left: 2em;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 0.5em;
+  border: 2px solid #3f3f3f;
+}
+#app .statusBox.timeTree .timeBox .contentBox h4 {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 2px solid #3f3f3f;
+}
+#app .statusBox.timeTree .timeBox .contentBox h4 e {
+  font-size: 1.25em;
+  color: #cccccc;
+}
+#app .statusBox.timeTree .timeBox .contentBox h4 small {
+  position: absolute;
+  right: 0;
+  font-size: 0.6em;
+}
+#app .statusBox.timeTree .timeBox .contentBox p {
+  padding-top: 0.5em;
+  padding-left: 3.5em;
+  font-size: 0.8em;
+  word-break: break-all;
+}
+#app .statusBox.timeTree .timeBox .contentBox span.material-icons {
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 3.5em;
+  left: 1.25em;
+  padding: 1em;
+}
+
+.title_1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.title_1 h4 {
+  padding: 2em;
+  font-size: 2em;
+  color: #000000;
+}
+
+.malwares article.casesBox .blockL section.listCases ul li.pick {
+  background-color: rgba(255, 255, 255, 0.25);
+  position: relative;
+}
+
+.titleBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5em 0.5em 0em 1em;
+}
+.titleBar span.material-icons {
+  margin: 0 0.5em 0 0;
+}
+
+.vDataPick {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 0.5em;
+}
+.vDataPick > div.flex.justify-center.items-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  background-color: rgba(63, 63, 63, 0.6);
+  border-radius: 4px;
+  border: 2px solid #3f3f3f;
+  position: relative;
+  max-height: 2em;
+}
+.vDataPick > div.flex.justify-center.items-center label.inputEvent {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+.vDataPick > div.flex.justify-center.items-center input ~ input {
+  pointer-events: none;
+}
+.vDataPick > div.flex.justify-center.items-center input.border.px-2.py-1.w-32.rounded {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  max-width: 45%;
+  font-size: 0.6em;
+  text-align: center;
+  background-color: rgba(63, 63, 63, 0);
+  border: none;
+  padding: 0.5em;
+  color: #cccccc;
+}
+.vDataPick > div.flex.justify-center.items-center svg.w-4.h-4.mx-2 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 10%;
+          flex: 0 0 10%;
+  padding: 0.25em;
+}
+.vDataPick .vc-popover-content-wrapper.is-interactive {
+  z-index: 10;
+}
+
+.vc-day {
+  max-height: 17em !important;
+}
+
+.vc-pane-container > div > div {
+  overflow: auto;
+}
+.vc-pane-container .c-grid-cell {
+  max-height: 17em !important;
+}
+.vc-pane-container > div > div > div > div > div {
+  max-height: 17em !important;
+}
+
+.selectBox {
+  padding: 0.5em;
+}
+.selectBox .tabBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #3f3f3f;
+}
+.selectBox .tabBox b {
+  border: 1px solid #3f3f3f;
+  border-bottom: none;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding: 0.25em 1em 0 1em;
+  cursor: pointer;
+}
+.selectBox .tabBox b.pick {
+  background-color: rgba(63, 63, 63, 0.25);
+  color: #cccccc;
+}
+.selectBox .insideBox, .selectBox .eventBox {
+  padding: 1em;
+  border: 1px solid #3f3f3f;
+  border-top: none;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: rgba(63, 63, 63, 0.15);
+}
+.selectBox .insideBox p, .selectBox .eventBox p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.selectBox .insideBox p + p, .selectBox .eventBox p + p {
+  padding-top: 1em;
+}
+.selectBox .insideBox p e, .selectBox .eventBox p e {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 7em;
+          flex: 0 0 7em;
+  font-size: 0.9em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.selectBox .insideBox p input, .selectBox .insideBox p select, .selectBox .eventBox p input, .selectBox .eventBox p select {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  font-size: 0.9em;
+  width: 60%;
+  min-width: 55%;
+  background-color: rgba(63, 63, 63, 0.6);
+  border-radius: 4px;
+  border: 2px solid #3f3f3f;
+  padding: 0.5em;
+  color: #cccccc;
+}
+.selectBox .insideBox p input ~ input, .selectBox .insideBox p input ~ select, .selectBox .insideBox p select ~ input, .selectBox .insideBox p select ~ select, .selectBox .eventBox p input ~ input, .selectBox .eventBox p input ~ select, .selectBox .eventBox p select ~ input, .selectBox .eventBox p select ~ select {
+  margin-top: 0.25em;
+}
+.selectBox .insideBox p input option, .selectBox .insideBox p select option, .selectBox .eventBox p input option, .selectBox .eventBox p select option {
+  background-color: #3f3f3f;
+  padding: 0.25em;
+}
+
+.btnBox {
+  padding: 1em 0.5em;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.btnBox button.btn {
+  border: 1px solid #2a2a39;
+  padding: 0.5em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.btnBox button.btn:hover {
+  color: #cccccc;
+}
+.btnBox button.btn.sty_1 {
+  background-color: #fc3848;
+}
+.btnBox button.btn.sty_1:hover {
+  background-color: #fc1f31;
+}
+.btnBox button.btn.sty_2 {
+  background-color: #ffec39;
+}
+.btnBox button.btn.sty_2:hover {
+  background-color: #ffea20;
+}
+.btnBox button.btn.sty_3 {
+  background-color: #25C7A2;
+}
+.btnBox button.btn.sty_3:hover {
+  background-color: #19866d;
+}
+.btnBox button.btn.sty_4 {
+  background-color: #1B96F1;
+}
+.btnBox button.btn.sty_4:hover {
+  background-color: #0b6cb4;
+}
+
+hr {
+  width: 100%;
+  height: 0;
+  border: none;
+  border-bottom: 1px dashed #3f3f3f;
+}
+hr ~ p {
+  padding-top: 0 !important;
+}
+
+.searchInfo {
+  padding: 0.5em;
+  position: relative;
+}
+.searchInfo textarea, .searchInfo .showInfo {
+  font-size: 0.9em;
+  width: 100%;
+  max-width: 100%;
+  max-height: 8em;
+  min-width: 100%;
+  min-height: 6em;
+  height: 6em;
+  border-radius: 4px;
+  background-color: rgba(63, 63, 63, 0.5);
+  border-color: #3f3f3f;
+  padding: 0.5em;
+  color: #cccccc;
+}
+
+.events .flexKeyboard .filterword {
+  top: -240px;
+  left: 50%;
+  margin-left: -170px;
+}
+.events .filterword {
+  color: #cccccc;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  display: block;
+  width: 330px;
+  max-width: 340px;
+  max-height: 255px;
+  height: auto;
+  background-color: #3f3f3f;
+  font-size: 0.9em;
+  border: 2px solid #cccccc;
+  border-radius: 4px;
+}
+.events .filterword b {
+  background-color: #2a2a39;
+  display: block;
+  padding: 0.25em 1em;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  position: relative;
+}
+.events .filterword b .clo {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: red;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.events .filterword select.filDD {
+  width: 100%;
+  background-color: #3f3f3f;
+}
+.events .filterword select.filDD option {
+  width: 100%;
+  color: #cccccc;
+  padding: 0.25em 1em;
+}
+.events .filterword select.filDD option:checked {
+  color: #3f3f3f;
+}
+
+input[disabled] {
+  opacity: 0.4;
+}
+
+.maxH {
+  max-height: 50vh;
+  overflow: auto;
+}
+
+.footerBox {
+  width: 100%;
+  position: relative;
+  position: sticky;
+  z-index: 10;
+  bottom: 0;
+  background-color: #16181f;
+  padding: 0.25em 1em;
+  border-top: 1px solid #3f3f3f;
+}
+.footerBox .descAsc {
+  position: absolute;
+  left: 1.5em;
+  top: 0.8em;
+  font-size: 0.8em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+.footerBox .descAsc span {
+  padding: 0 0.25em;
+}
+.footerBox ul.pageFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.footerBox ul.pageFooter li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 2em;
+  border: 1px solid #3f3f3f;
+  padding: 0em;
+  width: 2em;
+  max-width: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.footerBox ul.pageFooter li:nth-child(2) {
+  max-width: 3em;
+}
+.footerBox ul.pageFooter li span {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  padding: 0.25em 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+.footerBox ul.pageFooter li input {
+  width: 100%;
+  height: 100%;
+  padding: 0.25em 0em;
+  border: none;
+  background-color: #cccccc;
+  color: #1e212b;
+  text-align: center;
+}
+.footerBox .pageDetal {
+  position: absolute;
+  right: 1em;
+  top: 0.8em;
+  font-size: 0.8em;
+}
+.footerBox .pageDetal span {
+  padding: 0 0.5em;
+}
+.footerBox .pageDetal a {
+  color: #cccccc;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.footerBox small {
+  padding-top: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.color_1 {
+  color: #fc3848;
+}
+
+.color_2 {
+  color: #ffec39;
+}
+
+.color_3 {
+  color: #25C7A2;
+}
+
+.color_4 {
+  color: #1B96F1;
+}
+
+section.socChart canvas.maxHeight {
+  max-height: -webkit-max-content !important;
+  max-height: -moz-max-content !important;
+  max-height: max-content !important;
+}
+
+article {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section {
+  min-width: 284px;
+}
+section.maxW200 {
+  min-width: 200px;
+}
+@media (min-width: 501px) and (max-width: 845px) {
+  section.maxW200 {
+    max-width: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+section.maxW240 {
+  min-width: 240px;
+}
+@media (min-width: 501px) and (max-width: 845px) {
+  section.maxW240 {
+    max-width: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+.maxW200 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 200px;
+          flex: 0 0 200px;
+  max-width: 200px;
+}
+@media (max-width: 650px) {
+  .maxW200 {
+    max-width: 100%;
+  }
+}
+
+.maxW240 {
+  min-width: 240px;
+}
+@media (min-width: 501px) and (max-width: 845px) {
+  .maxW240 {
+    max-width: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+.maxW100 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100px;
+          flex: 0 0 100px;
+  max-width: 100px;
+}
+@media (max-width: 650px) {
+  .maxW100 {
+    max-width: 60px;
+  }
+}
+
+span.maxW50 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 1em;
+          flex: 0 0 1em;
+  max-width: 1em;
+}
+
+.horizonta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.Straight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.flex_1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.flex_2 {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.flex_3 {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+
+.flex_4 {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+}
+
+.flex_5 {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+}
+
+.flex_6 {
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
+}
+
+@media (max-width: 650px) {
+  header .container {
+    padding: 0;
+  }
+  header .container .logo-title {
+    padding: 0em 0.5em 0em 0em !important;
+    display: none;
+  }
+  header .container nav.topMenu {
+    font-size: 0.8em;
+  }
+  header .container nav.topMenu ul {
+    display: -webkit-inline-box !important;
+    display: -ms-inline-flexbox !important;
+    display: inline-flex !important;
+  }
+  header .container nav.topMenu ul li {
+    display: -webkit-inline-box !important;
+    display: -ms-inline-flexbox !important;
+    display: inline-flex !important;
+    padding: 0.75em 0.25em 0.35em 0.25em !important;
+  }
+  header .container nav.topMenu ul li a {
+    padding: 0.5em !important;
+    font-size: 0.88em;
+  }
+  header .container nav.topMenu ul.sub-menu li {
+    padding: 0.35em 0.25em 0.15em 0.25em !important;
+  }
+  header .container ul.sysBox li:nth-child(2), header .container ul.sysBox li:nth-child(3) {
+    display: none;
+  }
+
+  .subject section {
+    height: auto !important;
+  }
+
+  .blockR section.socCases ul.endpointList li {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .blockR section.socCases ul.endpointList li span:nth-child(4) {
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
+    min-width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    border-top: 1px dashed #3f3f3f;
+  }
+
+  .footerBox ul.pageFooter {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+
+  article.infoBox section.dataInfo ul {
+    border-top: 4px dashed #2a2a39;
+  }
+}
+@media (max-width: 400px) {
+  header .container .logo-title {
+    display: none !important;
+  }
+}
+@media (max-width: 650px) {
+  body header + .content #app.body .blockL {
+    max-width: 100%;
+    width: 70%;
+    z-index: 100;
+    border-right: 1px solid #3f3f3f;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-box-shadow: 0 0 10px #16181f;
+            box-shadow: 0 0 10px #16181f;
+  }
+  body header + .content #app.body .blockL .userIcon {
+    display: none;
+  }
+  body header + .content #app.body .blockL .rwdBox {
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body header + .content #app.body .blockL.openRwd {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  body header + .content #app.body .blockL.openRwd .clo_i {
+    z-index: -1;
+    display: block;
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  body header + .content #app.body .blockR {
+    width: 100%;
+    margin-left: 0;
+  }
+  body header + .content #app.body .blockR > .horizonta {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.chartBox .socStayus {
+  min-width: auto;
+}
+.chartBox .rwdBox {
+  display: none !important;
+}
+@media (max-width: 650px) {
+  .chartBox .blockL {
+    -webkit-transform: translateX(0%) !important;
+            transform: translateX(0%) !important;
+    position: relative !important;
+    top: 0 !important;
+    border-right: 0 !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    width: 100% !important;
+    padding-bottom: 0 !important;
+  }
+  .chartBox .blockR::after, .chartBox .blockR::before {
+    display: none !important;
+  }
+}
+
+.rwdBox {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: -2em;
+  width: 2em;
+  height: 2em;
+  background-color: #3f3f3f;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 4px black;
+          box-shadow: 0 0 4px black;
+  overflow: hidden;
+}
+body.white header {
+  background-color: #1B96F1;
+  border-bottom: solid 2px #0a5e9c;
+}
+body.white header .container nav.topMenu ul li.pick, body.white header .container nav.topMenu ul li:hover {
+  background-color: #07416c !important;
+}
+body.white header .container nav.topMenu ul li a {
+  color: #ffffff;
+}
+body.white header .container ul.sysBox li {
+  color: #ffffff;
+}
+body.white header .container ul.sysBox li a {
+  color: #ffffff;
+}
+
+.mitreattack {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+}
+.mitreattack .clo {
+  padding: 0.5em 1em;
+  font-size: 1em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #ffffff;
+  background-color: #fc3848;
+  cursor: pointer;
+}
+.mitreattack article.mitre {
+  background-color: #ffffff;
+  padding: 1em;
+  min-height: 80vh;
+  height: 100%;
+}
+.mitreattack article.mitre .attack {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding: 0em 0em 3em 0em;
+}
+.mitreattack article.mitre .attack ul.attUl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.75em;
+}
+.mitreattack article.mitre .attack ul.attUl > li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0.5em;
+  min-width: 150px;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+}
+.mitreattack article.mitre .attack ul.attUl > li b {
+  display: block;
+  width: 100%;
+  height: 4em;
+  padding: 0.5em;
+  background-color: rgba(27, 150, 241, 0.95);
+  border: 1px solid #1B96F1;
+  border-bottom: none;
+  word-wrap: break-word;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.1em;
+  color: #ffffff;
+  text-shadow: 0 0 4px #0a5e9c;
+  position: sticky;
+  top: 0;
+  left: 0;
+  -webkit-box-shadow: inset 0 0.25em 0.5em #0a5e9c;
+          box-shadow: inset 0 0.25em 0.5em #0a5e9c;
+}
+.mitreattack article.mitre .attack ul.attUl > li > ul {
+  border: 1px solid #1e212b;
+}
+.mitreattack article.mitre .attack ul.attUl > li > ul > li + li {
+  border-top: 1px solid #1e212b;
+  min-height: 3em;
+}
+.mitreattack article.mitre .attack ul.attUl > li > ul > li:nth-child(2n) {
+  background-color: #dcdee7;
+  color: #5d6685;
+}
+.mitreattack article.mitre .attack ul.attUl > li > ul > li e {
+  display: block;
+  word-wrap: break-word;
+  cursor: pointer;
+  padding: 0.75em 0.5em;
+}
+.mitreattack article.mitre .attack ul.attUl > li > ul > li e.pickMe {
+  background-color: rgba(252, 114, 50, 0.7);
+  color: #ffffff;
+}
+.mitreattack .center {
+  height: 2.4em;
+  width: 100%;
+}
+
+.sendBox {
+  position: absolute;
+  bottom: 1em;
+  right: 2em;
+  width: 50vw;
+  min-width: 260px;
+  max-width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.sendBox input {
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
+  border: 1px solid #1e212b;
+  padding-left: 1em;
+  border-top-left-radius: 0.25em;
+  border-bottom-left-radius: 0.25em;
+}
+.sendBox span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
+  border: 1px solid #1e212b;
+  padding-left: 1em;
+  border-top-left-radius: 0.25em;
+  border-bottom-left-radius: 0.25em;
+  background-color: #ffffff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.sendBox .sendACCT {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  border-top-right-radius: 0.25em;
+  border-bottom-right-radius: 0.25em;
+  background-color: #fc3848;
+  color: #ffffff;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #1e212b;
+  border-left: none;
+}
+.sendBox .sendACCT.keep {
+  pointer-events: none;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.dragDiv {
+  cursor: all-scroll;
+}
+.dragDiv .attUl {
+  pointer-events: none;
+}
+
+.mySetMat {
+  position: fixed;
+  font-size: 0.9em;
+  bottom: 5em;
+  left: 2.5em;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #ffffff;
+  padding: 0.5em 0.25em 0.5em 0.5em;
+  border-radius: 4px;
+  border: solid 1px #909090;
+}
+.mySetMat ul.setUl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 0em 0 0.5em;
+}
+.mySetMat ul.setUl li {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.mySetMat ul.setUl li b, .mySetMat ul.setUl li input {
+  padding: 0.25em 0.5em;
+  border-radius: 4px;
+  border: solid 1px #4f0a7d;
+  background-color: #8b12db;
+  color: #ffffff;
+  margin: 0 0.5em;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.mySetMat ul.setUl li b.hasNew {
+  background-color: #25C7A2;
+  border: solid 1px #1d9c7f;
+}
+.mySetMat ul.setUl li input {
+  width: 8em;
+  text-align: center;
+}
+.mySetMat ul.setUl li input:focus, .mySetMat ul.setUl li input:hover {
+  background-color: #4f0a7d;
+}
+.mySetMat ul.setUl li input:focus ~ em, .mySetMat ul.setUl li input:focus ~ i, .mySetMat ul.setUl li input:hover ~ em, .mySetMat ul.setUl li input:hover ~ i {
+  display: block;
+}
+.mySetMat ul.setUl li:focus input, .mySetMat ul.setUl li:hover input {
+  background-color: #4f0a7d;
+}
+.mySetMat ul.setUl li:focus input ~ em, .mySetMat ul.setUl li:focus input ~ i, .mySetMat ul.setUl li:hover input ~ em, .mySetMat ul.setUl li:hover input ~ i {
+  display: block;
+}
+.mySetMat ul.setUl li em {
+  display: none;
+  font-size: 0.7em;
+  font-weight: 500;
+  background-color: #ffec39;
+  border: solid 1px #d2be00;
+  color: #303030;
+  position: absolute;
+  top: -1.9em;
+  left: 0%;
+  margin-left: 0.8em;
+  border-radius: 4px;
+  width: calc( 50% - 1em );
+  cursor: pointer;
+  text-align: center;
+}
+.mySetMat ul.setUl li i {
+  display: none;
+  font-size: 0.7em;
+  font-weight: 400;
+  background-color: #fc3848;
+  border: solid 1px #cb0313;
+  color: #ffffff;
+  position: absolute;
+  top: -1.9em;
+  left: 0%;
+  margin-left: 50%;
+  border-radius: 4px;
+  width: calc( 50% - .8em );
+  cursor: pointer;
+  text-align: center;
+}
+
+.contnetBox p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.contnetBox p a ~ a {
+  padding-left: 1em;
+}

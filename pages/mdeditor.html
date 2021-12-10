@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link href="../css/mdeditor.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="mdeditor">
+      <section class="sys_title"> 
+        <h1>md  =>  png</h1>
+      </section>
+      <section id="mdBox">
+        <div class="mdTopng">
+          <textarea v-model="mdData"></textarea>
+        </div>
+        <div id="printable">
+          <canvas id="myChart"></canvas>
+          <div class="setComment">
+            <h2>添加折線圖添加註解<b class="okBtn" @click="writeCom">確定繪出註解</b></h2>
+            <div class="conLeft"> 
+              <ul> 
+                <li v-for="(item,ii) in setComment" v-if="item!==''&amp;&amp;cData[ii]&gt;0" :key="item+ii">
+                  <label class="center">{{item}} 
+                    <input v-model="commentBox[ii][0]" placeholder="添加註解" type="text">
+                    <input class="numberBox" v-model.number="commentBox[ii][1]" type="number" name="" min="-9" max="11">
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div id="attackHistory">
+            <div class="timePeriod">
+              <div class="list">區間：
+                <div class="list_li center" v-for="(ss,l) in iArr" :key="l" :class="ss[0]"><span class="material-icons">{{ss[0]}} </span><b>{{ss[1]}} </b></div>
+              </div>
+            </div>
+            <div class="timeBox" v-for="(item,i) in endData" :key="i"> 
+              <h2 v-if="item[0]=='0000-00-00'"> 
+                <p v-for="(h,k) in item[1][0].start" :key="k">{{h}}</p>
+              </h2>
+              <div v-else>
+                <h1 class="date"> <b>{{cutTime(item[0])[0]}}</b><em>{{cutTime(item[0])[1]}}</em></h1>
+                <div class="detail" v-for="(el,j) in item[1]" :key="j" :myCLass="myCLass=SelectＰic(el.time)"> <b class="title center" :class="myCLass"> <span class="material-icons">{{myCLass}} </span><em>{{parseInt(el.time.split(':')[0])==25?el.con:el.time}} </em></b>
+                  <div class="content"> 
+                    <p v-show="parseInt(el.time.split(':')[0])!==25" v-html="pickMeWord(el.con)"></p>
+                    <ul class="ann" v-if="el.ann">
+                      <li v-for="(e,u) in el.ann" :key="u"> <b v-html="pickMeWord(e)"></b></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dragBox"></div>
+        </div>
+      </section>
+      <button class="top_right btn_dlo center" onClick="screenshot();"><span class="material-icons">cloud_download</span><b>下載圖片</b></button>
+    </div>
+  </body>
+  <script type="text/javascript" src="../../vendors/axios.min.js"></script>
+  <script type="text/javascript" src="../../vendors/Chart.min.js"></script>
+  <script type="text/javascript" src="../../vendors/vue.min.js"></script>
+  <script type="text/javascript" src="../../vendors/html2canvas.min.js"> </script>
+  <script type="text/javascript" src="../js/mdeditor.js"></script>
+</html>
