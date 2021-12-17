@@ -49,8 +49,8 @@ dfn {
 }
 
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
   height: 0;
 }
 
@@ -148,12 +148,12 @@ button[disabled], html input[disabled] {
 }
 
 input[type=checkbox], input[type=radio] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0;
 }
 input[type=search] {
   -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
@@ -377,771 +377,6 @@ input[type=button], button {
 /* // http://www.w3.org/TR/css3-animations/#the-animation-name-property-
 // Each of these mixins support comma separated lists of values, which allows different transitions for individual properties to be described in a single style rule. Each value in the list corresponds to the value at that same position in the other properties.
  */
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  scrollbar-color: rgba(153, 153, 153, 0.7) rgba(0, 0, 0, 0);
-}
-*::-webkit-scrollbar {
-  width: 8px;
-}
-*::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  border-radius: 0;
-  background: transparent;
-  -webkit-box-shadow: none;
-}
-*::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background: rgba(153, 153, 153, 0.7);
-  -webkit-box-shadow: none;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-* :focus {
-  outline: none;
-}
-
-html, body {
-  padding: 0;
-  margin: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  font-family: "微軟正黑體", "微软雅黑", "メイリオ", "맑은 고딕", sans-serif;
-  font-size: 1em;
-}
-
-body {
-  -webkit-overflow-scrolling: touch;
-  padding: 0;
-  background-color: #1e212b;
-  height: 100%;
-  line-height: 1.42857143;
-  margin: 0;
-  font-weight: 400;
-  color: #000000;
-}
-body > div {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-body header + .content {
-  display: block;
-  width: 100%;
-  height: calc( 100% - 40px );
-  padding: 1em 0em 1em 0em;
-  margin-top: 40px;
-  overflow: auto;
-}
-body header + .content > div {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-body header + .content > div > #app {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
-  height: 100%;
-}
-body header + .content > div > #app > article.infoBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-body header + .content > div > #app > article.infoBox section.dataInfo {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-body header + .content > div > #app > article.subject {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  height: 1;
-}
-body header + .content p {
-  color: #909090;
-}
-body .body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.container {
-  width: 100%;
-  height: auto;
-  max-width: 1450px;
-  margin: 0 auto;
-  padding: 0 1em;
-  position: relative;
-}
-
-footer#footer {
-  font-size: 0.8em;
-  padding: 15px;
-  color: #ffffff;
-  background-color: #909090;
-  text-align: right;
-}
-
-.clCover {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  background-color: #ffffff;
-  padding: 0.25em 0.5em;
-  border-radius: 0.25em;
-  width: 13em;
-  height: 3.25em;
-}
-.clCover b {
-  display: inline-block;
-  cursor: pointer;
-  margin: 0.5em;
-  padding: 0.25em 1em;
-  border-radius: 0.25em;
-}
-
-b.clStyle_0 {
-  border: 1px solid #2ec4d1;
-  color: #abe7ed;
-  background-image: linear-gradient(135deg, #1B96F1, #3BE2BC);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1B96F1", endColorstr="#3BE2BC",GradientType=0);
-}
-b.clStyle_0:hover {
-  color: #58d0da;
-  -webkit-box-shadow: inset 0 0 4px black;
-          box-shadow: inset 0 0 4px black;
-}
-
-b.clStyle_1 {
-  border: 1px solid #a53ae9;
-  color: #e4c4f8;
-  background-image: linear-gradient(135deg, #3544DC, #EF33F2);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3544DC", endColorstr="#EF33F2",GradientType=0);
-}
-b.clStyle_1:hover {
-  color: #ba68ee;
-  -webkit-box-shadow: inset 0 0 4px black;
-          box-shadow: inset 0 0 4px black;
-}
-
-b.clStyle_2 {
-  border: 1px solid #d78f6f;
-  color: #f8ece7;
-  background-image: linear-gradient(135deg, #9a04bf, #ffec39);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9a04bf", endColorstr="#ffec39",GradientType=0);
-}
-b.clStyle_2:hover {
-  color: #e2ae97;
-  -webkit-box-shadow: inset 0 0 4px black;
-          box-shadow: inset 0 0 4px black;
-}
-
-b.clStyle_3 {
-  border: 1px solid #d33264;
-  color: #eeb0c3;
-  background-image: linear-gradient(135deg, #9F046C, #F5515F);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9F046C", endColorstr="#F5515F",GradientType=0);
-}
-b.clStyle_3:hover {
-  color: #dc5c84;
-  -webkit-box-shadow: inset 0 0 4px black;
-          box-shadow: inset 0 0 4px black;
-}
-
-b.clStyle_4 {
-  border: 1px solid #27a2a4;
-  color: #83e0e1;
-  background-image: linear-gradient(135deg, #564ce6, #07db78);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#564ce6", endColorstr="#07db78",GradientType=0);
-}
-b.clStyle_4:hover {
-  color: #31cbcd;
-  -webkit-box-shadow: inset 0 0 4px black;
-          box-shadow: inset 0 0 4px black;
-}
-
-b.clStyle_5 {
-  border: 1px solid #6dd871;
-  color: #e6f8e6;
-  background-image: linear-gradient(135deg, #25C7A2, #9de451);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#25C7A2", endColorstr="#9de451",GradientType=0);
-}
-b.clStyle_5:hover {
-  color: #95e398;
-  -webkit-box-shadow: inset 0 0 4px black;
-          box-shadow: inset 0 0 4px black;
-}
-
-b.clStyle_6 {
-  border: 1px solid #fdab60;
-  color: #fffbf7;
-  background-image: linear-gradient(135deg, #ffe7a6, #FB8332);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffe7a6", endColorstr="#FB8332",GradientType=0);
-}
-b.clStyle_6:hover {
-  color: #fec692;
-  -webkit-box-shadow: inset 0 0 4px #735400;
-          box-shadow: inset 0 0 4px #735400;
-}
-
-b.clStyle_7 {
-  border: 1px solid #7c74e4;
-  color: #f5f4fd;
-  background-image: linear-gradient(135deg, #61DEC7, #8E2EF7);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#61DEC7", endColorstr="#8E2EF7",GradientType=0);
-}
-b.clStyle_7:hover {
-  color: #a49fec;
-  -webkit-box-shadow: inset 0 0 4px #020b09;
-          box-shadow: inset 0 0 4px #020b09;
-}
-
-b.clStyle_8 {
-  border: 1px solid #cccd32;
-  color: #ebebad;
-  background-image: linear-gradient(135deg, #8ADC32, #F8C332);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8ADC32", endColorstr="#F8C332",GradientType=0);
-}
-b.clStyle_8:hover {
-  color: #d6d75b;
-  -webkit-box-shadow: inset 0 0 4px black;
-          box-shadow: inset 0 0 4px black;
-}
-
-b.clStyle_9 {
-  border: 1px solid #888888;
-  color: #d5d5d5;
-  background-image: linear-gradient(135deg, #eeeeee, #444444);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeeeee", endColorstr="#444444",GradientType=0);
-}
-b.clStyle_9:hover {
-  color: #a2a2a2;
-  -webkit-box-shadow: inset 0 0 4px #555555;
-          box-shadow: inset 0 0 4px #555555;
-}
-
-.content.charts {
-  overflow: auto;
-}
-.content.charts article.chartBox .blockR {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  width: 100%;
-  white-space: pre-wrap;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-.content.charts article.chartBox .blockR section.socChart {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 calc( 50% - 1em );
-          flex: 0 0 calc( 50% - 1em );
-  margin: 0.5em;
-}
-@media (max-width: 650px) {
-  .content.charts article.chartBox .blockR section.socChart {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-  }
-}
-
-article.casesBox .blockR section.socCases .detailed ul li span {
-  white-space: pre-wrap;
-}
-
-.noteSay, .accSpk p {
-  white-space: pre-wrap;
-}
-
-article.casesBox .blockR section.socCases {
-  -ms-flex-line-pack: baseline;
-      align-content: baseline;
-}
-body header + .content.cases,
-body header + .content.host,
-body header + .content.malwares,
-body header + .content.events {
-  padding: 0;
-  overflow: auto;
-}
-body header + .content.cases .container,
-body header + .content.host .container,
-body header + .content.malwares .container,
-body header + .content.events .container {
-  padding: 0;
-}
-body header + .content.cases .container article.casesBox,
-body header + .content.host .container article.casesBox,
-body header + .content.malwares .container article.casesBox,
-body header + .content.events .container article.casesBox {
-  position: relative;
-}
-body header + .content.cases .container article.casesBox .blockL,
-body header + .content.host .container article.casesBox .blockL,
-body header + .content.malwares .container article.casesBox .blockL,
-body header + .content.events .container article.casesBox .blockL {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  min-width: 300px;
-  max-width: 300px;
-  position: fixed;
-  top: 40px;
-  height: calc( 100% - 40px );
-  z-index: 20;
-}
-body header + .content.cases .container article.casesBox .blockR,
-body header + .content.host .container article.casesBox .blockR,
-body header + .content.malwares .container article.casesBox .blockR,
-body header + .content.events .container article.casesBox .blockR {
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
-  margin-left: 300px;
-}
-body header + .content.cases .container article.casesBox .blockR > div.horizonta,
-body header + .content.host .container article.casesBox .blockR > div.horizonta,
-body header + .content.malwares .container article.casesBox .blockR > div.horizonta,
-body header + .content.events .container article.casesBox .blockR > div.horizonta {
-  background-color: #14151c;
-}
-
-.btn {
-  padding: 0.25em 1em;
-  border-radius: 0.35em;
-  cursor: pointer;
-}
-
-.deleteAll {
-  position: absolute;
-  right: 0;
-  font-size: 0.75em;
-  font-weight: bold;
-  background-color: #1B96F1;
-  color: #ffffff;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  border: 1px solid #0c75c3;
-  -webkit-box-shadow: 2px 2px 3px #202020;
-          box-shadow: 2px 2px 3px #202020;
-}
-.deleteAll:hover {
-  background-color: #0d7bcc;
-}
-
-.wti {
-  position: fixed;
-  padding: 0;
-  margin: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-.wti span {
-  opacity: 0.35;
-}
-.wti span.go_next {
-  position: fixed;
-  display: block;
-  width: 120px;
-  height: 120px;
-  border-radius: 60px;
-  top: 50%;
-  left: 50%;
-  margin: -190px 0 0 -60px;
-  z-index: 10;
-  -webkit-animation: shadow 2s infinite linear;
-          animation: shadow 2s infinite linear;
-  background-color: rgba(37, 199, 162, 0.35);
-  cursor: pointer;
-}
-@-webkit-keyframes shadow {
-  0% {
-    -webkit-box-shadow: 0px 0px 15px #25C7A2;
-            box-shadow: 0px 0px 15px #25C7A2;
-  }
-  50% {
-    -webkit-box-shadow: 0px 0px 65px #1B96F1;
-            box-shadow: 0px 0px 65px #1B96F1;
-  }
-  100% {
-    -webkit-box-shadow: 0px 0px 15px #25C7A2;
-            box-shadow: 0px 0px 15px #25C7A2;
-  }
-}
-@keyframes shadow {
-  0% {
-    -webkit-box-shadow: 0px 0px 15px #25C7A2;
-            box-shadow: 0px 0px 15px #25C7A2;
-  }
-  50% {
-    -webkit-box-shadow: 0px 0px 65px #1B96F1;
-            box-shadow: 0px 0px 65px #1B96F1;
-  }
-  100% {
-    -webkit-box-shadow: 0px 0px 15px #25C7A2;
-            box-shadow: 0px 0px 15px #25C7A2;
-  }
-}
-.go_next:before {
-  position: absolute;
-  display: block;
-  content: " ";
-  border: solid 1px #FFF;
-  width: 132px;
-  height: 132px;
-  border-radius: 66px;
-  top: -6px;
-  left: -6px;
-  -webkit-animation: bbig 2s infinite linear;
-          animation: bbig 2s infinite linear;
-}
-.go_next:after {
-  position: absolute;
-  display: block;
-  content: " ";
-  border: solid 1px #FFF;
-  width: 132px;
-  height: 132px;
-  border-radius: 66px;
-  top: -6px;
-  left: -6px;
-  -webkit-animation: bbig 2s 0.5s infinite linear;
-          animation: bbig 2s 0.5s infinite linear;
-}
-
-@-webkit-keyframes bbig {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    -webkit-transform: scale(1.3);
-            transform: scale(1.3);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 0;
-  }
-}
-
-@keyframes bbig {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    -webkit-transform: scale(1.3);
-            transform: scale(1.3);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 0;
-  }
-}
-.fade-enter-active, .fade-leave-active {
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
-}
-
-.fade-enter, .fade-leave-to, .fade-leave-active {
-  opacity: 0;
-}
-
-.component-fade-enter-active, .component-fade-leave-active {
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
-}
-
-.component-fade-enter, .component-fade-leave-to {
-  opacity: 0;
-}
-
-.curr {
-  cursor: pointer;
-}
-
-.loader {
-  position: relative;
-}
-.loader:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  z-index: 10;
-  top: 50%;
-  left: 50%;
-  margin: -44px auto auto -44px;
-  border-radius: 50%;
-  border: 8px solid #3f3f3f;
-  border-top: 8px solid #3498db;
-  -webkit-animation: spin 2s linear infinite;
-          animation: spin 2s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-.disabled, input[disabled=disabled] {
-  pointer-events: none !important;
-  opacity: 0.35 !important;
-  cursor: no-drop !important;
-  cursor: not-allowed !important;
-}
-
-.loading {
-  position: relative;
-  opacity: 0.6;
-  pointer-events: none;
-}
-.loading::after {
-  content: "";
-  position: absolute;
-  z-index: 100;
-  top: calc( 50% - 2.25em );
-  left: calc( 50% - 2.25em );
-  width: 3em;
-  height: 3em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border: 0.5em solid #ffffff;
-  border-top: 0.5em solid #1B96F1;
-  border-radius: 50%;
-  -webkit-animation: spin 2s linear infinite;
-          animation: spin 2s linear infinite;
-}
-
-.events .blockR.loading, .malwares .blockR.loading {
-  opacity: 0.6;
-}
-.events .blockR.loading::after, .malwares .blockR.loading::after {
-  position: fixed;
-  left: calc( 50% + 119px );
-}
-
-/** .loader
- * border: 16px solid #f3f3f3
- * border-top: 16px solid #3498db
- * border-radius: 50%
- * width: 120px
- * height: 120px
- * animation: spin 2s linear infinite
- *
- * **/
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-.showWarning {
-  position: fixed;
-  bottom: 0em;
-  right: 0em;
-  max-width: 14em;
-  text-align: center;
-  padding: 2em 2em;
-  background-color: #25C7A2;
-  border-radius: 0.5em;
-  color: #1e212b;
-  border: 4px solid #25C7A2;
-  -webkit-box-shadow: inset 0 0 1em rgba(30, 33, 43, 0.5);
-          box-shadow: inset 0 0 1em rgba(30, 33, 43, 0.5);
-  pointer-events: none;
-  display: none;
-  font-weight: bold;
-}
-.showWarning::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 0;
-  height: 0;
-  top: 1em;
-  left: -1em;
-  border-style: solid;
-  border-width: 1em 1em 1em 0;
-  border-color: transparent #25C7A2 transparent transparent;
-}
-
-.home .showWarning {
-  max-width: 100%;
-  width: auto;
-  position: absolute;
-  top: -1em;
-  bottom: auto;
-  right: auto;
-  left: 6em;
-  padding: 0.25em 1em;
-  border: 2px solid #25C7A2;
-  font-size: 0.8em;
-}
-.home .showWarning.fail {
-  background-color: #fc3848;
-  border: 2px solid #fc3848;
-  color: #ffffff;
-}
-.home .showWarning::before {
-  display: none;
-  border-color: transparent #fc3848 transparent transparent;
-}
-
-.center {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-canvas {
-  max-height: 310px !important;
-  max-width: 100% !important;
-}
-
-@-moz-document url-prefix() {
-  span.material-icons.status_S {
-    border: none !important;
-    box-shadow: none !important;
-    background-color: rgba(0, 0, 0, 0) !important;
-    text-shadow: 0 0 4px #25C7A2, 0 0 10px #25C7A2, 0 0 10px #25C7A2, 0 0 15px #25C7A2, 0 0 20px #25C7A2;
-  }
-  span.material-icons.status_W {
-    border: none !important;
-    box-shadow: none !important;
-    background-color: rgba(0, 0, 0, 0) !important;
-    text-shadow: 0 0 4px #ffec39, 0 0 10px #ffec39, 0 0 10px #ffec39, 0 0 15px #ffec39, 0 0 20px #ffec39;
-  }
-  span.material-icons.status_U {
-    border: none !important;
-    box-shadow: none !important;
-    background-color: rgba(0, 0, 0, 0) !important;
-    text-shadow: 0 0 4px #fc3848, 0 0 10px #fc3848, 0 0 10px #fc3848, 0 0 15px #fc3848, 0 0 20px #fc3848;
-  }
-}
-.Progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 1111;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.Progress .ppBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 24em;
-  height: 8em;
-  background-color: #2a2a39;
-  border: 1px solid #1e212b;
-  border-radius: 6px;
-  -webkit-box-shadow: 0 0 10px #000000;
-          box-shadow: 0 0 10px #000000;
-}
-.Progress label {
-  color: #ffffff;
-  padding: 1em;
-}
-.Progress label span {
-  padding: 0 0.5em;
-}
-.Progress #Progress_file {
-  width: 20em !important;
-  height: 1em !important;
-}
-
 header {
   position: fixed;
   z-index: 50;
@@ -1155,20 +390,13 @@ header {
   max-height: 40px;
 }
 header .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-content: center;
+  align-items: center;
   position: relative;
   z-index: 100;
 }
 header .container .logo-title {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   height: 22px;
   padding: 0em 4em 0em 1em;
@@ -1178,26 +406,18 @@ header .container .logo-title img {
   width: auto;
 }
 header .container nav.topMenu {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
 header .container nav.topMenu ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 40px;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 header .container nav.topMenu ul li {
   position: relative;
   display: inline-block;
   padding: 0.65em 0.5em 0.35em 0.5em;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   border-bottom: 2px solid transparent;
 }
@@ -1221,8 +441,7 @@ header .container nav.topMenu ul li:hover ul {
   display: block;
   opacity: 1;
   visibility: visible;
-  -ms-flex-flow: wrap;
-      flex-flow: wrap;
+  flex-flow: wrap;
 }
 header .container nav.topMenu ul li > ul {
   visibility: hidden;
@@ -1230,7 +449,6 @@ header .container nav.topMenu ul li > ul {
   top: 100%;
   left: 0;
   z-index: 1;
-  -webkit-transition: 0.25s;
   transition: 0.25s;
   opacity: 0;
 }
@@ -1238,14 +456,10 @@ header .container nav.topMenu ul li .sub-menu {
   background-color: #3f3f3f;
   border: 3px solid #3f3f3f;
   height: auto;
-  -webkit-box-shadow: 0 0 4px black;
-          box-shadow: 0 0 4px black;
+  box-shadow: 0 0 4px black;
   border-radius: 0.5em;
   opacity: 0;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 header .container nav.topMenu ul li .sub-menu::before {
   position: absolute;
@@ -1273,8 +487,6 @@ header .container nav.topMenu ul li .sub-menu li a {
   padding: 0.75em 1em;
 }
 header .container ul.sysBox {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
 }
 header .container ul.sysBox li {
@@ -1282,7 +494,6 @@ header .container ul.sysBox li {
   margin: 0 0.25em;
   color: #aaaaaa;
   cursor: pointer;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 header .container ul.sysBox li:hover {
@@ -1297,15 +508,12 @@ header .userInfoBox {
   left: 0;
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 header .userInfoBox .cloMe {
   position: absolute;
@@ -1327,16 +535,11 @@ header .userInfoBox .userData {
   border: 2px solid #3f3f3f;
   border-radius: 1em;
   overflow: auto;
-  -webkit-box-shadow: 0 0 1em black;
-          box-shadow: 0 0 1em black;
+  box-shadow: 0 0 1em black;
 }
 header .userInfoBox .userData h2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   font-size: 1.1rem;
   padding: 1em 1em 0.75em 1em;
   border-bottom: 1px dashed #3f3f3f;
@@ -1359,15 +562,12 @@ header .userInfoBox .userData .cloBtn {
   width: 2rem;
   height: 2rem;
   font-size: 1.4em;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   position: sticky;
   top: 0.5rem;
   right: 0.5rem;
@@ -1383,46 +583,29 @@ header .userInfoBox .userData .bigBox {
 }
 header .userInfoBox .userData .bigBox .dtalContnet {
   padding: 0 1em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 header .userInfoBox .userData .bigBox .dtalContnet .rowLine {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   min-width: 300px;
   padding: 0 0.25em;
 }
 header .userInfoBox .userData .bigBox .dtalContnet .rowLine .infoTitle {
   padding: 0.25em;
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  flex: 2;
   max-width: 120px;
   max-width: 260px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  align-items: center;
+  justify-content: flex-end;
   color: #25C7A2;
   font-size: 0.9em;
   text-align: right;
 }
 header .userInfoBox .userData .bigBox .dtalContnet .rowLine .inputBox {
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+  flex: 3;
   padding: 0.5em 0.25em;
   position: relative;
 }
@@ -1468,12 +651,8 @@ header .userInfoBox .userData .bigBox .dtalContnet .rowLine .inputBox select {
   color: #cccccc;
 }
 header .userInfoBox .userData .bigBox .dtalContnet .rowLine e.inputBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 header .userInfoBox .userData .bigBox .dtalContnet .rowLine e.inputBox::before {
   display: none;
@@ -1483,12 +662,8 @@ header .userInfoBox .userData .bigBox .dtalContnet .rowLine e.inputBox small {
   word-break: break-all;
 }
 header .userInfoBox .userData .bigBox .dtalContnet .rowLine label.inputBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 header .userInfoBox .userData .bigBox .dtalContnet .rowLine label.inputBox::before {
   display: none;
@@ -1504,7 +679,6 @@ header .userInfoBox .userData .noBefore::before {
 header button.btn {
   background-color: #1B96F1;
   border: 1px solid #0d7bcc;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 header button.btn:hover {
@@ -1531,7 +705,6 @@ header button.btn:hover {
   display: block;
   width: 200%;
   margin-left: -100%;
-  -webkit-transition: margin 0.3s ease-in 0s;
   transition: margin 0.3s ease-in 0s;
 }
 .switch .switch-txt::before {
@@ -1541,8 +714,7 @@ header button.btn:hover {
   font-size: 13px;
   color: #cccccc;
   font-weight: bold;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 .switch .switch-txt::after {
   display: block;
@@ -1551,8 +723,7 @@ header button.btn:hover {
   font-size: 13px;
   color: #cccccc;
   font-weight: bold;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   content: attr(turnOn);
   padding-left: 10px;
   background: #1B96F1;
@@ -1577,7 +748,6 @@ header button.btn:hover {
   right: 35px;
   border: 2px solid #ffffff;
   border-radius: 13px;
-  -webkit-transition: all 0.3s ease-in 0s;
   transition: all 0.3s ease-in 0s;
 }
 .switch .switch-checkbox:checked + .switch-label .switch-txt {
@@ -1598,15 +768,12 @@ header button.btn:hover {
 }
 .cloud_downloadBox .conBox {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   z-index: 10;
@@ -1633,18 +800,13 @@ header button.btn:hover {
   background-color: #262a37;
   border-radius: 1em;
   border: 2px solid #3f3f3f;
-  -webkit-box-shadow: 0 0 1.8em black;
-          box-shadow: 0 0 1.8em black;
+  box-shadow: 0 0 1.8em black;
   overflow: hidden;
 }
 .cloud_downloadBox .conBox .conData h2 {
   padding: 0.5em 1em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   font-size: 1.2em;
   background-color: #1e212b;
   border-bottom: 1px dashed #3f3f3f;
@@ -1658,15 +820,12 @@ header button.btn:hover {
   width: 2rem;
   height: 2rem;
   font-size: 1.4em;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
@@ -1685,21 +844,15 @@ header button.btn:hover {
 .cloud_downloadBox .conBox .conData .contnetBox p > a {
   color: #1B96F1;
   line-height: 2.4em;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   cursor: pointer;
 }
 .cloud_downloadBox .conBox .conData .contnetBox p > a b {
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 .cloud_downloadBox .conBox .conData .contnetBox p > a b:hover {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
 }
 .cloud_downloadBox .conBox .conData .contnetBox p > a > span {
   margin-right: 0.25em;
@@ -1741,9 +894,7 @@ header button.btn:hover {
   padding: 0.5em !important;
   font-size: 0.8em;
   cursor: auto;
-  -webkit-box-shadow: 0 0 0.5em black;
-          box-shadow: 0 0 0.5em black;
-  -webkit-transition: 0.5s;
+  box-shadow: 0 0 0.5em black;
   transition: 0.5s;
 }
 .contactInfo ul::before {
@@ -1768,87 +919,58 @@ header button.btn:hover {
 }
 
 article.infoBox section {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   padding: 1em 0.5em;
 }
 article.infoBox section.userIcon {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 260px;
-          flex: 0 0 260px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex: 0 0 260px;
+  justify-content: space-between;
 }
 article.infoBox section.userIcon .iconBox {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   padding-right: 0.5em;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  justify-content: flex-end;
 }
 article.infoBox section.userIcon .iconBox span.material-icons {
   font-size: 4em;
   color: #262a37;
   border-radius: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   width: 4rem;
   height: 4rem;
 }
 article.infoBox section.userIcon .iconBox span.material-icons.status_S {
   border: 1px solid #25C7A2;
-  -webkit-box-shadow: 0 0 1rem #25C7A2;
-          box-shadow: 0 0 1rem #25C7A2;
+  box-shadow: 0 0 1rem #25C7A2;
   background-color: #25C7A2;
 }
 article.infoBox section.userIcon .iconBox span.material-icons.status_W {
   border: 1px solid #ffec39;
-  -webkit-box-shadow: 0 0 1rem #ffec39;
-          box-shadow: 0 0 1rem #ffec39;
+  box-shadow: 0 0 1rem #ffec39;
   background-color: #ffec39;
 }
 article.infoBox section.userIcon .iconBox span.material-icons.status_U {
   border: 1px solid #fc3848;
-  -webkit-box-shadow: 0 0 1rem #fc3848;
-          box-shadow: 0 0 1rem #fc3848;
+  box-shadow: 0 0 1rem #fc3848;
   background-color: #fc3848;
 }
 article.infoBox section.userIcon .info {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
   color: #cccccc;
 }
 article.infoBox section.userIcon .info h1 {
@@ -1863,53 +985,33 @@ article.infoBox section.userIcon .info h2 {
   padding-left: 0.75rem;
 }
 article.infoBox section.dataInfo {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
 article.infoBox section.dataInfo ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-content: center;
+  justify-content: center;
 }
 article.infoBox section.dataInfo ul li {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   color: #cccccc;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
   text-align: center;
   border-bottom: dashed 4px #2a2a39;
   margin: 0.5em;
   border-radius: 3.5em;
 }
 article.infoBox section.dataInfo ul li span {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   width: 3.5em;
   height: 3.5em;
   min-width: 3.5em;
@@ -1918,10 +1020,7 @@ article.infoBox section.dataInfo ul li span {
   color: #cccccc;
   font-weight: bolder;
   border-radius: 3em;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 article.infoBox section.dataInfo ul li span small {
   border-top: 2px solid #cccccc;
@@ -1939,8 +1038,6 @@ article.infoBox section.dataInfo ul li:nth-child(4) span {
   border: 4px solid #1B96F1;
 }
 article.infoBox section.dataInfo ul li b {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   padding: 0.5rem;
   font-size: 0.95em;
@@ -1950,46 +1047,30 @@ article.infoBox section.dataInfo ul li b {
 @media (min-width: 1365px) {
   article.infoBox section.dataInfo ul li {
     max-width: 240px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
   article.infoBox section.dataInfo ul li b {
     max-width: 100%;
   }
 }
 article.subject {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   color: #cccccc;
 }
 article.subject section {
   position: relative;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex: 1;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   background-color: #2a2a39;
   padding: 1em;
   margin: 0.5em;
   border-radius: 4px;
 }
 article.subject section h1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   font-size: 1.25em;
   position: relative;
 }
@@ -2005,17 +1086,12 @@ article.subject section h1 e.tag {
 }
 article.subject section h1 e.tag div {
   font-size: 0.7rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   display: inline-flex;
   padding: 0 0.5em;
 }
@@ -2039,14 +1115,10 @@ article.subject section h1 e.tag .tag_g::before {
   background-color: #25C7A2;
 }
 article.subject section.cases, article.subject section.host {
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+  flex: 3;
 }
 article.subject section ul.casesData {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   overflow: auto;
   padding: 1em 0;
   font-size: 0.8em;
@@ -2071,26 +1143,19 @@ article.subject section ul.casesData > li.pick_4 {
   border-left: 4px solid #25C7A2;
 }
 article.subject section ul.casesData > li > ul {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   width: 100%;
 }
 article.subject section ul.casesData > li > ul li {
   min-width: 5em;
   padding: 0.25em;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  flex: 1;
 }
 article.subject section ul.casesData > li > ul li:nth-child(1) {
   word-break: break-all;
@@ -2123,9 +1188,7 @@ article.subject section ul.casesData > li > ul li small.wait {
   background-color: #ffec39;
 }
 article.subject section ul.newsData {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   padding: 0.5em 0;
   overflow: auto;
 }
@@ -2146,20 +1209,15 @@ article.subject section ul.newsData li p {
   white-space: pre-wrap;
 }
 article.subject section ul.contactsData {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   padding: 0.5em 0;
   margin-top: 0.5em;
   overflow: auto;
 }
 article.subject section ul.contactsData li {
   position: relative;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   padding: 0.5em;
   width: 100%;
 }
@@ -2175,37 +1233,23 @@ article.subject section ul.contactsData li b {
   color: rgba(37, 199, 162, 0.6);
 }
 article.subject section ul.contactsData li .accSpk {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   width: 100%;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row-reverse;
+  align-items: center;
 }
 article.subject section ul.contactsData li .accSpk e {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 60px;
-          flex: 0 0 60px;
+  flex: 0 0 60px;
   height: auto;
   overflow-wrap: break-word;
   word-wrap: break-word;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  hyphens: auto;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   text-align: center;
   font-size: 0.8em;
   border-radius: 10px;
@@ -2221,26 +1265,19 @@ article.subject section ul.contactsData li .accSpk e span {
   width: 1.6rem;
   height: 1.6rem;
   max-width: 1.6rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   bottom: -0.5rem;
   background-color: #ffec39;
   border-radius: 50%;
   color: #16181f;
 }
 article.subject section ul.contactsData li .accSpk p {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex: 1;
   display: flex;
   word-break: break-all;
   background-color: rgba(204, 204, 204, 0.1);
@@ -2249,9 +1286,7 @@ article.subject section ul.contactsData li .accSpk p {
   border-radius: 4px;
   position: relative;
   min-width: 4em;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
 }
 article.subject section ul.contactsData li .accSpk p::before {
   content: "";
@@ -2267,15 +1302,10 @@ article.subject section ul.contactsData li .accSpk p::before {
   border-color: transparent #ffec39 transparent transparent;
 }
 article.subject section ul.contactsData li.reply .accSpk {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
 article.subject section ul.contactsData li.reply .accSpk p {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
 }
 article.subject section ul.contactsData li.reply p {
   text-align: left;
@@ -2295,9 +1325,7 @@ article.subject section ul.contactsData li.reply e span {
   background-color: #1b96f1;
 }
 article.subject .contacBox {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  flex: 2;
 }
 article.subject .searchBox {
   width: 100%;
@@ -2324,19 +1352,15 @@ article.subject .posTR {
   position: absolute;
   top: 0;
   right: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 article.subject .posTR span.material-icons {
   color: #707070;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   cursor: pointer;
 }
@@ -2344,8 +1368,6 @@ article.subject .posTR span.material-icons:hover {
   color: #ffffff;
 }
 article.chartBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 100%;
   color: #909090;
@@ -2360,26 +1382,15 @@ article.chartBox .blockL section.socStayus {
 }
 article.chartBox .blockL section.socStayus ul {
   padding: 1em 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 article.chartBox .blockL section.socStayus ul li {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   text-align: center;
   padding: 0.5em;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 article.chartBox .blockL section.socStayus ul li + li {
   border-left: 2px solid #3f3f3f;
@@ -2387,19 +1398,13 @@ article.chartBox .blockL section.socStayus ul li + li {
 article.chartBox .blockL section.socStayus ul li span {
   font-size: 1.25em;
   font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  flex-direction: column;
 }
 article.chartBox .blockL section.socStayus ul li span i {
   border-bottom: 1px solid #25C7A2;
@@ -2437,19 +1442,13 @@ article section h4.title {
   position: absolute;
   top: 0.5em;
   left: 0.5em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 article section h4.title span.material-icons {
   margin-right: 0.25em;
 }
 article.casesBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 100%;
   color: #909090;
@@ -2460,58 +1459,34 @@ article.casesBox .blockL {
 }
 article.casesBox .blockL section.listCases {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 article.casesBox .blockL section.listCases section.userIcon {
   margin-bottom: 0;
   padding: 1em 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 article.casesBox .blockL section.listCases section.userIcon .iconBox {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 4em;
-          flex: 0 0 4em;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex: 0 0 4em;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 article.casesBox .blockL section.listCases section.userIcon .iconBox span.material-icons {
   font-size: 3em;
   color: #cccccc;
 }
 article.casesBox .blockL section.listCases section.userIcon .info {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
   color: #cccccc;
 }
 article.casesBox .blockL section.listCases section.userIcon .info h1 {
@@ -2527,8 +1502,6 @@ article.casesBox .blockL section.listCases .casesInfo {
 }
 article.casesBox .blockL section.listCases .casesInfo h2.titleInfo {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 0.5em 1em;
   border-top: 4px double #3f3f3f;
@@ -2556,15 +1529,12 @@ article.casesBox .blockL section.listCases .casesInfo h2.titleInfo .mySort {
   border: 1px solid rgba(255, 255, 255, 0);
   border-left: 1px solid #3f3f3f;
   color: #cccccc;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   cursor: pointer;
 }
 article.casesBox .blockL section.listCases .casesInfo h2.titleInfo .mySort span.material-icons {
@@ -2572,29 +1542,20 @@ article.casesBox .blockL section.listCases .casesInfo h2.titleInfo .mySort span.
 }
 article.casesBox .blockL section.listCases .sortBox {
   border-bottom: 1px solid #2a2a39;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 32px;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
   background-color: #16181f;
-  -webkit-box-shadow: 0 3px 1px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 3px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 1px rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 article.casesBox .blockL section.listCases .sortBox .selectBox {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 0;
 }
 article.casesBox .blockL section.listCases .sortBox .selectBox select.myselect {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   height: 32px;
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0);
@@ -2611,9 +1572,7 @@ article.casesBox .blockL section.listCases .sortBox .selectBox select.myselect +
 article.casesBox .blockL section.listCases .sortBox .selectBox .selectUl {
   position: relative;
   overflow: visible;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   height: 32px;
   background-color: rgba(0, 0, 0, 0.15);
   color: #cccccc;
@@ -2626,8 +1585,6 @@ article.casesBox .blockL section.listCases .sortBox .selectBox .selectUl + .sele
 }
 article.casesBox .blockL section.listCases .sortBox .selectBox .selectUl:focus .checkbox {
   width: 100%;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
 }
 article.casesBox .blockL section.listCases .sortBox .selectBox .selectUl:focus .titleCC {
@@ -2644,7 +1601,6 @@ article.casesBox .blockL section.listCases .sortBox .selectBox .selectUl .checkb
   background-color: #3f3f3f;
   padding: 0.35em 0.5em;
   height: 2rem;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 article.casesBox .blockL section.listCases .sortBox .selectBox .selectUl .checkbox:hover {
@@ -2662,12 +1618,8 @@ article.casesBox .blockL section.listCases .sortBox .selectBox .selectUl .checkb
 }
 article.casesBox .blockL section.listCases .sortBox .selectBox .selectUl .checkbox a {
   color: #cccccc;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   width: 100%;
   height: 100%;
 }
@@ -2675,8 +1627,6 @@ article.casesBox .blockL section.listCases .sortBox .filterMe {
   width: 100%;
   height: 100%;
   left: 0%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   background-color: rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(255, 255, 255, 0);
@@ -2696,9 +1646,7 @@ article.casesBox .blockL section.listCases .sortBox .filterMe .selectSearc optio
 }
 article.casesBox .blockL section.listCases .sortBox .filterMe .searchBox {
   position: relative;
-  -webkit-box-flex: 5;
-      -ms-flex: 5;
-          flex: 5;
+  flex: 5;
 }
 article.casesBox .blockL section.listCases .sortBox .filterMe .searchBox span.material-icons {
   position: absolute;
@@ -2720,18 +1668,13 @@ article.casesBox .blockL section.listCases .sortBox .filterMe .searchBox input {
   color: #cccccc;
 }
 article.casesBox .blockL section.listCases .sortBox .filterMe e {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex: 1;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 article.casesBox .blockL section.listCases .sortBox .filterMe e span {
   background-color: rgba(255, 255, 255, 0.1);
@@ -2741,45 +1684,33 @@ article.casesBox .blockL section.listCases .sortBox .filterMe e span {
   cursor: pointer;
 }
 article.casesBox .blockL section.listCases .sortBox e.cloSort {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   cursor: pointer;
   border-left: 1px solid #3f3f3f;
 }
 article.casesBox .blockL section.listCases .sortBox ul.sortList {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   background-color: rgba(0, 0, 0, 0.15);
   color: #cccccc;
   font-size: 0.8em;
 }
 article.casesBox .blockL section.listCases .sortBox ul.sortList li {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   padding: 0.15em;
 }
 article.casesBox .blockL section.listCases .sortBox ul.sortList li span {
@@ -2796,27 +1727,19 @@ article.casesBox .blockL section.listCases .sortBox ul.sortList li.pickMe {
 article.casesBox .blockL section.listCases .filterBox {
   position: relative;
   border-bottom: 1px solid #2a2a39;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 32px;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-shadow: 0 3px 1px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 3px 1px rgba(0, 0, 0, 0.5);
+  justify-content: flex-end;
+  box-shadow: 0 3px 1px rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 article.casesBox .blockL section.listCases .filterBox e, article.casesBox .blockL section.listCases .filterBox a {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #cccccc;
   padding: 0.35em;
   border-left: 1px solid #2a2a39;
@@ -2833,15 +1756,11 @@ article.casesBox .blockL section.listCases .filterBox .filterMe {
   width: 100%;
   height: 100%;
   left: 0%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 article.casesBox .blockL section.listCases .filterBox .filterMe .searchBox {
   position: relative;
-  -webkit-box-flex: 5;
-      -ms-flex: 5;
-          flex: 5;
+  flex: 5;
 }
 article.casesBox .blockL section.listCases .filterBox .filterMe .searchBox span.material-icons {
   position: absolute;
@@ -2862,18 +1781,13 @@ article.casesBox .blockL section.listCases .filterBox .filterMe .searchBox input
   color: #cccccc;
 }
 article.casesBox .blockL section.listCases .filterBox .filterMe e {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex: 1;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 article.casesBox .blockL section.listCases .filterBox .filterMe e span {
   background-color: rgba(255, 255, 255, 0.1);
@@ -2884,15 +1798,11 @@ article.casesBox .blockL section.listCases .filterBox .filterMe e span {
 }
 article.casesBox .blockL section.listCases .filterBox .filterMe .selectBox {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 0;
 }
 article.casesBox .blockL section.listCases .filterBox .filterMe .selectBox select.myselect {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   height: 32px;
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0);
@@ -2909,9 +1819,7 @@ article.casesBox .blockL section.listCases .filterBox .filterMe .selectBox selec
 article.casesBox .blockL section.listCases .filterBox .filterMe .selectBox .selectUl {
   position: relative;
   overflow: visible;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   height: 32px;
   background-color: rgba(255, 255, 255, 0.05);
   color: #cccccc;
@@ -2924,8 +1832,6 @@ article.casesBox .blockL section.listCases .filterBox .filterMe .selectBox .sele
 }
 article.casesBox .blockL section.listCases .filterBox .filterMe .selectBox .selectUl:focus .checkbox {
   width: 100%;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
 }
 article.casesBox .blockL section.listCases .filterBox .filterMe .selectBox .selectUl:focus .titleCC {
@@ -2942,7 +1848,6 @@ article.casesBox .blockL section.listCases .filterBox .filterMe .selectBox .sele
   background-color: #3f3f3f;
   padding: 0.35em 0.5em;
   height: 2rem;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 article.casesBox .blockL section.listCases .filterBox .filterMe .selectBox .selectUl .checkbox:hover {
@@ -2959,19 +1864,13 @@ article.casesBox .blockL section.listCases .filterBox .filterMe .selectBox .sele
   border-left: 1px solid #3f3f3f;
 }
 article.casesBox .blockL section.listCases .filterBox .filterMe .selectBox .selectUl .checkbox a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   width: 100%;
   height: 100%;
 }
 article.casesBox .blockL section.listCases > ul {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
 article.casesBox .blockL section.listCases ul {
   font-size: 0.9em;
@@ -2982,7 +1881,6 @@ article.casesBox .blockL section.listCases ul li {
   position: relative;
   padding: 0.75em 1em;
   border-bottom: 1px solid #2a2a39;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   cursor: pointer;
 }
@@ -2999,23 +1897,18 @@ article.casesBox .blockL section.listCases ul li.flexBtm {
   left: 0;
   height: 40px;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   display: flex;
   padding: 0;
   background-color: #2a2a39;
   cursor: auto;
 }
 article.casesBox .blockL section.listCases ul li.flexBtm > ul {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   margin-bottom: 0;
   width: 17.5em;
@@ -3023,15 +1916,12 @@ article.casesBox .blockL section.listCases ul li.flexBtm > ul {
 article.casesBox .blockL section.listCases ul li.flexBtm > ul > li {
   width: 2em;
   height: 2em;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   border: 1px solid #3f3f3f;
   pointer-events: auto;
 }
@@ -3056,42 +1946,32 @@ article.casesBox .blockL section.listCases ul li.flexBtm > ul > li span, article
   padding: 0;
   right: auto;
   overflow: visible;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 article.casesBox .blockL section.listCases ul li.flexBtm > ul > li b {
   font-size: 1em;
 }
 article.casesBox .blockL section.listCases ul li.flexBtm .pageIndex {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
 }
 article.casesBox .blockL section.listCases ul li.flexBtm .pageIndex input {
   width: 4em;
 }
 article.casesBox .blockL section.listCases ul li.flexBtm .pageall {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   color: #909090;
   font-size: 0.6em;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 article.casesBox .blockL section.listCases ul li.flexBtm .pageall span {
   right: auto;
@@ -3103,8 +1983,6 @@ article.casesBox .blockL section.listCases ul li p.anti {
   padding-left: 0.5em;
   margin-top: 0.5em;
   white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   width: 100%;
 }
@@ -3140,22 +2018,15 @@ article.casesBox .blockL section.listCases ul li p.anti span b {
   font-weight: bolder;
 }
 article.casesBox .blockL section.listCases ul li p.anti span.groupsIcon {
-  -webkit-box-flex: 2em;
-      -ms-flex: 2em;
-          flex: 2em;
+  flex: 2em;
   max-width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  justify-content: flex-start;
   border-left: none;
   background-color: #1B96F1;
   overflow: hidden;
@@ -3178,15 +2049,11 @@ article.casesBox .blockL section.listCases ul li p.anti.flexTop {
   top: 0;
   left: 0;
   right: 0 !important;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 0;
 }
 article.casesBox .blockL section.listCases ul li p.anti.flexTop span {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   right: 0 !important;
   margin: 0 !important;
   border-radius: 0 !important;
@@ -3206,16 +2073,10 @@ article.casesBox .blockL section.listCases ul li p.anti.flexTop + h3 .noflex {
 }
 article.casesBox .blockL section.listCases ul li .ipShow {
   position: relative;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 article.casesBox .blockL section.listCases ul li .ipShow:hover ul {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
 }
 article.casesBox .blockL section.listCases ul li .ipShow b {
@@ -3223,35 +2084,29 @@ article.casesBox .blockL section.listCases ul li .ipShow b {
   padding: 0;
   width: 1.4rem;
   height: 1.4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   background-color: #3f3f3f;
   color: #cccccc;
   border-radius: 50%;
 }
 article.casesBox .blockL section.listCases ul li .ipShow ul {
   display: none;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   position: absolute;
   left: 4em;
   background-color: #cccccc;
   color: #16181f;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   z-index: 1000;
   border-radius: 4px;
   border: 1px solid #16181f;
   overflow: visible;
-  -webkit-box-shadow: 0 0 10px black;
-          box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px black;
 }
 article.casesBox .blockL section.listCases ul li .ipShow ul::before {
   position: absolute;
@@ -3286,19 +2141,15 @@ article.casesBox .blockL section.listCases ul li .amendGroup {
   right: 0;
   width: 1.8em;
   height: 1.8em;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   border-radius: 50%;
   background-color: #ffec39;
   display: none;
-  -webkit-transition: all 1s;
   transition: all 1s;
   opacity: 0;
 }
@@ -3310,14 +2161,10 @@ article.casesBox .blockL section.listCases ul li .amendGroup span {
   color: #1e212b;
 }
 article.casesBox .blockL section.listCases ul li:hover {
-  -webkit-transition: all 1s;
   transition: all 1s;
 }
 article.casesBox .blockL section.listCases ul li:hover .amendGroup {
-  -webkit-transition: 0.5s;
   transition: 0.5s;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   opacity: 1;
 }
@@ -3329,7 +2176,6 @@ article.casesBox .blockL section.listCases ul li h3 {
   font-size: 1em;
   font-weight: bolder;
   word-break: break-all;
-  -webkit-transition: 0.25s;
   transition: 0.25s;
 }
 article.casesBox .blockL section.listCases ul li h3 small {
@@ -3347,8 +2193,6 @@ article.casesBox .blockL section.listCases ul li b {
   margin-right: 0.5em;
   max-width: 11.5em;
   overflow: hidden;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   white-space: nowrap;
 }
@@ -3405,15 +2249,12 @@ article.casesBox .blockL section.listCases .flexGroup {
   left: 0;
   width: 100vw;
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -3446,15 +2287,12 @@ article.casesBox .blockL section.listCases .flexGroup section.groupBox .cloBtn {
   width: 2rem;
   height: 2rem;
   font-size: 1.4em;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
@@ -3463,31 +2301,23 @@ article.casesBox .blockL section.listCases .flexGroup section.groupBox .cloBtn {
   cursor: pointer;
 }
 article.casesBox .blockL section.listCases .flexGroup section.groupBox h2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   border-bottom: 4px solid #1B96F1;
 }
 @media (max-width: 650px) {
   article.casesBox .blockL section.listCases .flexGroup section.groupBox h2 {
-    -ms-flex-flow: wrap;
-        flex-flow: wrap;
+    flex-flow: wrap;
   }
 }
 article.casesBox .blockL section.listCases .flexGroup section.groupBox h2 b {
   font-size: 1.6rem;
 }
 article.casesBox .blockL section.listCases .flexGroup section.groupBox h2 .otherBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: absolute;
   right: 3.5em;
   top: 0.9em;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   font-size: 0.8rem;
 }
@@ -3499,15 +2329,12 @@ article.casesBox .blockL section.listCases .flexGroup section.groupBox h2 .other
   }
 }
 article.casesBox .blockL section.listCases .flexGroup section.groupBox h2 .otherBox e {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   background-color: rgba(204, 204, 204, 0.15);
   border-radius: 4px;
   color: #cccccc;
   padding: 0.15em 0.5em;
   margin: 0 0.25em;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   cursor: pointer;
   overflow: visible;
@@ -3534,25 +2361,19 @@ article.casesBox .blockL section.listCases .flexGroup section.groupBox select op
   color: #1e212b;
 }
 article.casesBox .blockL section.listCases .flexGroup section.groupBox .searchBox.horizonta {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-bottom: 1em;
 }
 article.casesBox .blockL section.listCases .flexGroup section.groupBox .searchBox.horizonta button.btn {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   padding: 0.5em;
   font-size: 0.75em;
   font-weight: bold;
   background-color: #1B96F1;
   border: 1px solid #0d7bcc;
   color: #ffffff;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
-  -webkit-box-shadow: 2px 2px 3px #16181f;
-          box-shadow: 2px 2px 3px #16181f;
+  box-shadow: 2px 2px 3px #16181f;
   margin: 0 0.25em 0 0;
 }
 article.casesBox .blockL section.listCases .flexGroup section.groupBox .searchBox.horizonta button.btn + button {
@@ -3561,15 +2382,10 @@ article.casesBox .blockL section.listCases .flexGroup section.groupBox .searchBo
   border: 1px solid #1d9c7f;
 }
 article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupList {
-  -webkit-box-flex: 6;
-      -ms-flex: 6;
-          flex: 6;
+  flex: 6;
   min-width: 400px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -ms-flex-flow: wrap;
-      flex-flow: wrap;
+  flex-flow: wrap;
   place-items: flex-start;
   padding-top: 1em;
   position: relative;
@@ -3626,7 +2442,6 @@ article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupLis
   padding: 0.5em 0.5em 0.25em 0.5em;
   background-color: #25C7A2;
   border-radius: 4px;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   margin: 0.75em 0.5em;
   width: calc( 33% - 1em );
@@ -3638,23 +2453,16 @@ article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupLis
   background-color: #ffec39;
 }
 article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupList label.titleTag .checkbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 1.5rem;
-          flex: 0 0 1.5rem;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  flex: 0 0 1.5rem;
 }
 article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupList label.titleTag .Straight {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   place-items: flex-start;
   padding-bottom: 0.5em;
 }
@@ -3719,24 +2527,14 @@ article.casesBox .blockL section.listCases .flexGroup section.groupBox .groupLis
 }
 article.casesBox .blockL section.listCases .flexGroup section.groupBox .typeInfoBox {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 article.casesBox .blockL section.listCases .flexGroup section.groupBox .setBox {
   min-width: 240px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex: 1;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   padding-left: 1em;
   padding-top: 1em;
   position: relative;
@@ -3744,20 +2542,14 @@ article.casesBox .blockL section.listCases .flexGroup section.groupBox .setBox {
   position: sticky;
   top: 0;
   right: 0;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
 }
 article.casesBox .blockL section.listCases .flexGroup section.groupBox .setBox > div {
   position: absolute;
 }
 article.casesBox .blockL section.listCases .flexGroup section.groupBox .setBox h1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   border-bottom: 1px dashed #3f3f3f;
   color: #ffec39;
 }
@@ -3776,9 +2568,7 @@ article.casesBox .blockL section.listCases .flexGroup section.groupBox .setBox p
 }
 article.casesBox .blockL section.listCases .flexGroup section.groupBox .setBox .pauseBox > div {
   min-width: calc( 240px - 1em );
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   padding: 0 0.5em;
   margin-bottom: 1em;
 }
@@ -3801,9 +2591,7 @@ article.casesBox .blockL section.listCases .flexGroup section.groupBox .setBox b
 }
 article.casesBox .blockL section.listCases .flexGroup section.groupBox .setBox .visibilityBox > div {
   min-width: calc( 240px - 1em );
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   padding: 0 0.5em;
   margin-bottom: 1em;
 }
@@ -3816,15 +2604,9 @@ article.casesBox .blockR {
 }
 article.casesBox .blockR section.socCases {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  display: -ms-grid;
   display: grid;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   background-color: #2a2a39;
   padding: 1em;
   margin: 0.5em;
@@ -3832,8 +2614,6 @@ article.casesBox .blockR section.socCases {
 }
 article.casesBox .blockR section.socCases h2 {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   font-size: 1.25em;
   color: #dedede;
@@ -3880,19 +2660,13 @@ article.casesBox .blockR section.socCases .detailed p .virusTotal {
 }
 article.casesBox .blockR section.socCases .detailed ul {
   margin-top: 1em;
-  display: -ms-grid;
   display: grid;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   font-size: 0.9em;
   border: 1px solid #3f3f3f;
   border-bottom: 0px solid #3f3f3f;
 }
 article.casesBox .blockR section.socCases .detailed ul li {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   border-bottom: 1px solid #3f3f3f;
 }
@@ -3900,32 +2674,19 @@ article.casesBox .blockR section.socCases .detailed ul li:nth-child(2n+1) {
   background-color: rgba(0, 0, 0, 0.2);
 }
 article.casesBox .blockR section.socCases .detailed ul li b {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100px;
-          flex: 0 0 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex: 0 0 100px;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 0.35em 0.5em;
 }
 article.casesBox .blockR section.socCases .detailed ul li span {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   border-left: 1px solid #3f3f3f;
   padding: 0.35em 0.5em;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   word-break: break-word;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 article.casesBox .blockR section.socCases .detailed ul li span i ~ i::before {
   content: "、";
@@ -3938,12 +2699,8 @@ article.casesBox .blockR section.socCases .detailed ul li span e {
   margin: 0.25em;
   color: #505050;
   cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 article.casesBox .blockR section.socCases .detailed ul li span e i {
   margin-right: 0.15em;
@@ -3956,9 +2713,7 @@ article.casesBox .blockR section.socCases .detailed ul li span e.pick i {
   color: #16181f;
 }
 article.casesBox .blockR section.socCases .detailed ul li div {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   border-left: 1px solid #3f3f3f;
   padding: 0.35em 0.5em;
 }
@@ -3977,19 +2732,13 @@ article.casesBox .blockR section.socCases .statusBox {
   padding: 1em 1em;
   font-size: 1.25em;
   border-radius: 0.5em;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  flex-direction: column;
 }
 article.casesBox .blockR section.socCases .statusBox + .statusBox {
   margin-top: 1em;
@@ -4016,8 +2765,6 @@ article.casesBox .blockR section.socCases .statusBox b {
   font-size: 1.5em;
 }
 article.casesBox .blockR section.socCases .statusClose {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   background-color: #1B96F1;
   width: 84%;
@@ -4034,20 +2781,16 @@ article.casesBox .blockR section.socCases .statusClose span.material-icons {
 article.casesBox .blockR section.socCases .statusClose e {
   font-size: 0.9em;
   border-left: 1px solid #2a2a39;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   width: 100%;
   border-top-right-radius: 0.25em;
   border-bottom-right-radius: 0.25em;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 article.casesBox .blockR section.socCases .statusClose:hover e {
   background-color: #0d7bcc;
@@ -4057,44 +2800,28 @@ article.casesBox .blockR section.socCases ul.spiteList, article.casesBox .blockR
   border: 1px solid #3f3f3f;
 }
 article.casesBox .blockR section.socCases ul.spiteList li, article.casesBox .blockR section.socCases ul.ipList li, article.casesBox .blockR section.socCases ul.endpointList li {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   width: 100%;
 }
 article.casesBox .blockR section.socCases ul.spiteList li span, article.casesBox .blockR section.socCases ul.ipList li span, article.casesBox .blockR section.socCases ul.endpointList li span {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  align-items: center;
+  justify-content: flex-start;
   padding: 0.5em;
   word-break: break-all;
 }
 article.casesBox .blockR section.socCases ul.spiteList li span:nth-child(1), article.casesBox .blockR section.socCases ul.ipList li span:nth-child(1), article.casesBox .blockR section.socCases ul.endpointList li span:nth-child(1) {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  flex: 2;
 }
 article.casesBox .blockR section.socCases ul.spiteList li span:nth-child(2), article.casesBox .blockR section.socCases ul.ipList li span:nth-child(2), article.casesBox .blockR section.socCases ul.endpointList li span:nth-child(2) {
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+  flex: 3;
 }
 article.casesBox .blockR section.socCases ul.spiteList li span:nth-child(3), article.casesBox .blockR section.socCases ul.ipList li span:nth-child(3), article.casesBox .blockR section.socCases ul.endpointList li span:nth-child(3) {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   text-align: center;
 }
 article.casesBox .blockR section.socCases ul.spiteList li span:nth-child(4), article.casesBox .blockR section.socCases ul.ipList li span:nth-child(4), article.casesBox .blockR section.socCases ul.endpointList li span:nth-child(4) {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   text-align: center;
 }
 article.casesBox .blockR section.socCases ul.spiteList li span b, article.casesBox .blockR section.socCases ul.ipList li span b, article.casesBox .blockR section.socCases ul.endpointList li span b {
@@ -4142,15 +2869,9 @@ article.casesBox .blockR section.socCases ul.spiteList li.goPage b span, article
   color: #cccccc;
   width: 2em;
   height: 2em;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 article.casesBox .blockR section.socCases ul.spiteList li.goPage b span.color_3, article.casesBox .blockR section.socCases ul.ipList li.goPage b span.color_3, article.casesBox .blockR section.socCases ul.endpointList li.goPage b span.color_3 {
   cursor: auto;
@@ -4169,8 +2890,7 @@ article.casesBox .blockR section.socCases ul.noteList {
   border: 1px solid #1e212b;
   border-radius: 0.5em;
   background-color: rgba(0, 0, 0, 0.15);
-  -webkit-box-shadow: 0 0 2px #3f3f3f;
-          box-shadow: 0 0 2px #3f3f3f;
+  box-shadow: 0 0 2px #3f3f3f;
 }
 article.casesBox .blockR section.socCases ul.noteList li {
   position: relative;
@@ -4180,17 +2900,12 @@ article.casesBox .blockR section.socCases ul.noteList li {
 article.casesBox .blockR section.socCases ul.noteList li span.noteUser {
   padding: 0.25em 0.5em 0.25em 0.25em;
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   display: inline-flex;
 }
 article.casesBox .blockR section.socCases ul.noteList li span.noteUser span.material-icons {
@@ -4201,18 +2916,15 @@ article.casesBox .blockR section.socCases ul.noteList li span.noteUser span.note
 }
 article.casesBox .blockR section.socCases ul.noteList li span.noteSay {
   position: relative;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
+  flex: 1;
   display: inline-flex;
-  padding: 0.5em 0.5em 1.25em 0.5em;
+  padding: 0.5em 0.75em 1.25em 0.75em;
   background-color: #1a1c25;
   border-radius: 4px;
   color: #dedede;
   z-index: 1;
   word-break: break-all;
+  font-size: 0.9em;
 }
 article.casesBox .blockR section.socCases ul.noteList li span.noteSay::before {
   content: "";
@@ -4237,15 +2949,10 @@ article.casesBox .blockR section.socCases ul.noteList li span.noteTime {
   z-index: 1;
 }
 article.casesBox .blockR section.socCases ul.noteList li.rowReverse {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 article.casesBox .blockR section.socCases ul.noteList li.rowReverse span.noteSay {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
   word-break: break-word;
 }
 article.casesBox .blockR section.socCases ul.noteList li.rowReverse span.noteSay::before {
@@ -4262,8 +2969,6 @@ article.casesBox .blockR section.socCases ul.noteList li.talkBox {
   position: absolute;
   bottom: 0;
   z-index: 1;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   width: 100%;
   padding: 1em;
@@ -4277,9 +2982,7 @@ article.casesBox .blockR section.socCases ul.noteList li.talkBox {
   }
 }
 article.casesBox .blockR section.socCases ul.noteList li.talkBox textarea {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   font-size: 0.9em;
   padding: 0.5em;
   border: 1px solid #16181f;
@@ -4290,9 +2993,7 @@ article.casesBox .blockR section.socCases ul.noteList li.talkBox textarea {
   border-bottom-left-radius: 4px;
 }
 article.casesBox .blockR section.socCases ul.noteList li.talkBox button {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 80px;
-          flex: 0 0 80px;
+  flex: 0 0 80px;
   min-height: 52px;
 }
 article.casesBox .blockR section.socCases ul.noteList li.talkBox button.postBtn {
@@ -4312,12 +3013,7 @@ article.casesBox .blockR section.socCases ul.noteList li ul.notBox {
   overflow: auto;
   overflow-x: hidden;
   margin-bottom: 88px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex-direction: column-reverse;
   display: flex;
 }
 article.casesBox .blockR section.socCases ul.noteList li ul.notBox li.is_top {
@@ -4338,8 +3034,7 @@ article.casesBox .blockR section.socCases ul.noteList li ul.notBox li.is_top::af
   font-size: 0.5em;
   z-index: 2;
   border-radius: 4px;
-  -webkit-box-shadow: 0 0 4px #15715c;
-          box-shadow: 0 0 4px #15715c;
+  box-shadow: 0 0 4px #15715c;
 }
 article.casesBox .blockR section.socCases ul.noteList li ul.notBox li.is_top span.noteSay {
   color: #1e212b;
@@ -4381,15 +3076,12 @@ article.casesBox .blockR section.socCases .imgBox.pos_flex > div .clo {
   background-color: #f12939;
   color: #ffffff;
   cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 article.casesBox .blockR section.socCases .imgBox.pos_flex > div .clo::before {
   content: "X";
@@ -4399,7 +3091,6 @@ article.casesBox .blockR section.socCases .imgBox.pos_flex > div .clo::before {
 article.casesBox .blockR section.socCases .imgBox > div {
   width: 100%;
   height: 100%;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 article.casesBox .blockR section.socCases .imgBox > div img {
@@ -4425,18 +3116,11 @@ article.casesBox .blockR section.socCases .imgBox > div img {
   border-radius: 4px;
 }
 .home section.cases .casesfox + .casesfox {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   overflow: hidden;
   margin-top: 0.5em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 .home section.cases .casesfox ul.casesData {
   overflow: auto;
@@ -4452,14 +3136,10 @@ article.casesBox .blockR section.socCases .imgBox > div img {
   left: auto;
 }
 .home section.Announcement {
-  -webkit-box-flex: 2 !important;
-      -ms-flex: 2 !important;
-          flex: 2 !important;
+  flex: 2 !important;
 }
 .home section.Announcement .casesfox {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   min-height: 160px;
   overflow: hidden;
 }
@@ -4480,9 +3160,7 @@ article.casesBox .blockR section.socCases .imgBox > div img {
 }
 
 .cases article.casesBox .blockL section.listCases .filterBox e, .cases article.casesBox .blockL section.listCases .filterBox a {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
   border-left: none;
   background-color: transparent;
 }
@@ -4490,24 +3168,19 @@ article.casesBox .blockR section.socCases .imgBox > div img {
 .login #loginApp.body {
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
 article.login {
   max-width: 500px;
 }
 article.login .coreLogo {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
+  flex: 0 0 100%;
   width: 100%;
   height: auto;
   text-align: center;
@@ -4517,15 +3190,12 @@ article.login .coreLogo img {
 }
 article.login section.logoIcon {
   padding: 1em;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 article.login section.logoIcon img {
   width: 80%;
@@ -4534,24 +3204,16 @@ article.login section.logoIcon img {
 article.login section.loginContent {
   max-width: 360px;
   padding: 1em 3em;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  flex-direction: column;
 }
 article.login section.loginContent .inputBox, article.login section.loginContent .btnBox, article.login section.loginContent .footInfo {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 0.25em;
 }
@@ -4566,9 +3228,7 @@ article.login section.loginContent .inputBox.userId span.material-icons, article
   font-size: 1.5em;
 }
 article.login section.loginContent .inputBox input, article.login section.loginContent .inputBox button, article.login section.loginContent .btnBox input, article.login section.loginContent .btnBox button, article.login section.loginContent .footInfo input, article.login section.loginContent .footInfo button {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
+  flex: 0 0 100%;
   display: inline-block;
   padding: 0.5em 1em;
   border-radius: 4px;
@@ -4589,50 +3249,30 @@ article.login section.loginContent .inputBox small, article.login section.loginC
 }
 
 .host .dataInfo {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
 .host .dataInfo ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-content: center;
+  justify-content: center;
 }
 .host .dataInfo ul li {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   color: #cccccc;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
   text-align: center;
 }
 .host .dataInfo ul li span {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   width: 3.5em;
   height: 3.5em;
   min-width: 3.5em;
@@ -4642,10 +3282,7 @@ article.login section.loginContent .inputBox small, article.login section.loginC
   font-weight: bolder;
   line-height: 3.2em;
   border-radius: 3em;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 .host .dataInfo ul li span small, .host .dataInfo ul li span i {
   line-height: 1.2em;
@@ -4666,8 +3303,6 @@ article.login section.loginContent .inputBox small, article.login section.loginC
   border: 4px solid #1B96F1;
 }
 .host .dataInfo ul li b {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   padding: 0.5rem;
   font-size: 0.95em;
@@ -4677,19 +3312,14 @@ article.login section.loginContent .inputBox small, article.login section.loginC
 @media (min-width: 1365px) {
   .host .dataInfo ul li {
     max-width: 240px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
   .host .dataInfo ul li b {
     max-width: 100%;
   }
 }
 .host ul.spiteList li span {
-  -webkit-box-flex: 1 !important;
-      -ms-flex: 1 !important;
-          flex: 1 !important;
+  flex: 1 !important;
 }
 .host ul.spiteList li + li {
   cursor: pointer;
@@ -4705,42 +3335,32 @@ article.login section.loginContent .inputBox small, article.login section.loginC
 }
 
 .pageSizeList {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 .pageSizeList label {
   margin-right: 0.5em;
 }
 .pageSizeList ul.pagesBox {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   margin-bottom: 0;
   width: 17.5em;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   padding-top: 0 !important;
 }
 .pageSizeList ul.pagesBox > li {
   width: 2em;
   height: 2em;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   border: 1px solid #3f3f3f !important;
   pointer-events: auto;
   padding: 0 !important;
@@ -4765,42 +3385,32 @@ article.login section.loginContent .inputBox small, article.login section.loginC
   padding: 0;
   right: auto;
   overflow: visible;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 .pageSizeList ul.pagesBox > li b {
   font-size: 1em;
 }
 .pageSizeList .pageIndex {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
 }
 .pageSizeList .pageIndex input {
   width: 4em;
 }
 .pageSizeList .pageall {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   color: #909090;
   font-size: 0.6em;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
 .hideMe {
@@ -4831,24 +3441,19 @@ article.login section.loginContent .inputBox small, article.login section.loginC
   color: #25C7A2;
 }
 .content.events .body#app .blockR ul.endpointList li:nth-child(1) span {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 .content.events .body#app .blockR ul.endpointList li + li > span:nth-child(1) {
   text-align: center;
   word-break: break-word;
 }
 .content.events .body#app .blockR ul.endpointList li + li > span:nth-child(2) {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
   font-size: 0.8em;
 }
 .content.events .body#app .blockR ul.endpointList li + li > span:nth-child(2) p {
@@ -4865,41 +3470,28 @@ article.login section.loginContent .inputBox small, article.login section.loginC
   text-decoration: underline;
 }
 .content.events .body#app .blockR ul.endpointList li + li > span span.material-icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 .content.events .body#app .blockR ul.endpointList li span:nth-child(1) {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  flex: 2;
 }
 .content.events .body#app .blockR ul.endpointList li span:nth-child(1) i {
   cursor: pointer;
 }
 .content.events .body#app .blockR ul.endpointList li span:nth-child(2) {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  flex: 2;
 }
 .content.events .body#app .blockR ul.endpointList li span:nth-child(3) {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  flex: 2;
 }
 .content.events .body#app .blockR ul.endpointList li span:nth-child(4) {
-  -webkit-box-flex: 7;
-      -ms-flex: 7;
-          flex: 7;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex: 7;
+  align-items: flex-start;
 }
 .content.events .body#app .blockR ul.endpointList li span:nth-child(4) > span {
   padding: 0;
@@ -4923,9 +3515,7 @@ article.login section.loginContent .inputBox small, article.login section.loginC
 .content.events .body#app .blockR ul.endpointList li span:nth-child(4) > span + span {
   padding-left: 2rem;
   padding-right: 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .content.events .body#app .blockR ul.endpointList li span:nth-child(4) > span + span::before, .content.events .body#app .blockR ul.endpointList li span:nth-child(4) > span + span::after {
   content: "";
@@ -4956,15 +3546,12 @@ article.login section.loginContent .inputBox small, article.login section.loginC
   display: block;
   position: absolute;
   z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   width: 1rem;
   height: 1rem;
   background-color: #cccccc;
@@ -4977,9 +3564,7 @@ article.login section.loginContent .inputBox small, article.login section.loginC
   font-size: 2.5rem;
 }
 .content.events .body#app .blockR ul.endpointList li span:nth-child(4) .dataInit span.Straight {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
   text-align: left;
   font-size: 0.9em;
   width: 100%;
@@ -4987,9 +3572,7 @@ article.login section.loginContent .inputBox small, article.login section.loginC
 .content.events .body#app .blockR ul.endpointList li span .dataInit {
   height: 100%;
   border-left: 1px dashed #3f3f3f;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   margin-left: 0.5rem;
 }
 .content.events .body#app .blockR ul.endpointList li span .dataInit p {
@@ -5007,15 +3590,12 @@ article.login section.loginContent .inputBox small, article.login section.loginC
   z-index: 2;
   width: 2rem;
   height: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   background-color: #25C7A2;
   color: #2a2a39;
   border-radius: 50%;
@@ -5039,15 +3619,12 @@ ul.endpointList li span b {
   text-align: center;
   padding: 0.25em 1em;
   background-color: rgba(37, 199, 162, 0.1);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   margin-top: 1em;
   border-radius: 4px;
   cursor: pointer;
@@ -5067,7 +3644,6 @@ ul.endpointList li span b {
 }
 
 .handwriting {
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 .handwriting.flexKeyboard {
@@ -5087,25 +3663,17 @@ ul.endpointList li span b {
   padding: 2em !important;
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 1em;
-  -webkit-box-shadow: inset 0 0 50px black;
-          box-shadow: inset 0 0 50px black;
+  box-shadow: inset 0 0 50px black;
   border: 2px solid #1e212b;
 }
 .handwriting .container {
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 .handwriting .keyboard {
   width: 100%;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-end;
+  align-items: center;
   padding-right: 1em;
   font-size: 0.8em;
   cursor: pointer;
@@ -5183,12 +3751,8 @@ ul.endpointList li span b {
 }
 #app .statusBox.timeTree .timeBox .contentBox h4 {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   border-bottom: 2px solid #3f3f3f;
 }
 #app .statusBox.timeTree .timeBox .contentBox h4 e {
@@ -5211,15 +3775,12 @@ ul.endpointList li span b {
   width: 2em;
   height: 2em;
   color: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   position: absolute;
   top: 3.5em;
   left: 1.25em;
@@ -5228,15 +3789,12 @@ ul.endpointList li span b {
 
 .title_1 {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 .title_1 h4 {
   padding: 2em;
@@ -5250,12 +3808,8 @@ ul.endpointList li span b {
 }
 
 .titleBar {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 0.5em 0.5em 0em 1em;
 }
 .titleBar span.material-icons {
@@ -5263,15 +3817,11 @@ ul.endpointList li span b {
 }
 
 .vDataPick {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   padding: 0.5em;
 }
 .vDataPick > div.flex.justify-center.items-center {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   background-color: rgba(63, 63, 63, 0.6);
@@ -5294,9 +3844,7 @@ ul.endpointList li span b {
   pointer-events: none;
 }
 .vDataPick > div.flex.justify-center.items-center input.border.px-2.py-1.w-32.rounded {
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+  flex: 3;
   max-width: 45%;
   font-size: 0.6em;
   text-align: center;
@@ -5306,9 +3854,7 @@ ul.endpointList li span b {
   color: #cccccc;
 }
 .vDataPick > div.flex.justify-center.items-center svg.w-4.h-4.mx-2 {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 10%;
-          flex: 0 0 10%;
+  flex: 0 0 10%;
   padding: 0.25em;
 }
 .vDataPick .vc-popover-content-wrapper.is-interactive {
@@ -5333,8 +3879,6 @@ ul.endpointList li span b {
   padding: 0.5em;
 }
 .selectBox .tabBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   border-bottom: 1px solid #3f3f3f;
 }
@@ -5359,34 +3903,24 @@ ul.endpointList li span b {
   background-color: rgba(63, 63, 63, 0.15);
 }
 .selectBox .insideBox p, .selectBox .eventBox p {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .selectBox .insideBox p + p, .selectBox .eventBox p + p {
   padding-top: 1em;
 }
 .selectBox .insideBox p e, .selectBox .eventBox p e {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 7em;
-          flex: 0 0 7em;
+  flex: 0 0 7em;
   font-size: 0.9em;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 .selectBox .insideBox p input, .selectBox .insideBox p select, .selectBox .eventBox p input, .selectBox .eventBox p select {
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+  flex: 3;
   font-size: 0.9em;
   width: 60%;
   min-width: 55%;
@@ -5407,14 +3941,11 @@ ul.endpointList li span b {
 .btnBox {
   padding: 1em 0.5em;
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .btnBox button.btn {
   border: 1px solid #2a2a39;
   padding: 0.5em;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 .btnBox button.btn:hover {
@@ -5512,15 +4043,12 @@ hr ~ p {
   height: 1.5em;
   background-color: red;
   color: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -5561,49 +4089,38 @@ input[disabled] {
   left: 1.5em;
   top: 0.8em;
   font-size: 0.8em;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   cursor: pointer;
 }
 .footerBox .descAsc span {
   padding: 0 0.25em;
 }
 .footerBox ul.pageFooter {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 .footerBox ul.pageFooter li {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   height: 2em;
   border: 1px solid #3f3f3f;
   padding: 0em;
   width: 2em;
   max-width: 2em;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 .footerBox ul.pageFooter li:nth-child(2) {
   max-width: 3em;
@@ -5613,15 +4130,12 @@ input[disabled] {
   height: 100%;
   max-width: 100%;
   padding: 0.25em 0.5em;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   cursor: pointer;
 }
 .footerBox ul.pageFooter li input {
@@ -5649,15 +4163,12 @@ input[disabled] {
 }
 .footerBox small {
   padding-top: 0.5em;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
 .color_1 {
@@ -5677,14 +4188,11 @@ input[disabled] {
 }
 
 section.socChart canvas.maxHeight {
-  max-height: -webkit-max-content !important;
-  max-height: -moz-max-content !important;
   max-height: max-content !important;
 }
 
 article {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 section {
@@ -5696,9 +4204,7 @@ section.maxW200 {
 @media (min-width: 501px) and (max-width: 845px) {
   section.maxW200 {
     max-width: 100%;
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    flex: 1;
   }
 }
 section.maxW240 {
@@ -5707,16 +4213,12 @@ section.maxW240 {
 @media (min-width: 501px) and (max-width: 845px) {
   section.maxW240 {
     max-width: 100%;
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    flex: 1;
   }
 }
 
 .maxW200 {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 200px;
-          flex: 0 0 200px;
+  flex: 0 0 200px;
   max-width: 200px;
 }
 @media (max-width: 650px) {
@@ -5731,16 +4233,12 @@ section.maxW240 {
 @media (min-width: 501px) and (max-width: 845px) {
   .maxW240 {
     max-width: 100%;
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    flex: 1;
   }
 }
 
 .maxW100 {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100px;
-          flex: 0 0 100px;
+  flex: 0 0 100px;
   max-width: 100px;
 }
 @media (max-width: 650px) {
@@ -5750,70 +4248,44 @@ section.maxW240 {
 }
 
 span.maxW50 {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 1em;
-          flex: 0 0 1em;
+  flex: 0 0 1em;
   max-width: 1em;
 }
 
 .horizonta {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .Straight {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .flex_1 {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
 
 .flex_2 {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  flex: 2;
 }
 
 .flex_3 {
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+  flex: 3;
 }
 
 .flex_4 {
-  -webkit-box-flex: 4;
-      -ms-flex: 4;
-          flex: 4;
+  flex: 4;
 }
 
 .flex_5 {
-  -webkit-box-flex: 5;
-      -ms-flex: 5;
-          flex: 5;
+  flex: 5;
 }
 
 .flex_6 {
-  -webkit-box-flex: 6;
-      -ms-flex: 6;
-          flex: 6;
+  flex: 6;
 }
 
 @media (max-width: 650px) {
@@ -5828,13 +4300,9 @@ span.maxW50 {
     font-size: 0.8em;
   }
   header .container nav.topMenu ul {
-    display: -webkit-inline-box !important;
-    display: -ms-inline-flexbox !important;
     display: inline-flex !important;
   }
   header .container nav.topMenu ul li {
-    display: -webkit-inline-box !important;
-    display: -ms-inline-flexbox !important;
     display: inline-flex !important;
     padding: 0.75em 0.25em 0.35em 0.25em !important;
   }
@@ -5854,26 +4322,18 @@ span.maxW50 {
   }
 
   .blockR section.socCases ul.endpointList li {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .blockR section.socCases ul.endpointList li span:nth-child(4) {
-    -ms-flex-flow: wrap;
-        flex-flow: wrap;
+    flex-flow: wrap;
     min-width: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    flex-direction: column;
+    align-content: center;
     border-top: 1px dashed #3f3f3f;
   }
 
   .footerBox ul.pageFooter {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    justify-content: start;
   }
 
   article.infoBox section.dataInfo ul {
@@ -5891,31 +4351,24 @@ span.maxW50 {
     width: 70%;
     z-index: 100;
     border-right: 1px solid #3f3f3f;
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-    -webkit-transition: 0.5s;
+    transform: translateX(-100%);
     transition: 0.5s;
-    -webkit-box-shadow: 0 0 10px #16181f;
-            box-shadow: 0 0 10px #16181f;
+    box-shadow: 0 0 10px #16181f;
   }
   body header + .content #app.body .blockL .userIcon {
     display: none;
   }
   body header + .content #app.body .blockL .rwdBox {
     display: block;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
   }
   body header + .content #app.body .blockL.openRwd {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+    transform: translateX(0%);
   }
   body header + .content #app.body .blockL.openRwd .clo_i {
     z-index: -1;
@@ -5933,10 +4386,7 @@ span.maxW50 {
     margin-left: 0;
   }
   body header + .content #app.body .blockR > .horizonta {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -5948,13 +4398,11 @@ span.maxW50 {
 }
 @media (max-width: 650px) {
   .chartBox .blockL {
-    -webkit-transform: translateX(0%) !important;
-            transform: translateX(0%) !important;
+    transform: translateX(0%) !important;
     position: relative !important;
     top: 0 !important;
     border-right: 0 !important;
-    -webkit-box-shadow: none !important;
-            box-shadow: none !important;
+    box-shadow: none !important;
     width: 100% !important;
     padding-bottom: 0 !important;
   }
@@ -5972,8 +4420,7 @@ span.maxW50 {
   height: 2em;
   background-color: #3f3f3f;
   cursor: pointer;
-  -webkit-box-shadow: 0 0 4px black;
-          box-shadow: 0 0 4px black;
+  box-shadow: 0 0 4px black;
   overflow: hidden;
 }
 body.white header {
@@ -6024,15 +4471,11 @@ body.white header .container ul.sysBox li a {
   padding: 0em 0em 3em 0em;
 }
 .mitreattack article.mitre .attack ul.attUl {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   font-size: 0.75em;
 }
 .mitreattack article.mitre .attack ul.attUl > li {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   margin: 0.5em;
   min-width: 150px;
   border-top-left-radius: 0.5em;
@@ -6047,23 +4490,19 @@ body.white header .container ul.sysBox li a {
   border: 1px solid #1B96F1;
   border-bottom: none;
   word-wrap: break-word;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   font-size: 1.1em;
   color: #ffffff;
   text-shadow: 0 0 4px #0a5e9c;
   position: sticky;
   top: 0;
   left: 0;
-  -webkit-box-shadow: inset 0 0.25em 0.5em #0a5e9c;
-          box-shadow: inset 0 0.25em 0.5em #0a5e9c;
+  box-shadow: inset 0 0.25em 0.5em #0a5e9c;
 }
 .mitreattack article.mitre .attack ul.attUl > li > ul {
   border: 1px solid #1e212b;
@@ -6098,54 +4537,39 @@ body.white header .container ul.sysBox li a {
   width: 50vw;
   min-width: 260px;
   max-width: 400px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .sendBox input {
-  -webkit-box-flex: 6;
-      -ms-flex: 6;
-          flex: 6;
+  flex: 6;
   border: 1px solid #1e212b;
   padding-left: 1em;
   border-top-left-radius: 0.25em;
   border-bottom-left-radius: 0.25em;
 }
 .sendBox span {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-flex: 6;
-      -ms-flex: 6;
-          flex: 6;
+  flex: 6;
   border: 1px solid #1e212b;
   padding-left: 1em;
   border-top-left-radius: 0.25em;
   border-bottom-left-radius: 0.25em;
   background-color: #ffffff;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .sendBox .sendACCT {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  flex: 2;
   border-top-right-radius: 0.25em;
   border-bottom-right-radius: 0.25em;
   background-color: #fc3848;
   color: #ffffff;
   padding: 0.5em 1em;
   cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   border: 1px solid #1e212b;
   border-left: none;
 }
@@ -6167,43 +4591,34 @@ body.white header .container ul.sysBox li a {
   bottom: 5em;
   left: 2.5em;
   z-index: 100;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   background-color: #ffffff;
   padding: 0.5em 0.25em 0.5em 0.5em;
   border-radius: 4px;
   border: solid 1px #909090;
 }
 .mySetMat ul.setUl {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   padding: 0 0em 0 0.5em;
 }
 .mySetMat ul.setUl li {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 .mySetMat ul.setUl li b, .mySetMat ul.setUl li input {
   padding: 0.25em 0.5em;
@@ -6213,15 +4628,12 @@ body.white header .container ul.sysBox li a {
   color: #ffffff;
   margin: 0 0.5em;
   cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 .mySetMat ul.setUl li b.hasNew {
   background-color: #25C7A2;
@@ -6277,8 +4689,6 @@ body.white header .container ul.sysBox li a {
 }
 
 .contnetBox p {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .contnetBox p a ~ a {

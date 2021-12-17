@@ -467,7 +467,8 @@ var mdBoxApp = new Vue({
       });
     },
     dragBox: function dragBox() {
-      var x_pos;
+      var x_pos,
+          startX = 0;
       var printable = document.querySelector('#printable');
       var dragDiv = document.querySelector('.dragBox');
       dragDiv.addEventListener('mousedown', dragStart);
@@ -483,7 +484,7 @@ var mdBoxApp = new Vue({
 
       function move(e) {
         //計算出拖曳物件的距離計算寬度
-        x = e.clientX - startX;
+        var x = e.clientX - startX;
         printable.style.width = x_pos - x + 'px';
       }
 
