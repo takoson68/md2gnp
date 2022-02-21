@@ -9,7 +9,7 @@
   <body>
     <div class="mdeditor">
       <section class="sys_title"> 
-        <h1>md  =>  png !!!!!!!! </h1>
+        <h1>md  =>  png</h1>
       </section>
       <section id="mdBox">
         <div class="mdTopng">
@@ -29,39 +29,51 @@
                 </li>
               </ul>
             </div>
+            <h2>添加事件處理敘述 </h2>
+            <div class="conLeft"> 
+              <textarea v-model="eventSource"></textarea>
+            </div>
           </div>
           <div id="attackHistory">
-            <div class="timePeriod">
-              <div class="list">區間：
-                <div class="list_li center" v-for="(ss,l) in iArr" :key="l" :class="ss[0]"><span class="material-icons">{{ss[0]}} </span><b>{{ss[1]}} </b></div>
+            <div> 
+              <div class="timePeriod">
+                <div class="list">區間：
+                  <div class="list_li center" v-for="(ss,l) in iArr" :key="l" :class="ss[0]"><span class="material-icons">{{ss[0]}} </span><b>{{ss[1]}} </b></div>
+                </div>
               </div>
-            </div>
-            <div class="timeBox" v-for="(item,i) in endData" :key="i"> 
-              <h2 v-if="item[0]=='0000-00-00'"> 
-                <p v-for="(h,k) in item[1][0].start" :key="k">{{h}}</p>
-              </h2>
-              <div v-else>
-                <h1 class="date"> <b>{{cutTime(item[0])[0]}}</b><em>{{cutTime(item[0])[1]}}</em></h1>
-                <div class="detail" v-for="(el,j) in item[1]" :key="j" :myCLass="myCLass=SelectＰic(el.time)"> <b class="title center" :class="myCLass"> <span class="material-icons">{{myCLass}} </span><em>{{parseInt(el.time.split(':')[0])==25?el.con:el.time}} </em></b>
-                  <div class="content"> 
-                    <p v-show="parseInt(el.time.split(':')[0])!==25" v-html="pickMeWord(el.con)"></p>
-                    <ul class="ann" v-if="el.ann">
-                      <li v-for="(e,u) in el.ann" :key="u"> <b v-html="pickMeWord(e)"></b></li>
-                    </ul>
+              <div class="timeBox" v-for="(item,i) in endData" :key="i"> 
+                <h2 v-if="item[0]=='0000-00-00'"> 
+                  <p v-for="(h,k) in item[1][0].start" :key="k" v-html="pickMeWord(h)[0]"></p>
+                </h2>
+                <div v-else>
+                  <h1 class="date"> <b>{{cutTime(item[0])[0]}}</b><em>{{cutTime(item[0])[1]}}</em></h1>
+                  <div class="detail" v-for="(el,j) in item[1]" :key="j" :myCLass="myCLass=SelectPic(el.time)"> <b class="title center" :class="myCLass"> <span class="material-icons">{{myCLass}} </span><em>{{parseInt(el.time.split(':')[0])==25?el.con:el.time}} </em></b>
+                    <div class="content"> 
+                      <p v-show="parseInt(el.time.split(':')[0])!==25" v-html="pickMeWord(el.con)[0]"></p>
+                      <ul class="ann" v-if="el.ann">
+                        <li v-for="(e,u) in el.ann" :key="u"> <b v-html="pickMeWord(e)[0]"></b></li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="eventBox" v-if="eventList.length&gt;0"> 
+              <h3>事件處理           </h3>
+              <h2> 
+                <p v-for="(h,k) in eventList" :key="k" :style="'padding-left: '+pickMeWord(h)[1]*2+'em'" v-html="pickMeWord(h)[0]"> </p>
+              </h2>
             </div>
           </div>
           <div class="dragBox"></div>
         </div>
       </section>
-      <button class="top_right btn_dlo center" onClick="screenshot();"><span class="material-icons">cloud_download</span><b>下載圖片</b></button>
+      <button class="top_right btn_dlo center" onClick="screenshot();" :download="downloadName"><span class="material-icons">cloud_download</span><b>下載圖片</b></button>
     </div>
   </body>
   <script type="text/javascript" src="/takoson/vendors/axios.min.js"></script>
   <script type="text/javascript" src="/takoson/vendors/Chart.min.js"></script>
   <script type="text/javascript" src="/takoson/vendors/vue.min.js"></script>
   <script type="text/javascript" src="/takoson/vendors/html2canvas.min.js"> </script>
-  <script type="text/javascript" src="/takoson/js/mdeditor.dev.js"></script>
+  <script type="text/javascript" src="/takoson/js/mdeditor.js"></script>
 </html>
