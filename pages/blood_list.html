@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>blood_list</title>
+    <link href="/takoson/css/blood_list.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div id="app">
+      <h1 class="title_1">血壓測量記錄表 - {{dataBox.name}}</h1>
+      <div class="content"> 
+        <ul class="listBox"> 
+          <li v-for="(el,j) in dataBox.list" :key="j"> <span class="time">{{el.time.seconds}}</span><span>{{el.low}}</span><span>{{el.high}}</span><span>{{el.heartbeat}}</span></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="/takoson/vendors/vue.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script defer type="text/javascript" src="/takoson/js/blood_list.js"></script>
+</html>
