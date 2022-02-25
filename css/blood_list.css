@@ -1055,7 +1055,7 @@ h1.title_1 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   background-color: #16181f;
-  border-bottom: 1px solid #2a2a39;
+  border-bottom: 4px solid #333849;
 }
 .content ul.listBox > li span {
   -webkit-box-flex: 1;
@@ -1084,13 +1084,16 @@ h1.title_1 {
 .content ul.listBox > li span.time big {
   padding-left: 0.5em;
   font-size: 1.1em;
+  opacity: 0.4;
 }
 .content ul.listBox > li span.time b {
   padding-left: 1em;
   font-size: 0.9em;
+  opacity: 0.4;
 }
 .content ul.listBox > li span:nth-child(1)::before {
   content: "日期：";
+  opacity: 0.4;
 }
 .content ul.listBox > li span:nth-child(2) {
   border-left: 1px solid #2a2a39;
