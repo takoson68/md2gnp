@@ -151,6 +151,11 @@ var mdBoxApp = new Vue({
       return `<big>${dd[0]}</big><b>${dd[1]}</b>`
     },
     openAddListBox(){
+      this.newData = {
+        heartbeat: 0,
+        low: 0,
+        high: 0
+      }
       this.pickMe = 1
       this.openAddBox = true
     },
@@ -174,11 +179,6 @@ var mdBoxApp = new Vue({
         this.dataBox.list = [...this.dataBox.list,this.newData]
         this.updateData()
         this.openAddBox = false
-        this.newData = {
-          heartbeat: 0,
-          low: 0,
-          high: 0
-        }
       }
 
       let dd = this.pickMe==1?'low':this.pickMe==2?'high':this.pickMe==3?'heartbeat':''
@@ -189,11 +189,11 @@ var mdBoxApp = new Vue({
           this.newData[dd] = 0
         }
       }else{
+        this.newData[dd] = (this.newData[dd]*1 + ele)*1
         if(this.newData[dd]*1>=100){
           this.pickMe++
           return false
         }
-        this.newData[dd] = (this.newData[dd]*1 + ele)*1
       }
       if(this.newData[dd]>=250){
         this.pickMe++

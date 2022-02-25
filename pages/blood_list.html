@@ -12,7 +12,7 @@
       <h1 class="title_1">血壓測量記錄表 - {{dataBox.name}}</h1>
       <div class="content"> 
         <ul class="listBox"> 
-          <li v-for="(el,j) in dataBox.list" :key="j"> <span class="time" v-cloak v-html="convertTime(el.time.seconds)"></span><span>{{el.low}}</span><span>{{el.high}}</span><span>{{el.heartbeat}}</span><b class="del" @click="delList(j)">一</b></li>
+          <li v-for="(el,j) in dataBox.list" :key="j"> <span class="time" v-cloak v-html="convertTime(el.time.seconds)"></span><span>{{el.low}}</span><span>{{el.high}}</span><span>{{el.heartbeat}}</span><b class="del" @click="delList(j)">一</b><em class="number">{{j+1}}</em></li>
         </ul>
         <div class="addList center"> <b @click="openAddListBox">✚</b></div>
         <div class="addListBox" v-show="openAddBox"> 
