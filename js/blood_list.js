@@ -142,7 +142,10 @@ var mdBoxApp = new Vue({
       //   t: new Date(time*1000).getHours(),
       // }
       // return DD
-      return new Date(time*1000).toLocaleString()
+      // return new Date(time*1000).toLocaleString()
+
+      let dd = new Date(time*1000).toLocaleString().split(' ')
+      return `<big>${dd[0]}</big><b>${dd[1]}</b>`
     },
     openAddListBox(){
       this.pickMe = 1

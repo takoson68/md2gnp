@@ -1020,6 +1020,10 @@ h1.title_1 {
   font-size: 1.5em;
   border-bottom: 1px solid #3f3f3f;
   background-color: #25C7A2;
+  -webkit-box-shadow: 0 0 1em black;
+          box-shadow: 0 0 1em black;
+  position: relative;
+  z-index: 1;
 }
 
 .content * {
@@ -1070,6 +1074,20 @@ h1.title_1 {
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
   background-color: #2a2a39;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.content ul.listBox > li span.time big {
+  padding-left: 0.5em;
+  font-size: 1.1em;
+}
+.content ul.listBox > li span.time b {
+  padding-left: 1em;
+  font-size: 0.9em;
 }
 .content ul.listBox > li span:nth-child(1)::before {
   content: "日期：";
@@ -1100,7 +1118,7 @@ h1.title_1 {
   display: block;
   background-color: #fc3848;
   color: #ffec39;
-  border: 1px solid #ffec39;
+  border: 2px solid #ffec39;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1119,13 +1137,16 @@ h1.title_1 {
   left: 0;
   background-color: #1e212b;
   width: 100%;
+  -webkit-box-shadow: 0 0 1em black;
+          box-shadow: 0 0 1em black;
 }
 .addList b {
   width: 2em;
   height: 2em;
   display: block;
   background-color: #1e212b;
-  border: 1px solid #cccccc;
+  color: #ffec39;
+  border: 1px solid #ffec39;
   border-radius: 50%;
   margin: 1.5em;
   display: -webkit-box;
