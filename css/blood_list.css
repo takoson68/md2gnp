@@ -1006,7 +1006,7 @@ canvas {
 }
 
 h1.title_1 {
-  color: #cccccc;
+  color: #1e212b;
   padding: 0.5em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1019,7 +1019,7 @@ h1.title_1 {
           justify-content: center;
   font-size: 1.5em;
   border-bottom: 1px solid #3f3f3f;
-  background-color: black;
+  background-color: #25C7A2;
 }
 
 .content * {
@@ -1036,6 +1036,7 @@ h1.title_1 {
   font-size: 0.9em;
 }
 .content ul.listBox > li {
+  position: relative;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1058,6 +1059,7 @@ h1.title_1 {
 }
 .content ul.listBox > li span::before {
   font-size: 0.8em;
+  color: #1B96F1;
 }
 .content ul.listBox > li span.time {
   -webkit-box-flex: 0;
@@ -1084,4 +1086,208 @@ h1.title_1 {
 }
 .content ul.listBox > li span:nth-child(4)::before {
   content: "脈搏：";
+}
+.content ul.listBox > li b.del {
+  position: absolute;
+  bottom: 1em;
+  left: 0.75em;
+  width: 1em;
+  height: 1em;
+  display: block;
+  background-color: #fc3848;
+  color: #ffec39;
+  border: 1px solid #ffec39;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.addList b {
+  width: 2em;
+  height: 2em;
+  display: block;
+  background-color: #1e212b;
+  border: 1px solid #cccccc;
+  border-radius: 50%;
+  margin: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.addListBox {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: auto;
+  background-color: #1e212b;
+  -webkit-box-shadow: 0 0 1em black;
+          box-shadow: 0 0 1em black;
+  z-index: 1;
+}
+.addListBox .cloBg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: -1;
+}
+.addListBox h2 {
+  color: #ffffff;
+  padding: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5em;
+  border-bottom: 1px solid #3f3f3f;
+  background-color: #25C7A2;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+}
+.addListBox ul.listFox {
+  background-color: #3f3f3f;
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.addListBox ul.listFox li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  position: relative;
+  padding: 0.5em;
+  font-size: 1.1em;
+}
+.addListBox ul.listFox li.pick::before {
+  margin-top: 1px;
+}
+.addListBox ul.listFox li.pick::after {
+  position: absolute;
+  content: "";
+  text-align: right;
+  color: #707070;
+  right: 0.9em;
+  top: 0.9em;
+  width: calc( 100% - 5em );
+  background-color: rgba(0, 0, 0, 0.07);
+  height: calc( 1.25em + 2px );
+  border-right: 1px solid #aaaaaa;
+}
+.addListBox ul.listFox li.pick input {
+  border: 2px solid #fc3848;
+  background-color: #eee;
+  margin-top: 1px;
+}
+.addListBox ul.listFox li::before {
+  font-size: 0.8em;
+  color: #1e212b;
+  position: absolute;
+  top: 1.1em;
+  left: 1.5em;
+}
+.addListBox ul.listFox li:nth-child(1)::before {
+  content: "低壓：";
+}
+.addListBox ul.listFox li:nth-child(2)::before {
+  content: "高壓：";
+}
+.addListBox ul.listFox li:nth-child(3)::before {
+  content: "脈搏：";
+}
+.addListBox ul.listFox li em {
+  color: #1e212b;
+  background-color: #cccccc;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+  width: 100%;
+  display: inline-block;
+  text-align: right;
+  min-height: 2em;
+}
+.addListBox ul.listFox li input {
+  pointer-events: none;
+  min-height: 2em;
+  text-align: right;
+  padding-right: 1em;
+  width: 100%;
+  color: black;
+  border-radius: 4px;
+  border: none;
+}
+
+ul.keyboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1em;
+  background-color: #3f3f3f;
+}
+ul.keyboard li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.333%;
+          flex: 0 0 33.333%;
+  padding: 0.25em;
+}
+ul.keyboard li b {
+  color: #1e212b;
+  font-size: 1.5em;
+  padding: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #1B96F1;
+  border-radius: 0.35em;
 }

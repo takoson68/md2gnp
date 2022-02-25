@@ -12,8 +12,27 @@
       <h1 class="title_1">血壓測量記錄表 - {{dataBox.name}}</h1>
       <div class="content"> 
         <ul class="listBox"> 
-          <li v-for="(el,j) in dataBox.list" :key="j"> <span class="time">{{el.time.seconds}}</span><span>{{el.low}}</span><span>{{el.high}}</span><span>{{el.heartbeat}}</span></li>
+          <li v-for="(el,j) in dataBox.list" :key="j"> <span class="time" v-cloak>{{convertTime(el.time.seconds)}}</span><span>{{el.low}}</span><span>{{el.high}}</span><span>{{el.heartbeat}}</span><b class="del" @click="delList(j)">一</b></li>
+          <li class="addList center"> <b @click="openAddListBox">✚</b></li>
         </ul>
+        <div class="addListBox" v-show="openAddBox"> 
+          <div class="cloBg" @click="cloMe"></div>
+          <h2>新增血壓紀錄</h2>
+          <ul class="listFox"> 
+            <li :class="pickMe==1?'pick':''" @click="pickMeBox(1)"> 
+              <input type="text" v-model="newData.low">
+            </li>
+            <li :class="pickMe==2?'pick':''" @click="pickMeBox(2)"> 
+              <input type="text" v-model="newData.high">
+            </li>
+            <li :class="pickMe==3?'pick':''" @click="pickMeBox(3)"> 
+              <input type="text" v-model="newData.heartbeat">
+            </li>
+          </ul>
+          <ul class="keyboard">
+            <li v-for="ele in keyboardBox" :key="ele"> <b @click="addNumber(ele)">{{ele}}</b></li>
+          </ul>
+        </div>
       </div>
     </div>
   </body>
