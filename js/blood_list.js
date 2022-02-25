@@ -94,8 +94,11 @@ var mdBoxApp = new Vue({
         this.updateData()
     },
     delList(j){
-      this.dataBox.list.splice(j, 1);
-      this.updateData()
+      let del = window.confirm('是否刪除此筆資料？');
+      if(del){ //確定刪除
+        this.dataBox.list.splice(j, 1);
+        this.updateData()
+      }
     },
     updateData(){
       let dd = this.dataBox
