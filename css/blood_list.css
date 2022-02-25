@@ -1054,8 +1054,11 @@ h1.title_1 {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background-color: #16181f;
-  border-bottom: 4px solid #333849;
+  background-color: #1e212b;
+  border-bottom: 2px solid #333849;
+}
+.content ul.listBox > li:nth-child(2n+1) {
+  background-color: black;
 }
 .content ul.listBox > li span {
   -webkit-box-flex: 1;
@@ -1063,7 +1066,7 @@ h1.title_1 {
           flex: 1;
   padding: 0.5em;
   font-size: 1.2em;
-  background-color: #1e212b;
+  background-color: rgba(30, 33, 43, 0.6);
 }
 .content ul.listBox > li span::before {
   font-size: 0.8em;
@@ -1073,7 +1076,7 @@ h1.title_1 {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
-  background-color: #2a2a39;
+  background-color: rgba(42, 42, 57, 0.6);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
