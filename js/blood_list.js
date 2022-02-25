@@ -32,7 +32,7 @@ var mdBoxApp = new Vue({
       messagingSenderId: "697182918191",
       appId: "1:697182918191:web:bfb3339590fec0af2f58da"
     },
-    openAddBox: true,
+    openAddBox: false,
     keyboardBox: ['1','2','3','4','5','6','7','8','9','<','0','enter'],
   },
   created: function () {
@@ -73,6 +73,8 @@ var mdBoxApp = new Vue({
       this.ref.get().then(doc => {
         console.log(doc.data());
         this.dataBox = doc.data()
+        this.dataBox.list.sort((x,y) => y.time.seconds - x.time.seconds);
+        console.log(this.dataBox.list);
         // querySnapshot.forEach(doc => {
         //   this.dataBox = doc.data()
         //   // console.log(doc.id, this.dataBox);
@@ -83,12 +85,12 @@ var mdBoxApp = new Vue({
 
     },
     addList(){
-      this.dataBox.list = [...this.dataBox.list,{
+      this.dataBox.list = [{
           time: new Date(),
           heartbeat: 33,
           low: 88,
           high: 123
-        }]
+        },...this.dataBox.list]
         this.updateData()
     },
     delList(j){

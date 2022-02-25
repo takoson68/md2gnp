@@ -13,8 +13,8 @@
       <div class="content"> 
         <ul class="listBox"> 
           <li v-for="(el,j) in dataBox.list" :key="j"> <span class="time" v-cloak>{{convertTime(el.time.seconds)}}</span><span>{{el.low}}</span><span>{{el.high}}</span><span>{{el.heartbeat}}</span><b class="del" @click="delList(j)">一</b></li>
-          <li class="addList center"> <b @click="openAddListBox">✚</b></li>
         </ul>
+        <div class="addList center"> <b @click="openAddListBox">✚</b></div>
         <div class="addListBox" v-show="openAddBox"> 
           <div class="cloBg" @click="cloMe"></div>
           <h2>新增血壓紀錄</h2>

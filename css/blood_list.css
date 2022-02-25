@@ -1034,6 +1034,10 @@ h1.title_1 {
       -ms-flex-direction: column;
           flex-direction: column;
   font-size: 0.9em;
+  position: absolute;
+  top: 4.25em;
+  overflow: auto;
+  height: calc( 100% - 10em );
 }
 .content ul.listBox > li {
   position: relative;
@@ -1109,6 +1113,13 @@ h1.title_1 {
           justify-content: center;
 }
 
+.addList {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  background-color: #1e212b;
+  width: 100%;
+}
 .addList b {
   width: 2em;
   height: 2em;
@@ -1291,3 +1302,4 @@ ul.keyboard li b {
   background-color: #1B96F1;
   border-radius: 0.35em;
 }
+/*# sourceMappingURL=blood_list.css.map */
