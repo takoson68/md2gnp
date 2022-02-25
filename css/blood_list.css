@@ -1344,6 +1344,10 @@ ul.keyboard li {
           flex: 0 0 33.333%;
   padding: 0.25em;
 }
+ul.keyboard li:nth-last-child(1) b {
+  border: 4px solid #1B96F1;
+  background-color: #ffffff;
+}
 ul.keyboard li b {
   color: #1e212b;
   font-size: 1.5em;

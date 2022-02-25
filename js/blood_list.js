@@ -170,6 +170,9 @@ var mdBoxApp = new Vue({
     },
     pickMeBox(e){
       this.pickMe = e
+      let dd = this.pickMe==1?'low':this.pickMe==2?'high':this.pickMe==3?'heartbeat':''
+      if(dd==''){return false}
+      this.newData[dd] = 0
     },
     addNumber(ele){
       console.log(ele);
@@ -183,6 +186,7 @@ var mdBoxApp = new Vue({
 
       let dd = this.pickMe==1?'low':this.pickMe==2?'high':this.pickMe==3?'heartbeat':''
       if(dd==''){return false}
+
       if(ele=='<'){
         this.newData[dd] = (this.newData[dd]+'').replace(/.$/, '')
         if(this.newData[dd]<=0){
